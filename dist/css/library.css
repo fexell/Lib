@@ -1,4 +1,6 @@
-@-ms-viewport { width: device-width; }
+@-ms-viewport {
+  width: device-width;
+}
 /*
 This is more of a reset than a traditional "normalizer", but with "normalizer" settings thrown in.
 It's made more to my taste as to what a reset/normalizer should do,
@@ -13,197 +15,698 @@ html5shiv does however not work for HTML5 inputs, such as "<input type=color>" a
 keep in mind that IE7- do NOT accept styling of unknown elements (of any type).
 
 Browsers Tested:
- Internet Explorer (actually tested in virtual enviroment): 7(*), 8, 9 Edge: 41.16299.15.0 Opera: 50.0.2762.67 Chrome: 63.0.3239.132, 64.0.3282.140 Firefox: 58.0.1 Firefox Nightly: 60.0a1 Firefox Developer: 59.0b6 Vivaldi: 1.14.1077.41 Brave: 0.19.147, 0.20.30
- = It is recommend to just NOT use HTML5 or CSS3 technologies for this browser.
- Why I haven't tested this in any other legacy browsers than Internet Explorer's 7, 8 and 9, is because if someone uses a different browser than IE, they are most probably/likely keeping their browser up to date. Instead of trying to support legacy IE browsers, the best thing would be to add a short code that makes the website inaccessible, unless they get a modern one. We all know what a pain in the ass Internet Explorer is, hence the reason to just not support it. Who thinks it's fun to develop for something that gives you too many limitations, right? ----------------------------------------------------------------------------------- ----------------------------------------------------------------------------------- -----------------------------------------------------------------------------------
+
+    Internet Explorer (actually tested in virtual enviroment): 7(*), 8, 9
+    Edge: 41.16299.15.0
+    Opera: 50.0.2762.67
+    Chrome: 63.0.3239.132, 64.0.3282.140
+    Firefox: 58.0.1
+    Firefox Nightly: 60.0a1
+    Firefox Developer: 59.0b6
+    Vivaldi: 1.14.1077.41
+    Brave: 0.19.147, 0.20.30
+
+    * = It is recommend to just NOT use HTML5 or CSS3 technologies for this browser.
+
+    Why I haven't tested this in any other legacy browsers than Internet Explorer's 7, 8 and 9, is because
+    if someone uses a different browser than IE, they are most probably/likely keeping their browser
+    up to date.
+    Instead of trying to support legacy IE browsers, the best thing would be to add a short code
+    that makes the website inaccessible, unless they get a modern one. We all know what a pain
+    in the ass Internet Explorer is, hence the reason to just not support it. Who thinks it's
+    fun to develop for something that gives you too many limitations, right?
+ -----------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------
 */
 /* BW = Border-width, BS = Border-style, BC = Border-color */
 /* Normalize all of these and apply "thin" to the border-width, instead of the default */
 /* Reset texts */
-html { -webkit-tab-size: 0; -moz-tab-size: 0; -o-tab-size: 0; tab-size: 0; }
+html {
+  -webkit-tab-size: 0;
+  -moz-tab-size: 0;
+  -o-tab-size: 0;
+  tab-size: 0;
+}
 
-html > body { -webkit-tab-size: 8; -moz-tab-size: 8; -o-tab-size: 8; tab-size: 8; }
+html > body {
+  -webkit-tab-size: 8;
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+}
 
-body { margin: 0; /* Removes/fixes "Whitespace nodes", (but not for inputs) } Both are needed */ /* Removes/fixes "Whitespace nodes", (but not for inputs) } for this fix */ white-space: nowrap; white-space: initial; }
+body {
+  margin: 0;
+  /* Removes/fixes "Whitespace nodes", (but not for inputs) } Both are needed */
+  /* Removes/fixes "Whitespace nodes", (but not for inputs) } for this fix */
+  white-space: nowrap;
+  white-space: initial;
+}
 
 /* Apply some stuff to both global and text elements */
-article, aside, dialog, footer, header, main, nav, section, details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt { -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; border: none; vertical-align: baseline; border-top-width: thin; border-top-style: none; border-top-color: transparent; border-right-width: thin; border-right-style: none; border-right-color: transparent; border-bottom-width: thin; border-bottom-style: none; border-bottom-color: transparent; border-left-width: thin; border-left-style: none; border-left-color: transparent; /* Fallback */ display: block; /* flow-root is basically the new "clearfix" */ display: flow-root; /* Add clear: both; just in case */ }
-article::before, article::after, aside::before, aside::after, dialog::before, dialog::after, footer::before, footer::after, header::before, header::after, main::before, main::after, nav::before, nav::after, section::before, section::after, details::before, details::after, div::before, div::after, img::before, img::after, video::before, video::after, canvas::before, canvas::after, svg::before, svg::after, embed::before, embed::after, source::before, source::after, track::before, track::after, form::before, form::after, ul::before, ul::after, li::before, li::after, iframe::before, iframe::after, h1::before, h1::after, h2::before, h2::after, h3::before, h3::after, h4::before, h4::after, h5::before, h5::after, h6::before, h6::after, a::before, a::after, p::before, p::after, b::before, b::after, i::before, i::after, u::before, u::after, s::before, s::after, q::before, q::after, strike::before, strike::after, pre::before, pre::after, code::before, code::after, tt::before, tt::after, blockquote::before, blockquote::after, small::before, small::after, font::before, font::after, center::before, center::after, em::before, em::after, strong::before, strong::after, sub::before, sub::after, sup::before, sup::after, del::before, del::after, samp::before, samp::after, big::before, big::after, mark::before, mark::after, abbr::before, abbr::after, bdi::before, bdi::after, address::before, address::after, summary::before, summary::after, dfn::before, dfn::after, caption::before, caption::after, div::before, div::after, ins::before, ins::after, legend::before, legend::after, cite::before, cite::after, var::before, var::after, label::before, label::after, rt::before, rt::after { content: ''; /* Clearfix. Works in IE7 and 8 */ clear: both; }
+article, aside, dialog, footer, header, main, nav, section, details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: baseline;
+  border-top-width: thin;
+  border-top-style: none;
+  border-top-color: transparent;
+  border-right-width: thin;
+  border-right-style: none;
+  border-right-color: transparent;
+  border-bottom-width: thin;
+  border-bottom-style: none;
+  border-bottom-color: transparent;
+  border-left-width: thin;
+  border-left-style: none;
+  border-left-color: transparent;
+  /* Fallback */
+  display: block;
+  /* flow-root is basically the new "clearfix" */
+  display: flow-root;
+  /* Add clear: both; just in case */
+}
+article::before, article::after, aside::before, aside::after, dialog::before, dialog::after, footer::before, footer::after, header::before, header::after, main::before, main::after, nav::before, nav::after, section::before, section::after, details::before, details::after, div::before, div::after, img::before, img::after, video::before, video::after, canvas::before, canvas::after, svg::before, svg::after, embed::before, embed::after, source::before, source::after, track::before, track::after, form::before, form::after, ul::before, ul::after, li::before, li::after, iframe::before, iframe::after, h1::before, h1::after, h2::before, h2::after, h3::before, h3::after, h4::before, h4::after, h5::before, h5::after, h6::before, h6::after, a::before, a::after, p::before, p::after, b::before, b::after, i::before, i::after, u::before, u::after, s::before, s::after, q::before, q::after, strike::before, strike::after, pre::before, pre::after, code::before, code::after, tt::before, tt::after, blockquote::before, blockquote::after, small::before, small::after, font::before, font::after, center::before, center::after, em::before, em::after, strong::before, strong::after, sub::before, sub::after, sup::before, sup::after, del::before, del::after, samp::before, samp::after, big::before, big::after, mark::before, mark::after, abbr::before, abbr::after, bdi::before, bdi::after, address::before, address::after, summary::before, summary::after, dfn::before, dfn::after, caption::before, caption::after, div::before, div::after, ins::before, ins::after, legend::before, legend::after, cite::before, cite::after, var::before, var::after, label::before, label::after, rt::before, rt::after {
+  content: '';
+  /* Clearfix. Works in IE7 and 8 */
+  clear: both;
+}
 
 /* 3.3) $global-text-elements and <details>
 ------------------------------------------ */
-h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt, details { font-family: "Verdana", sans-serif; -webkit-font-kerning: auto; font-kerning: auto; font-size: 1em; font-size: 1rem; font-size-adjust: 0.54; font-weight: 400; text-overflow: clip; text-align: left; unicode-bidi: embed; line-height: 1.3em; word-spacing: 0.01em; word-wrap: break-word; vertical-align: baseline; letter-spacing: 0.1px; direction: ltr; /* Font smooth hack */ text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4); }
+h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt,
+details {
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
+  word-spacing: 0.01em;
+  word-wrap: break-word;
+  vertical-align: baseline;
+  letter-spacing: 0.1px;
+  direction: ltr;
+  /* Font smooth hack */
+  text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
+}
 
 /* 3.4) $global-headings and h1, h2, h3, h4, h5, h6
 ------------------------------------------ */
-h1, h2, h3, h4, h5, h6 { margin: 0 0 1.1rem; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1.1rem;
+}
 
-h1 { font-size: 200%; }
+h1 {
+  font-size: 200%;
+}
 
-h2 { font-size: 150%; }
+h2 {
+  font-size: 150%;
+}
 
-h3 { font-size: 130%; }
+h3 {
+  font-size: 130%;
+}
 
-h4 { font-size: 100%; }
+h4 {
+  font-size: 100%;
+}
 
-h5 { font-size: 80%; }
+h5 {
+  font-size: 80%;
+}
 
-h6 { font-size: 70%; }
+h6 {
+  font-size: 70%;
+}
 
-input, select, option, button, textarea, datalist, output, optgroup { margin: 0; padding: 0; border: none; vertical-align: baseline; font-family: "Verdana", sans-serif; -webkit-font-kerning: auto; font-kerning: auto; font-size: 1em; font-size: 1rem; font-size-adjust: 0.54; font-weight: 400; text-overflow: clip; text-align: left; unicode-bidi: embed; line-height: 1.3em; background: #F1F1F1; }
+input, select, option, button, textarea, datalist, output, optgroup {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: baseline;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
+  background: #F1F1F1;
+}
 
 /* Only apply any size related CSS styling to these and NOT radio- or checkbox-buttons */
-input[type=text], input[type=button], input[type=color], input[type=date], input[type=datetime-local], input[type=email], input[type=file], input[type=image], input[type=month], input[type=number], input[type=range], input[type=reset], input[type=password], input[type=submit], input[type=tel], input[type=time], input[type=url], input[type=week], select, textarea { margin-bottom: 1px; }
+input[type=text], input[type=button], input[type=color],
+input[type=date], input[type=datetime-local], input[type=email],
+input[type=file], input[type=image], input[type=month],
+input[type=number], input[type=range], input[type=reset],
+input[type=password], input[type=submit], input[type=tel],
+input[type=time], input[type=url], input[type=week],
+select, textarea {
+  margin-bottom: 1px;
+}
 
 /* HTML5 Input Elements */
-input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color] { display: block; }
+input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=range], input[type=date],
+input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color] {
+  display: block;
+}
 
 /* IE8 & where src hasn't been given source */
-* + html input[type=image], input[type=image][src=""], input[src=""] { display: none; }
+* + html input[type=image],
+input[type=image][src=""],
+input[src=""] {
+  display: none;
+}
 
-input[type=file] { /* Vertically centers text and button */ line-height: 250%; }
+input[type=file] {
+  /* Vertically centers text and button */
+  line-height: 250%;
+}
 
-input, select, textarea, button { min-width: 1px; /* Gives input color a "standard" height for some reason (not only 1px) */ min-height: 1px; /* Fixes IE7 */ padding: 1px; }
+input, select, textarea, button {
+  min-width: 1px;
+  /* Gives input color a "standard" height for some reason (not only 1px) */
+  min-height: 1px;
+  /* Fixes IE7 */
+  padding: 1px;
+}
 
-input[type=button], input[type=submit], button { border: 0; }
+input[type=button], input[type=submit], button {
+  border: 0;
+}
 
 /* For <input type="file"> for -webkit-, such as: Opera, Chrome, etc. */
-::-webkit-file-upload-button { /* Vertically centers text and button */ line-height: 250%; min-width: 1px; /* Gives input color a "standard" height for some reason (not only 1px) */ min-height: 1px; /* Fixes IE7 */ padding: 1px; border: 0; -webkit-box-shadow: 0; box-shadow: 0; }
+::-webkit-file-upload-button {
+  /* Vertically centers text and button */
+  line-height: 250%;
+  min-width: 1px;
+  /* Gives input color a "standard" height for some reason (not only 1px) */
+  min-height: 1px;
+  /* Fixes IE7 */
+  padding: 1px;
+  border: 0;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+}
 
-form, form > fieldset, form > input, form > textarea, form > button, form > fieldset > input, form > fieldset > textarea, form > fieldset > button { word-spacing: 0; }
+form,
+form > fieldset,
+form > input,
+form > textarea,
+form > button,
+form > fieldset > input,
+form > fieldset > textarea,
+form > fieldset > button {
+  word-spacing: 0;
+}
 
-form { /* Works better than display inline since "margin: 0 auto;" now can be used, but no longer gets a "width: 100%;" default value */ display: table; }
+form {
+  /* Works better than display inline since "margin: 0 auto;" now can be used, but no longer gets a "width: 100%;" default value */
+  display: table;
+}
 
-form > fieldset { display: inline; }
+form > fieldset {
+  display: inline;
+}
 
-form > input, form > textarea, form > button, form > fieldset > input, form > fieldset > textarea, form > fieldset > button { -webkit-box-sizing: border-box; box-sizing: border-box; display: block; }
+form > input,
+form > textarea,
+form > button,
+form > fieldset > input,
+form > fieldset > textarea,
+form > fieldset > button {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
 
-form > input, form > textarea, form > button { /* IE7 and 8 hack */ float: left\9; clear: both\9; }
+form > input,
+form > textarea,
+form > button {
+  /* IE7 and 8 hack */
+  float: left\9;
+  clear: both\9;
+}
 
-form > fieldset > input[type=radio], form > fieldset > input[type=checkbox] { display: table-cell; }
+form > fieldset > input[type=radio], form > fieldset > input[type=checkbox] {
+  display: table-cell;
+}
 
-input[type=radio], input[type=checkbox] { display: table-cell; clear: initial; }
+input[type=radio], input[type=checkbox] {
+  display: table-cell;
+  clear: initial;
+}
 
-form, input, textarea, button, legend, select, option { -webkit-margin-start: 0; -moz-margin-start: 0; margin-inline-start: 0; -webkit-margin-end: 0; -moz-margin-end: 0; margin-inline-end: 0; -webkit-padding-before: 0; padding-block-start: 0; -webkit-padding-after: 0; padding-block-end: 0; -webkit-padding-start: 0; -moz-padding-start: 0; padding-inline-start: 0; -webkit-padding-end: 0; -moz-padding-end: 0; padding-inline-end: 0; }
+form, input, textarea, button, legend, select, option {
+  -webkit-margin-start: 0;
+     -moz-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+     -moz-margin-end: 0;
+          margin-inline-end: 0;
+  -webkit-padding-before: 0;
+          padding-block-start: 0;
+  -webkit-padding-after: 0;
+          padding-block-end: 0;
+  -webkit-padding-start: 0;
+     -moz-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-padding-end: 0;
+     -moz-padding-end: 0;
+          padding-inline-end: 0;
+}
 
-caption { caption-side: top; }
+caption {
+  caption-side: top;
+}
 
-center, caption { text-align: center; }
+center, caption {
+  text-align: center;
+}
 
-sub, sup, small { font-size: 80%; }
+sub, sup, small {
+  font-size: 80%;
+}
 
-cite, i, var, dfn { font-style: italic; }
+cite, i, var, dfn {
+  font-style: italic;
+}
 
-em { font-style: oblique; }
+em {
+  font-style: oblique;
+}
 
-code, samp, pre { font-family: monospace; }
+code, samp, pre {
+  font-family: monospace;
+}
 
-ins { text-decoration: underline; }
+ins {
+  text-decoration: underline;
+}
 
-pre { white-space: pre; margin: 0.2em 0; }
+pre {
+  white-space: pre;
+  margin: 0.2em 0;
+}
 
-s { text-decoration: line-through; }
+s {
+  text-decoration: line-through;
+}
 
-b, strong { font-weight: bold; }
+b, strong {
+  font-weight: bold;
+}
 
-sub { vertical-align: sub; }
+sub {
+  vertical-align: sub;
+}
 
-sup { vertical-align: super; }
+sup {
+  vertical-align: super;
+}
 
-var { color: BlueViolet; font-weight: 500; }
+var {
+  color: BlueViolet;
+  font-weight: 500;
+}
 
-mark { /* Inline unfortunately this creates "Whitespace nodes"... Deal with it ;P */ display: inline; background-color: #FFFF61; }
+mark {
+  /* Inline unfortunately this creates "Whitespace nodes"... Deal with it ;P */
+  display: inline;
+  background-color: #FFFF61;
+}
 
-abbr { border-bottom: 1px dotted #000; }
+abbr {
+  border-bottom: 1px dotted #000;
+}
 
-kbd { /* This fixes/removes the "Whitespace nodes" it spits out */ display: block; }
+kbd {
+  /* This fixes/removes the "Whitespace nodes" it spits out */
+  display: block;
+}
 
-summary { display: list-item; }
+summary {
+  display: list-item;
+}
 
-a { outline: none; }
-a, a:visited { text-decoration: none; color: #0008ff; }
-a:hover, a:focus, a:active { text-decoration: underline; }
+a {
+  outline: none;
+}
+a, a:visited {
+  text-decoration: none;
+  color: #0008ff;
+}
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+}
 
 /* IE7 and 8 hack */
-* + html img, * + html video { float: left\9; clear: both\9; }
+* + html img, * + html video {
+  float: left\9;
+  clear: both\9;
+}
 
-table, tbody, thead, tfoot, th, tr, td, colgroup, col { margin: 0; padding: 0; border: none; vertical-align: baseline; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "Verdana", sans-serif; -webkit-font-kerning: auto; font-kerning: auto; font-size: 1em; font-size: 1rem; font-size-adjust: 0.54; font-weight: 400; text-overflow: clip; text-align: left; unicode-bidi: embed; line-height: 1.3em; }
+table, tbody, thead, tfoot, th, tr, td, colgroup, col {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
+}
 
-table { /* Even though the "user-agent"-default is table-row-group, but table is better (in my opinion) since "margin: 0 auto" can be used with it, even without "width" */ display: table; /* Let's make tables automagically responsive with this simple line of code */ overflow-x: auto; }
+table {
+  /* Even though the "user-agent"-default is table-row-group, but table is better (in my opinion) since "margin: 0 auto" can be used with it, even without "width" */
+  display: table;
+  /* Let's make tables automagically responsive with this simple line of code */
+  overflow-x: auto;
+}
 
-tbody { /* Since tbody gets generated automatically, let's make <tbody> act as if it's the table */ display: table-row-group; }
+tbody {
+  /* Since tbody gets generated automatically, let's make <tbody> act as if it's the table */
+  display: table-row-group;
+}
 
-thead { display: table-header-group; }
+thead {
+  display: table-header-group;
+}
 
-tfoot { display: table-footer-group; }
+tfoot {
+  display: table-footer-group;
+}
 
-tr { display: table-row; }
+tr {
+  display: table-row;
+}
 
-th, td { display: table-cell; }
+th, td {
+  display: table-cell;
+}
 
-th { font-weight: bold; }
+th {
+  font-weight: bold;
+}
 
-[hidden] { /* !important In case it gets overriden somewhere */ display: none !important; }
+[hidden] {
+  /* !important In case it gets overriden somewhere */
+  display: none !important;
+}
 
 /*
 * ------------- 9) Display none / [src=""] ------------- *
 */
-audio[src=""], embed[src=""], iframe[src=""], img[src=""], source[src=""], track[src=""], video[src=""] { /* If either of these elements (accepting the src attribute) are empty, set "display: none;" to not take up space in the layout */ display: none !important; display: none\9 !important; }
+audio[src=""],
+embed[src=""],
+iframe[src=""],
+img[src=""],
+source[src=""],
+track[src=""],
+video[src=""] {
+  /* If either of these elements (accepting the src attribute) are empty, set "display: none;" to not take up space in the layout */
+  display: none !important;
+  display: none\9 !important;
+}
 
 /* Legacy IE (Internet Explorer) will completely ignore this rule */
-@supports (display: block) { abbr { border: 0; display: block; -webkit-text-decoration: underline dotted; text-decoration: underline dotted; } }
+@supports (display: block) {
+  abbr {
+    border: 0;
+    display: block;
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+  }
+}
 /* Px to vw conversion - credit: http://pxtovw.com/ */
-@media only screen and (max-width: 1920px) { h1 { font-size: 1.9791666667vw; } }
-@media only screen and (min-width: 1920px) { h1 { font-size: 1.9791666667vw; } }
-@media only screen and (max-width: 1280px) { h1 { font-size: 2.375vw; } }
-@media only screen and (max-width: 960px) { h1 { font-size: 2.96875vw; } }
-@media only screen and (max-width: 640px) { h1 { font-size: 3.9583333333vw; } }
-@media only screen and (max-width: 480px) { h1 { font-size: 5.9375vw; text-transform: uppercase; } }
-@media only screen and (max-width: 384px) { h1 { font-size: 7.9166666667vw; text-transform: uppercase; } }
+@media only screen and (max-width: 1920px) {
+  h1 {
+    font-size: 1.9791666667vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h1 {
+    font-size: 1.9791666667vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h1 {
+    font-size: 2.375vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h1 {
+    font-size: 2.96875vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 3.9583333333vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 5.9375vw;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1 {
+    font-size: 7.9166666667vw;
+    text-transform: uppercase;
+  }
+}
 
-@media only screen and (max-width: 1920px) { h2 { font-size: 1.7708333333vw; } }
-@media only screen and (min-width: 1920px) { h2 { font-size: 1.7708333333vw; } }
-@media only screen and (max-width: 1280px) { h2 { font-size: 2.125vw; } }
-@media only screen and (max-width: 960px) { h2 { font-size: 2.65625vw; } }
-@media only screen and (max-width: 640px) { h2 { font-size: 3.5416666667vw; } }
-@media only screen and (max-width: 480px) { h2 { font-size: 5.3125vw; text-transform: uppercase; } }
-@media only screen and (max-width: 384px) { h2 { font-size: 7.0833333333vw; text-transform: uppercase; } }
+@media only screen and (max-width: 1920px) {
+  h2 {
+    font-size: 1.7708333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h2 {
+    font-size: 1.7708333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h2 {
+    font-size: 2.125vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h2 {
+    font-size: 2.65625vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h2 {
+    font-size: 3.5416666667vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 5.3125vw;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h2 {
+    font-size: 7.0833333333vw;
+    text-transform: uppercase;
+  }
+}
 
-@media only screen and (max-width: 1920px) { h3 { font-size: 1.4583333333vw; } }
-@media only screen and (min-width: 1920px) { h3 { font-size: 1.4583333333vw; } }
-@media only screen and (max-width: 1280px) { h3 { font-size: 1.75vw; } }
-@media only screen and (max-width: 960px) { h3 { font-size: 2.1875vw; } }
-@media only screen and (max-width: 640px) { h3 { font-size: 2.9166666667vw; } }
-@media only screen and (max-width: 480px) { h3 { font-size: 4.375vw; text-transform: uppercase; } }
-@media only screen and (max-width: 384px) { h3 { font-size: 5.8333333333vw; text-transform: uppercase; } }
+@media only screen and (max-width: 1920px) {
+  h3 {
+    font-size: 1.4583333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h3 {
+    font-size: 1.4583333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h3 {
+    font-size: 1.75vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h3 {
+    font-size: 2.1875vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h3 {
+    font-size: 2.9166666667vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h3 {
+    font-size: 4.375vw;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h3 {
+    font-size: 5.8333333333vw;
+    text-transform: uppercase;
+  }
+}
 
-@media only screen and (max-width: 1920px) { h4 { font-size: 1.3541666667vw; } }
-@media only screen and (min-width: 1920px) { h4 { font-size: 1.3541666667vw; } }
-@media only screen and (max-width: 1280px) { h4 { font-size: 1.625vw; } }
-@media only screen and (max-width: 960px) { h4 { font-size: 2.03125vw; } }
-@media only screen and (max-width: 640px) { h4 { font-size: 2.7083333333vw; } }
-@media only screen and (max-width: 480px) { h4 { font-size: 4.0625vw; text-transform: uppercase; } }
-@media only screen and (max-width: 384px) { h4 { font-size: 5.4166666667vw; text-transform: uppercase; } }
+@media only screen and (max-width: 1920px) {
+  h4 {
+    font-size: 1.3541666667vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h4 {
+    font-size: 1.3541666667vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h4 {
+    font-size: 1.625vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h4 {
+    font-size: 2.03125vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h4 {
+    font-size: 2.7083333333vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h4 {
+    font-size: 4.0625vw;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h4 {
+    font-size: 5.4166666667vw;
+    text-transform: uppercase;
+  }
+}
 
-@media only screen and (max-width: 1920px) { h5 { font-size: 1.25vw; } }
-@media only screen and (min-width: 1920px) { h5 { font-size: 1.25vw; } }
-@media only screen and (max-width: 1280px) { h5 { font-size: 1.5vw; } }
-@media only screen and (max-width: 960px) { h5 { font-size: 1.875vw; } }
-@media only screen and (max-width: 640px) { h5 { font-size: 2.5vw; } }
-@media only screen and (max-width: 480px) { h5 { font-size: 3.75vw; text-transform: uppercase; } }
-@media only screen and (max-width: 384px) { h5 { font-size: 5vw; text-transform: uppercase; } }
+@media only screen and (max-width: 1920px) {
+  h5 {
+    font-size: 1.25vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h5 {
+    font-size: 1.25vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h5 {
+    font-size: 1.5vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h5 {
+    font-size: 1.875vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h5 {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h5 {
+    font-size: 3.75vw;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h5 {
+    font-size: 5vw;
+    text-transform: uppercase;
+  }
+}
 
-@media only screen and (max-width: 1920px) { h6 { font-size: 1.1458333333vw; } }
-@media only screen and (min-width: 1920px) { h6 { font-size: 1.1458333333vw; } }
-@media only screen and (max-width: 1280px) { h6 { font-size: 1.375vw; } }
-@media only screen and (max-width: 960px) { h6 { font-size: 1.71875vw; } }
-@media only screen and (max-width: 640px) { h6 { font-size: 2.2916666667vw; } }
-@media only screen and (max-width: 480px) { h6 { font-size: 3.4375vw; text-transform: uppercase; } }
-@media only screen and (max-width: 384px) { h6 { font-size: 4.5833333333vw; text-transform: uppercase; } }
+@media only screen and (max-width: 1920px) {
+  h6 {
+    font-size: 1.1458333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h6 {
+    font-size: 1.1458333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h6 {
+    font-size: 1.375vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h6 {
+    font-size: 1.71875vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h6 {
+    font-size: 2.2916666667vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h6 {
+    font-size: 3.4375vw;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h6 {
+    font-size: 4.5833333333vw;
+    text-transform: uppercase;
+  }
+}
 
-body.unset > *, form.unset > *, table.unset > *, fieldset.unset > *, header.unset > *, section.unset > *, aside.unset > *, footer.unset > * { all: initial; all: unset; }
-body .unset, form .unset, table .unset, fieldset .unset, header .unset, section .unset, aside .unset, footer .unset { all: initial; all: unset; }
+body.unset > *, form.unset > *, table.unset > *, fieldset.unset > *, header.unset > *, section.unset > *, aside.unset > *, footer.unset > * {
+  all: initial;
+  all: unset;
+}
+body .unset, form .unset, table .unset, fieldset .unset, header .unset, section .unset, aside .unset, footer .unset {
+  all: initial;
+  all: unset;
+}
 
-div.unset, details.unset { all: initial; all: unset; }
+div.unset, details.unset {
+  all: initial;
+  all: unset;
+}
 
-.unset, .unset-children { all: initial; all: unset; }
+.unset,
+.unset-children {
+  all: initial;
+  all: unset;
+}
