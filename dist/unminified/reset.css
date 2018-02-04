@@ -1,0 +1,6 @@
+body.unset > *, form.unset > *, table.unset > *, fieldset.unset > *, header.unset > *, section.unset > *, aside.unset > *, footer.unset > * { all: initial; all: unset; }
+body .unset, form .unset, table .unset, fieldset .unset, header .unset, section .unset, aside .unset, footer .unset { all: initial; all: unset; }
+
+div.unset, details.unset { all: initial; all: unset; }
+
+.unset, .unset-children { all: initial; all: unset; }

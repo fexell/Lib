@@ -1,0 +1,37 @@
+table, tbody, thead, tfoot, th, tr, td, colgroup, col {
+  @include global-reset;
+  @include global-all;
+  @include global-font;
+}
+
+table {
+  /* Even though the "user-agent"-default is table-row-group, but table is better (in my opinion) since "margin: 0 auto" can be used with it, even without "width" */
+  display: table;
+  /* Let's make tables automagically responsive with this simple line of code */
+  overflow-x: auto;
+}
+
+tbody {
+  /* Since tbody gets generated automatically, let's make <tbody> act as if it's the table */
+  display: table-row-group;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tfoot {
+  display: table-footer-group;
+}
+
+tr {
+  display: table-row;
+}
+
+th, td {
+  display: table-cell;
+}
+
+th {
+  font-weight: bold;
+}

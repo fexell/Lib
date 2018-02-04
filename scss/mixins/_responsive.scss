@@ -1,0 +1,84 @@
+$break: 1920px;
+
+$xxs: $break / 5 !default; // 384
+$xs: $break / 4 !default; // 480
+$sm: $break / 3 !default; // 640
+$md: $break / 2 !default; // 960
+$lg: $break / 1.5 !default; // 1280
+$xlg: $break !default; // 1920
+
+@mixin max($device) {
+  @if $device == xs {
+    @media only screen and (max-width: $break / 5) {
+      @content;
+      text-transform: uppercase;
+    }
+  }
+  @else if $device == sm {
+    @media only screen and (max-width: $break / 4) {
+      @content;
+      text-transform: uppercase;
+    }
+  }
+  @else if $device == md {
+    @media only screen and (max-width: $break / 3) {
+      @content;
+    }
+  }
+  @else if $device == xmd {
+    @media only screen and (max-width: $break / 2) {
+      @content;
+    }
+  }
+  @else if $device == lg {
+    @media only screen and (max-width: $break / 1.5) {
+      @content;
+    }
+  }
+  @else if $device == xlg {
+    @media only screen and (min-width: $break) {
+      @content;
+    }
+    @media only screen and (max-width: $break) {
+      @content;
+    }
+  }
+}
+
+@mixin min($device) {
+  @if $device == xs {
+    @media only screen and (min-width: $break / 5) {
+      @content;
+      text-transform: uppercase;
+    }
+  }
+  @else if $device == sm {
+    @media only screen and (min-width: $break / 4) {
+      @content;
+      text-transform: uppercase;
+    }
+  }
+  @else if $device == md {
+    @media only screen and (min-width: $break / 3) {
+      @content;
+    }
+  }
+  @else if $device == xmd {
+    @media only screen and (min-width: $break / 2) {
+      @content;
+    }
+  }
+  @else if $device == lg {
+    @media only screen and (min-width: $break / 1.5) {
+      @content;
+    }
+  }
+  @else if $device == xlg {
+    @media only screen and (max-width: $break) {
+      @content;
+    }
+    @media only screen and (min-width: $break) {
+      @content;
+    }
+  }
+}

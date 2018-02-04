@@ -1,0 +1,62 @@
+/* Apply some stuff to both global and text elements */
+#{$global-elements, $global-text-elements} {
+  @include global-all;
+  @include global-reset;
+  @include elements-reset;
+
+  /* Fallback */
+  display: block;
+  /* flow-root is basically the new "clearfix" */
+  display: flow-root;
+
+  /* Add clear: both; just in case */
+  &::before, &::after {
+    content: '';
+    /* Clearfix. Works in IE7 and 8 */
+    clear: both;
+  }
+}
+
+/* 3.3) $global-text-elements and <details>
+------------------------------------------ */
+#{$global-text-elements},
+details {
+  @include global-font;
+  @include text-reset;
+}
+
+/* 3.4) $global-headings and h1, h2, h3, h4, h5, h6
+------------------------------------------ */
+#{$global-headings} {
+  margin: 0 0 1.1rem;
+}
+
+h1 {
+  // Default
+  font-size: 200%;
+}
+
+h2 {
+  // Default
+  font-size: 150%;
+}
+
+h3 {
+  // Default
+  font-size: 130%;
+}
+
+h4 {
+  // Default
+  font-size: 100%;
+}
+
+h5 {
+  // Default
+  font-size: 80%;
+}
+
+h6 {
+  // Default
+  font-size: 70%;
+}

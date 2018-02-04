@@ -1,0 +1,35 @@
+// "Required" elements
+$html:                 html;
+$body:                 body;
+$htmlbody:             $html, $body;
+
+
+// \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\
+// ------------------------------- $GLOBAL's -----------------------------
+// /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+// Elements used for containing / "wrapping"
+$global-elements:      article, aside, dialog, footer, header, main, nav, section,
+details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe;
+
+// Elements used for text formatting
+$global-text-elements: h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt,
+blockquote, small, font, center, em, strong, sub, sup, del, samp, big,
+mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite,
+var, label, rt;
+
+// Form elements
+$global-inputs:        input, select, option, button, textarea, datalist,
+output, optgroup;
+
+// \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\
+// ------------------------------- $ELEMENTs -----------------------------
+// /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+// HTML5 specific elements
+$html5-elements:       article, aside, audio, canvas, command, details, embed, figcaption, figure, footer, header, hgroup,
+keygen, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time,
+track, video, wbr;
+
+// Headings
+$global-headings:      h1, h2, h3, h4, h5, h6;

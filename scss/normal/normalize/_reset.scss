@@ -1,0 +1,91 @@
+caption {
+  caption-side:      top;
+}
+
+center, caption {
+  text-align:        center;
+}
+
+sub, sup, small {
+  font-size:         80%;
+}
+
+cite, i, var, dfn {
+  font-style:        italic;
+}
+
+em {
+  font-style:        oblique;
+}
+
+code, samp, pre {
+  font-family:       monospace;
+}
+
+ins {
+  text-decoration:   underline;
+}
+
+pre {
+  white-space:       pre;
+  margin:            0.2em 0;
+}
+
+s {
+  text-decoration:   line-through;
+}
+
+b, strong {
+  font-weight:       bold;
+}
+
+sub {
+  vertical-align:    sub;
+}
+
+sup {
+  vertical-align:    super;
+}
+
+var {
+  color:             BlueViolet;
+  font-weight:       500;
+}
+
+mark {
+  /* Inline unfortunately this creates "Whitespace nodes"... Deal with it ;P */
+  display:           inline;
+  background-color:  #FFFF61;
+}
+
+abbr {
+  border-bottom:     1px dotted #000;
+}
+
+kbd {
+  /* This fixes/removes the "Whitespace nodes" it spits out */
+  display:           block;
+}
+
+summary {
+  display:           list-item;
+}
+
+a {
+
+  outline:           none;
+
+  &, &:visited {
+    text-decoration: none;
+    color:           #0008ff;
+  }
+  &:hover, &:focus, &:active {
+    text-decoration: underline;
+  }
+}
+
+/* IE7 and 8 hack */
+*+html img, *+html video {
+  float:             left\9;
+  clear:             both\9;
+}

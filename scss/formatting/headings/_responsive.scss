@@ -1,0 +1,23 @@
+@import "../../mixins/mixins";
+@import "../../functions/functions";
+
+// Breakpoints
+
+// Screen sizes
+
+
+// Maps
+$headings-map: (h1: 38px, h2: 34px, h3: 28px, h4: 26px, h5: 24px, h6: 22px);
+
+@each $h, $s in ($headings-map) {
+  @each $heading in ($h) {
+    #{$heading} {
+      @include min(xlg){ font-size: get-vw($s, 1920); }
+      @include max(lg){ font-size: get-vw($s, 1600); }
+      @include max(xmd){ font-size: get-vw($s, 1280); }
+      @include max(md){ font-size: get-vw($s, 960); }
+      @include max(sm){ font-size: get-vw($s, 640); }
+      @include max(xs){ font-size: get-vw($s, 480); }
+    }
+  }
+}

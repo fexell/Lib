@@ -1,0 +1,5 @@
+/* Px to vw conversion - credit: http://pxtovw.com/ */
+@function get-vw($object, $screensize) {
+    $vw: ($screensize * 0.01) * 1px;
+    @return ($object / $vw) * 1vw;
+}

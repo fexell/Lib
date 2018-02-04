@@ -1,0 +1,15 @@
+/*
+* ------------- 9) Display none / [src=""] ------------- *
+*/
+
+audio[src=""],
+embed[src=""],
+iframe[src=""],
+img[src=""],
+source[src=""],
+track[src=""],
+video[src=""] {
+  /* If either of these elements (accepting the src attribute) are empty, set "display: none;" to not take up space in the layout */
+  display: none !important;
+  display: none\9 !important;
+}

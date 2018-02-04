@@ -1,0 +1,38 @@
+/*
+This is more of a reset than a traditional "normalizer", but with "normalizer" settings thrown in.
+It's made more to my taste as to what a reset/normalizer should do,
+which is to make elements behave in way "you want to", but still keeping things
+like still being able to use "margin: 0 auto;", etc.
+This is basically the result of a lot of testing.
+It is completely optional to use this or not.
+NO CREDIT IS NEEDED. USE AND/OR ABUSE THIS HOWEVER YOU WANT.
+
+Use html5shiv to get the best result in legacy Internet Explorer browsers ( https://github.com/aFarkas/html5shiv )
+html5shiv does however not work for HTML5 inputs, such as "<input type=color>" and please
+keep in mind that IE7- do NOT accept styling of unknown elements (of any type).
+
+Browsers Tested:
+
+    Internet Explorer (actually tested in virtual enviroment): 7(*), 8, 9
+    Edge: 41.16299.15.0
+    Opera: 50.0.2762.67
+    Chrome: 63.0.3239.132, 64.0.3282.140
+    Firefox: 58.0.1
+    Firefox Nightly: 60.0a1
+    Firefox Developer: 59.0b6
+    Vivaldi: 1.14.1077.41
+    Brave: 0.19.147, 0.20.30
+
+    * = It is recommend to just NOT use HTML5 or CSS3 technologies for this browser.
+
+    Why I haven't tested this in any other legacy browsers than Internet Explorer's 7, 8 and 9, is because
+    if someone uses a different browser than IE, they are most probably/likely keeping their browser
+    up to date.
+    Instead of trying to support legacy IE browsers, the best thing would be to add a short code
+    that makes the website inaccessible, unless they get a modern one. We all know what a pain
+    in the ass Internet Explorer is, hence the reason to just not support it. Who thinks it's
+    fun to develop for something that gives you too many limitations, right?
+ -----------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------
+*/

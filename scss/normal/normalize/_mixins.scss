@@ -1,0 +1,64 @@
+@mixin global-font {
+    font: {
+    family: "Verdana", sans-serif;
+    kerning: auto;
+    size: 1em;
+    size: 1rem;
+    size-adjust: 0.54;
+    weight: 400;
+  }
+  text: {
+    overflow: clip;
+    align: left;
+  }
+    unicode-bidi: embed;
+    line-height: 1.3em;
+}
+
+
+@mixin global-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: baseline;
+}
+
+@mixin global-all {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* BW = Border-width, BS = Border-style, BC = Border-color */
+/* Normalize all of these and apply "thin" to the border-width, instead of the default */
+@mixin elements-reset($bw: thin, $bs: none, $bc: transparent) {
+  border: {
+    top-width: $bw;
+    top-style: $bs;
+    top-color: $bc;
+
+    right-width: $bw;
+    right-style: $bs;
+    right-color: $bc;
+
+    bottom-width: $bw;
+    bottom-style: $bs;
+    bottom-color: $bc;
+
+    left-width: $bw;
+    left-style: $bs;
+    left-color: $bc;
+  }
+}
+
+/* Reset texts */
+@mixin text-reset {
+  word-spacing: 0.01em;
+  word-wrap: break-word;
+  vertical-align: baseline;
+  letter-spacing: 0.1px;
+  direction: ltr;
+  /* Font smooth hack */
+  text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
+}

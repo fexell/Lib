@@ -1,0 +1,21 @@
+html {
+  -webkit-tab-size: 0;
+  -moz-tab-size: 0;
+  -o-tab-size: 0;
+  tab-size: 0;
+}
+
+html > body {
+  -webkit-tab-size: 8;
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+}
+
+#{$body} {
+  margin: 0;
+  /* Removes/fixes "Whitespace nodes", (but not for inputs) } Both are needed */
+  /* Removes/fixes "Whitespace nodes", (but not for inputs) } for this fix */
+  white-space: nowrap;
+  white-space: initial;
+}

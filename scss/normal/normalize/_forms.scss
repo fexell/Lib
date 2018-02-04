@@ -1,0 +1,116 @@
+#{$global-inputs} {
+  @include global-reset;
+  @include global-font;
+  background: #F1F1F1;
+}
+
+
+/* Only apply any size related CSS styling to these and NOT radio- or checkbox-buttons */
+input[type=text], input[type=button], input[type=color],
+input[type=date], input[type=datetime-local], input[type=email],
+input[type=file], input[type=image], input[type=month],
+input[type=number], input[type=range], input[type=reset],
+input[type=password], input[type=submit], input[type=tel],
+input[type=time], input[type=url], input[type=week],
+select, textarea {
+  margin-bottom: 1px;
+}
+
+/* HTML5 Input Elements */
+input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=range], input[type=date],
+input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color] {
+    display: block;
+}
+
+/* IE8 & where src hasn't been given source */
+*+html input[type=image],
+input[type=image][src=""],
+input[src=""] {
+  display: none;
+}
+
+input[type=file] {
+  /* Vertically centers text and button */
+  line-height: 250%;
+}
+
+input, select, textarea, button {
+  min-width: 1px;
+  /* Gives input color a "standard" height for some reason (not only 1px) */
+  min-height: 1px;
+  /* Fixes IE7 */
+  padding: 1px;
+}
+
+input[type=button], input[type=submit], button {
+  border: 0;
+}
+
+/* For <input type="file"> for -webkit-, such as: Opera, Chrome, etc. */
+::-webkit-file-upload-button {
+  /* Vertically centers text and button */
+  line-height: 250%;
+  min-width: 1px;
+  /* Gives input color a "standard" height for some reason (not only 1px) */
+  min-height: 1px;
+  /* Fixes IE7 */
+  padding: 1px;
+  border: 0;
+  box-shadow: 0;
+}
+
+form,
+form > fieldset,
+form > input,
+form > textarea,
+form > button,
+form > fieldset > input,
+form > fieldset > textarea,
+form > fieldset > button {
+  word-spacing: 0;
+}
+
+form {
+  /* Works better than display inline since "margin: 0 auto;" now can be used, but no longer gets a "width: 100%;" default value */
+  display: table;
+}
+
+form > fieldset {
+  display: inline;
+}
+
+form > input,
+form > textarea,
+form > button,
+form > fieldset > input,
+form > fieldset > textarea,
+form > fieldset > button {
+  @include global-all;
+  display: block;
+}
+
+form > input,
+form > textarea,
+form > button {
+  /* IE7 and 8 hack */
+  float: left\9;
+  clear: both\9;
+}
+
+form > fieldset > input[type=radio], form > fieldset > input[type=checkbox] {
+  display: table-cell;
+}
+
+input[type=radio], input[type=checkbox] {
+  display: table-cell;
+  clear: initial;
+}
+
+form, input, textarea, button, legend, select, option {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
