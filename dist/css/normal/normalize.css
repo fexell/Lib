@@ -320,7 +320,7 @@ ins {
 }
 
 pre {
-  white-space: pre;
+  white-space: pre-line;
   margin: 0.2em 0;
 }
 
