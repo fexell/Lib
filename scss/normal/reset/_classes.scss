@@ -3,21 +3,19 @@ body, form, table, fieldset, header, section, aside, footer {
     all: initial;
     all: unset;
   }
-  .unset {
-    all: initial;
-    all: unset;
-  }
-}
 
-div, details {
-  &.unset {
-    all: initial;
-    all: unset;
-  }
-}
+  @at-root {
+    div, details {
+      &.unset {
+        all: initial;
+        all: unset;
+      }
+    }
 
-.unset,
-.unset-children {
-  all: initial;
-  all: unset;
+    .unset,
+    .unset-children > * {
+      all: initial;
+      all: unset;
+    }
+  }
 }

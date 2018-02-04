@@ -1,0 +1,12 @@
+.footnote {
+  color: #DDD;
+  &.small {
+    font-size: 80%;
+  }
+  &.big {
+    font-size: 120%;
+  }
+  &.invert-color {
+    color: invert(#DDD);
+  }
+}

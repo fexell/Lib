@@ -462,6 +462,16 @@ video[src=""] {
             text-decoration: underline dotted;
   }
 }
+/**
+ * Retrieves a color value from the $material-colors Sass map
+ * Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette/
+ *
+ * @function
+ * @param {string} color-name             - quoted, lower-case, dasherized color
+ *                                          name (e.g. 'pink', 'amber')
+ * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
+ *                                          '200', 'a100')
+ */
 /* Px to vw conversion - credit: http://pxtovw.com/ */
 @media only screen and (max-width: 1920px) {
   h1 {
@@ -691,22 +701,39 @@ video[src=""] {
   }
 }
 
+.footnote {
+  color: #DDD;
+}
+.footnote.small {
+  font-size: 80%;
+}
+.footnote.big {
+  font-size: 120%;
+}
+.footnote.invert-color {
+  color: #222222;
+}
+
 body.unset > *, form.unset > *, table.unset > *, fieldset.unset > *, header.unset > *, section.unset > *, aside.unset > *, footer.unset > * {
   all: initial;
   all: unset;
 }
-body .unset, form .unset, table .unset, fieldset .unset, header .unset, section .unset, aside .unset, footer .unset {
-  all: initial;
-  all: unset;
-}
-
 div.unset, details.unset {
   all: initial;
   all: unset;
 }
 
 .unset,
-.unset-children {
+.unset-children > * {
   all: initial;
   all: unset;
+}
+
+/* f-middle = force middle */
+.f-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
