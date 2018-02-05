@@ -8,13 +8,6 @@
   display: block;
   /* flow-root is basically the new "clearfix" */
   display: flow-root;
-
-  /* Add clear: both; just in case */
-  &::before, &::after {
-    content: '';
-    /* Clearfix. Works in IE7 and 8 */
-    clear: both;
-  }
 }
 
 /* 3.3) $global-text-elements and <details>

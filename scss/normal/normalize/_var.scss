@@ -9,8 +9,8 @@ $htmlbody:             $html, $body;
 // /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
 // Elements used for containing / "wrapping"
-$global-elements:      article, aside, dialog, footer, header, main, nav, section,
-details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe;
+$global-elements:      article, aside, dialog, footer, header, menu, main, nav, section,
+details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, figure;
 
 // Elements used for text formatting
 $global-text-elements: h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt,

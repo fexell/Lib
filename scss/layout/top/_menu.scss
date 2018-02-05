@@ -1,0 +1,40 @@
+.nav-container {
+
+  position: relative;
+  display: flex;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  &> picture, > menu {
+    flex: 1;
+  }
+
+  &> picture {
+    &> a {
+      display: block;
+      &> img {
+        margin: 0 auto;
+        width: 100px;
+      }
+    }
+  }
+
+  &> menu {
+    &> ul > li {
+      float: left;
+      display: block;
+
+      &> a {
+        display: block;
+      }
+    }
+  }
+
+  // Full width class
+  &.full {
+    max-width: 100%;
+    width: 100%;
+  }
+
+}
