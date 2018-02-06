@@ -64,8 +64,7 @@ body {
   white-space: initial;
 }
 
-/* Apply some stuff to both global and text elements */
-article, aside, dialog, footer, header, menu, main, nav, section, details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, figure, h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt {
+article, aside, dialog, footer, header, menu, main, nav, section, details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, figure, picture, b, i, u, s, q, strike, code, tt, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, summary, dfn, caption, ins, legend, cite, var, label, rt {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -84,15 +83,9 @@ article, aside, dialog, footer, header, menu, main, nav, section, details, div, 
   border-left-width: thin;
   border-left-style: none;
   border-left-color: transparent;
-  /* Fallback */
-  display: block;
-  /* flow-root is basically the new "clearfix" */
-  display: flow-root;
 }
 
-/* 3.3) $global-text-elements and <details>
------------------------------------------- */
-h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt,
+b, i, u, s, q, strike, code, tt, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, summary, dfn, caption, ins, legend, cite, var, label, rt,
 details {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
@@ -112,12 +105,32 @@ details {
   direction: ltr;
   /* Font smooth hack */
   text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
+  display: block;
 }
 
-/* 3.4) $global-headings and h1, h2, h3, h4, h5, h6
------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1.1rem;
+em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, font, br, map, area, tt, i, b, u, strike, big, small, sub, sup, input, select, option, textarea, caption, tr, th, td, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: baseline;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
+  word-spacing: 0.01em;
+  word-wrap: break-word;
+  vertical-align: baseline;
+  letter-spacing: 0.1px;
+  direction: ltr;
+  /* Font smooth hack */
+  text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
 }
 
 h1 {
@@ -341,7 +354,8 @@ var {
 
 mark {
   /* Inline unfortunately this creates "Whitespace nodes"... Deal with it ;P */
-  display: inline;
+  display: table;
+  /* F*ck display: inline;.... Seriously... */
   background-color: #FFFF61;
 }
 
@@ -356,6 +370,15 @@ kbd {
 
 summary {
   display: list-item;
+}
+
+img, video {
+  float: left;
+  clear: both;
+}
+
+address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, li, main, nav, ol, output, p, pre, section, table, tfoot, ul, video {
+  display: block;
 }
 
 a {
@@ -455,4 +478,8 @@ video[src=""] {
     -webkit-text-decoration: underline dotted;
             text-decoration: underline dotted;
   }
+}
+article, aside, audio, canvas, command, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, track, video, wbr, menu {
+  /* A "fix" for older browsers */
+  display: block;
 }

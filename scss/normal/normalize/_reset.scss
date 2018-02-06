@@ -54,7 +54,7 @@ var {
 
 mark {
   /* Inline unfortunately this creates "Whitespace nodes"... Deal with it ;P */
-  display:           inline;
+  display:           table; /* F*ck display: inline;.... Seriously... */
   background-color:  #FFFF61;
 }
 
@@ -69,6 +69,15 @@ kbd {
 
 summary {
   display:           list-item;
+}
+
+img, video {
+  float: left;
+  clear: both;
+}
+
+#{$block-level-elements} {
+  display: block;
 }
 
 a {
