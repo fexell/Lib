@@ -1,0 +1,77 @@
+main {
+  width: 100%;
+  max-width: 100%;
+}
+
+header {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+nav.nav-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+nav.nav-container .menu {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 120px;
+  grid-column-gap: 1%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 960px) {
+  nav.nav-container .menu {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu {
+    grid-template-columns: 100%;
+    grid-template-rows: 100% 100%;
+  }
+}
+nav.nav-container .menu.logo-top {
+  grid-template-columns: 100%;
+  grid-template-rows: 100% 100%;
+}
+nav.nav-container .menu.logo-right > ul {
+  grid-row: 1;
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu.logo-right > ul {
+    grid-row: 2;
+  }
+}
+nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > ul, nav.nav-container .menu > input {
+  margin-left: auto;
+  margin-right: auto;
+}
+nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > input {
+  max-width: 100%;
+  height: 100%;
+  /* F*ck you, -webkit- max height bug... */
+  max-height: 100%;
+}
+nav.nav-container .menu > ul li, nav.nav-container .menu > li {
+  float: left;
+}
+nav.nav-container .menu > ul li a, nav.nav-container .menu > li a {
+  display: block;
+}

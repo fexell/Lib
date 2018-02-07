@@ -10,6 +10,7 @@ html > body {
   -moz-tab-size: 8;
   -o-tab-size: 8;
   tab-size: 8;
+  @include global-font;
 }
 
 #{$body} {

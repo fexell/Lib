@@ -1,3 +1,13 @@
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
 /* Px to vw conversion - credit: http://pxtovw.com/ */
 @media only screen and (max-width: 1920px) {
   h1 {
@@ -11,218 +21,242 @@
 }
 @media only screen and (max-width: 1280px) {
   h1 {
+    font-size: 3.125vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h1 {
+    font-size: 3.90625vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 5.2083333333vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 6.5625vw;
+  }
+  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1 {
+    font-size: 8.75vw;
+  }
+  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  h2 {
+    font-size: 1.7708333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h2 {
+    font-size: 1.7708333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h2 {
+    font-size: 2.875vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h2 {
+    font-size: 3.59375vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h2 {
+    font-size: 4.7916666667vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 5.9375vw;
+  }
+  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h2 {
+    font-size: 7.9166666667vw;
+  }
+  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  h3 {
+    font-size: 1.4583333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h3 {
+    font-size: 1.4583333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h3 {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h3 {
+    font-size: 3.125vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h3 {
+    font-size: 4.1666666667vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h3 {
+    font-size: 5vw;
+  }
+  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h3 {
+    font-size: 6.6666666667vw;
+  }
+  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  h4 {
+    font-size: 1.3541666667vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h4 {
+    font-size: 1.3541666667vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h4 {
     font-size: 2.375vw;
   }
 }
 @media only screen and (max-width: 960px) {
-  h1 {
+  h4 {
     font-size: 2.96875vw;
   }
 }
 @media only screen and (max-width: 640px) {
-  h1 {
+  h4 {
     font-size: 3.9583333333vw;
   }
 }
 @media only screen and (max-width: 480px) {
-  h1 {
-    font-size: 5.9375vw;
+  h4 {
+    font-size: 4.6875vw;
+  }
+  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
-  h1 {
-    font-size: 7.9166666667vw;
+  h4 {
+    font-size: 6.25vw;
+  }
+  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
     text-transform: uppercase;
   }
 }
 
 @media only screen and (max-width: 1920px) {
-  h2 {
-    font-size: 1.7708333333vw;
+  h5 {
+    font-size: 1.25vw;
   }
 }
 @media only screen and (min-width: 1920px) {
-  h2 {
-    font-size: 1.7708333333vw;
+  h5 {
+    font-size: 1.25vw;
   }
 }
 @media only screen and (max-width: 1280px) {
-  h2 {
+  h5 {
+    font-size: 2.25vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h5 {
+    font-size: 2.8125vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h5 {
+    font-size: 3.75vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h5 {
+    font-size: 4.375vw;
+  }
+  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h5 {
+    font-size: 5.8333333333vw;
+  }
+  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  h6 {
+    font-size: 1.1458333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h6 {
+    font-size: 1.1458333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h6 {
     font-size: 2.125vw;
   }
 }
 @media only screen and (max-width: 960px) {
-  h2 {
+  h6 {
     font-size: 2.65625vw;
   }
 }
 @media only screen and (max-width: 640px) {
-  h2 {
+  h6 {
     font-size: 3.5416666667vw;
   }
 }
 @media only screen and (max-width: 480px) {
-  h2 {
-    font-size: 5.3125vw;
-    text-transform: uppercase;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h2 {
-    font-size: 7.0833333333vw;
-    text-transform: uppercase;
-  }
-}
-
-@media only screen and (max-width: 1920px) {
-  h3 {
-    font-size: 1.4583333333vw;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h3 {
-    font-size: 1.4583333333vw;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h3 {
-    font-size: 1.75vw;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h3 {
-    font-size: 2.1875vw;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h3 {
-    font-size: 2.9166666667vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h3 {
-    font-size: 4.375vw;
-    text-transform: uppercase;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h3 {
-    font-size: 5.8333333333vw;
-    text-transform: uppercase;
-  }
-}
-
-@media only screen and (max-width: 1920px) {
-  h4 {
-    font-size: 1.3541666667vw;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h4 {
-    font-size: 1.3541666667vw;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h4 {
-    font-size: 1.625vw;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h4 {
-    font-size: 2.03125vw;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h4 {
-    font-size: 2.7083333333vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h4 {
+  h6 {
     font-size: 4.0625vw;
+  }
+  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
-  h4 {
+  h6 {
     font-size: 5.4166666667vw;
-    text-transform: uppercase;
   }
-}
-
-@media only screen and (max-width: 1920px) {
-  h5 {
-    font-size: 1.25vw;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h5 {
-    font-size: 1.25vw;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h5 {
-    font-size: 1.5vw;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h5 {
-    font-size: 1.875vw;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h5 {
-    font-size: 2.5vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h5 {
-    font-size: 3.75vw;
-    text-transform: uppercase;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h5 {
-    font-size: 5vw;
-    text-transform: uppercase;
-  }
-}
-
-@media only screen and (max-width: 1920px) {
-  h6 {
-    font-size: 1.1458333333vw;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h6 {
-    font-size: 1.1458333333vw;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h6 {
-    font-size: 1.375vw;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h6 {
-    font-size: 1.71875vw;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h6 {
-    font-size: 2.2916666667vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h6 {
-    font-size: 3.4375vw;
-    text-transform: uppercase;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h6 {
-    font-size: 4.5833333333vw;
+  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
     text-transform: uppercase;
   }
 }

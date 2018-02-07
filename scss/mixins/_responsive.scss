@@ -11,13 +11,17 @@ $xlg: $break !default; // 1920
   @if $device == xs {
     @media only screen and (max-width: $break / 5) {
       @content;
-      text-transform: uppercase;
+      h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+      }
     }
   }
   @else if $device == sm {
     @media only screen and (max-width: $break / 4) {
       @content;
-      text-transform: uppercase;
+      h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+      }
     }
   }
   @else if $device == md {
@@ -80,5 +84,17 @@ $xlg: $break !default; // 1920
     @media only screen and (min-width: $break) {
       @content;
     }
+  }
+}
+
+@media only screen and (max-width: $break / 4) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: $break / 5) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
   }
 }

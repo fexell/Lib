@@ -54,6 +54,18 @@ html > body {
   -moz-tab-size: 8;
   -o-tab-size: 8;
   tab-size: 8;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  -o-text-overflow: clip;
+     text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
 }
 
 body {
@@ -94,7 +106,8 @@ details {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -120,7 +133,8 @@ em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, fo
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -169,11 +183,12 @@ input, select, option, button, textarea, datalist, output, optgroup {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
-  background: #F1F1F1;
+  background-color: #F1F1F1;
 }
 
 /* Only apply any size related CSS styling to these and NOT radio- or checkbox-buttons */
@@ -185,6 +200,10 @@ input[type=password], input[type=submit], input[type=tel],
 input[type=time], input[type=url], input[type=week],
 select, textarea {
   margin-bottom: 1px;
+}
+
+input[type=image] {
+  background-color: initial;
 }
 
 /* HTML5 Input Elements */
@@ -412,7 +431,8 @@ table, tbody, thead, tfoot, th, tr, td, colgroup, col {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -494,6 +514,16 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
  * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
  *                                          '200', 'a100')
  */
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
 /* Px to vw conversion - credit: http://pxtovw.com/ */
 @media only screen and (max-width: 1920px) {
   h1 {
@@ -507,218 +537,242 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
 }
 @media only screen and (max-width: 1280px) {
   h1 {
+    font-size: 3.125vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h1 {
+    font-size: 3.90625vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 5.2083333333vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 6.5625vw;
+  }
+  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1 {
+    font-size: 8.75vw;
+  }
+  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  h2 {
+    font-size: 1.7708333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h2 {
+    font-size: 1.7708333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h2 {
+    font-size: 2.875vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h2 {
+    font-size: 3.59375vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h2 {
+    font-size: 4.7916666667vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 5.9375vw;
+  }
+  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h2 {
+    font-size: 7.9166666667vw;
+  }
+  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  h3 {
+    font-size: 1.4583333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h3 {
+    font-size: 1.4583333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h3 {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h3 {
+    font-size: 3.125vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h3 {
+    font-size: 4.1666666667vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h3 {
+    font-size: 5vw;
+  }
+  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h3 {
+    font-size: 6.6666666667vw;
+  }
+  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  h4 {
+    font-size: 1.3541666667vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h4 {
+    font-size: 1.3541666667vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h4 {
     font-size: 2.375vw;
   }
 }
 @media only screen and (max-width: 960px) {
-  h1 {
+  h4 {
     font-size: 2.96875vw;
   }
 }
 @media only screen and (max-width: 640px) {
-  h1 {
+  h4 {
     font-size: 3.9583333333vw;
   }
 }
 @media only screen and (max-width: 480px) {
-  h1 {
-    font-size: 5.9375vw;
+  h4 {
+    font-size: 4.6875vw;
+  }
+  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
-  h1 {
-    font-size: 7.9166666667vw;
+  h4 {
+    font-size: 6.25vw;
+  }
+  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
     text-transform: uppercase;
   }
 }
 
 @media only screen and (max-width: 1920px) {
-  h2 {
-    font-size: 1.7708333333vw;
+  h5 {
+    font-size: 1.25vw;
   }
 }
 @media only screen and (min-width: 1920px) {
-  h2 {
-    font-size: 1.7708333333vw;
+  h5 {
+    font-size: 1.25vw;
   }
 }
 @media only screen and (max-width: 1280px) {
-  h2 {
+  h5 {
+    font-size: 2.25vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  h5 {
+    font-size: 2.8125vw;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h5 {
+    font-size: 3.75vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h5 {
+    font-size: 4.375vw;
+  }
+  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h5 {
+    font-size: 5.8333333333vw;
+  }
+  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  h6 {
+    font-size: 1.1458333333vw;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h6 {
+    font-size: 1.1458333333vw;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  h6 {
     font-size: 2.125vw;
   }
 }
 @media only screen and (max-width: 960px) {
-  h2 {
+  h6 {
     font-size: 2.65625vw;
   }
 }
 @media only screen and (max-width: 640px) {
-  h2 {
+  h6 {
     font-size: 3.5416666667vw;
   }
 }
 @media only screen and (max-width: 480px) {
-  h2 {
-    font-size: 5.3125vw;
-    text-transform: uppercase;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h2 {
-    font-size: 7.0833333333vw;
-    text-transform: uppercase;
-  }
-}
-
-@media only screen and (max-width: 1920px) {
-  h3 {
-    font-size: 1.4583333333vw;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h3 {
-    font-size: 1.4583333333vw;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h3 {
-    font-size: 1.75vw;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h3 {
-    font-size: 2.1875vw;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h3 {
-    font-size: 2.9166666667vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h3 {
-    font-size: 4.375vw;
-    text-transform: uppercase;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h3 {
-    font-size: 5.8333333333vw;
-    text-transform: uppercase;
-  }
-}
-
-@media only screen and (max-width: 1920px) {
-  h4 {
-    font-size: 1.3541666667vw;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h4 {
-    font-size: 1.3541666667vw;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h4 {
-    font-size: 1.625vw;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h4 {
-    font-size: 2.03125vw;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h4 {
-    font-size: 2.7083333333vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h4 {
+  h6 {
     font-size: 4.0625vw;
+  }
+  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
-  h4 {
+  h6 {
     font-size: 5.4166666667vw;
-    text-transform: uppercase;
   }
-}
-
-@media only screen and (max-width: 1920px) {
-  h5 {
-    font-size: 1.25vw;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h5 {
-    font-size: 1.25vw;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h5 {
-    font-size: 1.5vw;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h5 {
-    font-size: 1.875vw;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h5 {
-    font-size: 2.5vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h5 {
-    font-size: 3.75vw;
-    text-transform: uppercase;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h5 {
-    font-size: 5vw;
-    text-transform: uppercase;
-  }
-}
-
-@media only screen and (max-width: 1920px) {
-  h6 {
-    font-size: 1.1458333333vw;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h6 {
-    font-size: 1.1458333333vw;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h6 {
-    font-size: 1.375vw;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h6 {
-    font-size: 1.71875vw;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h6 {
-    font-size: 2.2916666667vw;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h6 {
-    font-size: 3.4375vw;
-    text-transform: uppercase;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h6 {
-    font-size: 4.5833333333vw;
+  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
     text-transform: uppercase;
   }
 }
@@ -757,6 +811,7 @@ div.unset, details.unset {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
@@ -770,68 +825,70 @@ header {
   width: 100%;
 }
 
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
 nav.nav-container {
   width: 100%;
-  height: 100px;
+  position: relative;
+  overflow: hidden;
 }
-nav.nav-container > menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+nav.nav-container .menu {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 120px;
+  grid-column-gap: 1%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80vw;
   margin-left: auto;
   margin-right: auto;
-  height: 120px;
-  padding: 20px 0;
 }
-@media only screen and (min-width: 960px) {
-  nav.nav-container > menu {
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 640px) {
-  nav.nav-container > menu {
-    height: 30vh;
-  }
-}
-nav.nav-container > menu > picture, nav.nav-container > menu > picture a, nav.nav-container > menu > picture a img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-nav.nav-container > menu > picture, nav.nav-container > menu > ul {
-  max-width: 50%;
-}
-@media only screen and (max-width: 640px) {
-  nav.nav-container > menu > picture, nav.nav-container > menu > ul {
-    max-width: 100%;
-  }
-}
-@media only screen and (max-width: 640px) {
-  nav.nav-container > menu > picture a img {
+@media only screen and (max-width: 960px) {
+  nav.nav-container .menu {
     width: 100%;
   }
 }
-nav.nav-container > menu > ul {
-  list-style-type: none;
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu {
+    grid-template-columns: 100%;
+    grid-template-rows: 100% 100%;
+  }
 }
-nav.nav-container > menu > ul li {
+nav.nav-container .menu.logo-top {
+  grid-template-columns: 100%;
+  grid-template-rows: 100% 100%;
+}
+nav.nav-container .menu.logo-right > ul {
+  grid-row: 1;
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu.logo-right > ul {
+    grid-row: 2;
+  }
+}
+nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > ul, nav.nav-container .menu > input {
+  margin-left: auto;
+  margin-right: auto;
+}
+nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > input {
+  max-width: 100%;
+  height: 100%;
+  /* F*ck you, -webkit- max height bug... */
+  max-height: 100%;
+}
+nav.nav-container .menu > ul li, nav.nav-container .menu > li {
   float: left;
 }
-nav.nav-container > menu > ul li a {
+nav.nav-container .menu > ul li a, nav.nav-container .menu > li a {
   display: block;
-  padding: 10px;
-}
-nav.nav-container.full {
-  max-width: 100%;
-  width: 100%;
-}
-nav.nav-container.vertical > ul li {
-  float: initial;
 }

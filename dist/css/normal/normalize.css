@@ -54,6 +54,18 @@ html > body {
   -moz-tab-size: 8;
   -o-tab-size: 8;
   tab-size: 8;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  -o-text-overflow: clip;
+     text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
 }
 
 body {
@@ -94,7 +106,8 @@ details {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -120,7 +133,8 @@ em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, fo
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -169,11 +183,12 @@ input, select, option, button, textarea, datalist, output, optgroup {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
-  background: #F1F1F1;
+  background-color: #F1F1F1;
 }
 
 /* Only apply any size related CSS styling to these and NOT radio- or checkbox-buttons */
@@ -185,6 +200,10 @@ input[type=password], input[type=submit], input[type=tel],
 input[type=time], input[type=url], input[type=week],
 select, textarea {
   margin-bottom: 1px;
+}
+
+input[type=image] {
+  background-color: initial;
 }
 
 /* HTML5 Input Elements */
@@ -412,7 +431,8 @@ table, tbody, thead, tfoot, th, tr, td, colgroup, col {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
