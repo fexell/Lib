@@ -1,5 +1,5 @@
 main {
-  width: 100%;
+  width: 100vw;
   max-width: 100%;
 }
 
@@ -18,10 +18,12 @@ header {
     text-transform: uppercase;
   }
 }
+/* Start nav */
 nav.nav-container {
   width: 100%;
   position: relative;
   overflow: hidden;
+  /* Menu */
 }
 nav.nav-container .menu {
   position: relative;
@@ -35,16 +37,19 @@ nav.nav-container .menu {
   width: 80vw;
   margin-left: auto;
   margin-right: auto;
+  /* In case of small screen, center everything */
+  /* Give option of spanning the <menu> 100%, but still keep the responsiveness */
 }
 @media only screen and (max-width: 960px) {
   nav.nav-container .menu {
     width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 @media only screen and (max-width: 640px) {
   nav.nav-container .menu {
     grid-template-columns: 100%;
-    grid-template-rows: 100% 100%;
   }
 }
 nav.nav-container .menu.logo-top {
@@ -64,14 +69,74 @@ nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.
   margin-right: auto;
 }
 nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > input {
-  max-width: 100%;
   height: 100%;
   /* F*ck you, -webkit- max height bug... */
   max-height: 100%;
+}
+nav.nav-container .menu > ul {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 nav.nav-container .menu > ul li, nav.nav-container .menu > li {
   float: left;
 }
 nav.nav-container .menu > ul li a, nav.nav-container .menu > li a {
   display: block;
+}
+nav.nav-container .menu.fluid {
+  width: 100vw;
+  grid-column-gap: 0;
+}
+nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo, nav.nav-container .menu.fluid > ul, nav.nav-container .menu.fluid > input {
+  margin: 0;
+}
+nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo {
+  justify-self: start;
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo {
+    justify-self: center;
+  }
+}
+nav.nav-container .menu.fluid > ul {
+  justify-self: end;
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu.fluid > ul {
+    justify-self: center;
+  }
+}
+
+section, .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 640px) {
+  section, .content-container {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+}
+section > article h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section .content h1, section .content h2, section .content h3, section .content h4, section .content h5, section .content h6, section > aside h1, section > aside h2, section > aside h3, section > aside h4, section > aside h5, section > aside h6, section .aside h1, section .aside h2, section .aside h3, section .aside h4, section .aside h5, section .aside h6, .content-container > article h1, .content-container > article h2, .content-container > article h3, .content-container > article h4, .content-container > article h5, .content-container > article h6, .content-container .content h1, .content-container .content h2, .content-container .content h3, .content-container .content h4, .content-container .content h5, .content-container .content h6, .content-container > aside h1, .content-container > aside h2, .content-container > aside h3, .content-container > aside h4, .content-container > aside h5, .content-container > aside h6, .content-container .aside h1, .content-container .aside h2, .content-container .aside h3, .content-container .aside h4, .content-container .aside h5, .content-container .aside h6 {
+  text-align: center;
+}
+section > article, section .content, .content-container > article, .content-container .content {
+  background: #CCC;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+section > aside, section .aside, .content-container > aside, .content-container .aside {
+  background: #333;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }

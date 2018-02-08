@@ -2,14 +2,15 @@
 
 $height: 140px;
 
+/* Start nav */
 nav.nav-container {
 
   width: 100%;
   position: relative;
   overflow: hidden;
 
+  /* Menu */
   & .menu {
-
     position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -22,8 +23,9 @@ nav.nav-container {
       right: auto;
     }
 
-    @include max(xmd){width: 100%;}
-    @include max(md){grid-template-columns: 100%; grid-template-rows: 100% 100%;}
+    /* In case of small screen, center everything */
+    @include max(xmd){width: 100%; justify-content: space-around;}
+    @include max(md){grid-template-columns: 100%;}
 
     &.logo-top {
       grid-template-columns: 100%;
@@ -45,13 +47,12 @@ nav.nav-container {
     }
 
     &> input[type=image], & .logo, &> input {
-      max-width: 100%;
       height: 100%; /* F*ck you, -webkit- max height bug... */
       max-height: 100%;
     }
 
     &> ul {
-
+      align-self: center;
     }
 
     &> ul li, &> li {
@@ -61,5 +62,23 @@ nav.nav-container {
     &> ul li a, &> li a {
       display: block;
     }
+
+    /* Give option of spanning the <menu> 100%, but still keep the responsiveness */
+    &.fluid {
+      width: 100vw;
+      grid-column-gap: 0;
+      &> input[type=image], & .logo, &> ul, &> input {
+        margin: 0;
+      }
+      &> input[type=image], & .logo {
+        justify-self: start;
+        @include max(md) {justify-self: center;}
+      }
+      &> ul {
+        justify-self: end;
+        @include max(md) {justify-self: center;}
+      }
+    }
+
   }
 }

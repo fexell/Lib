@@ -21,32 +21,32 @@
 /* Px to vw conversion - credit: http://pxtovw.com/ */
 @media only screen and (max-width: 1920px) {
   h1 {
-    font-size: 1.9791666667vw;
+    font-size: 3rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h1 {
-    font-size: 1.9791666667vw;
+    font-size: 3rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h1 {
-    font-size: 3.125vw;
+    font-size: 2.1428571429rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h1 {
-    font-size: 3.90625vw;
+    font-size: 1.875rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h1 {
-    font-size: 5.2083333333vw;
+    font-size: 1.6666666667rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h1 {
-    font-size: 6.5625vw;
+    font-size: 1.5rem;
   }
   h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
     text-transform: uppercase;
@@ -54,7 +54,7 @@
 }
 @media only screen and (max-width: 384px) {
   h1 {
-    font-size: 8.75vw;
+    font-size: 1.3636363636rem;
   }
   h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
     text-transform: uppercase;
@@ -63,32 +63,32 @@
 
 @media only screen and (max-width: 1920px) {
   h2 {
-    font-size: 1.7708333333vw;
+    font-size: 2.8rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h2 {
-    font-size: 1.7708333333vw;
+    font-size: 2.8rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h2 {
-    font-size: 2.875vw;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h2 {
-    font-size: 3.59375vw;
+    font-size: 1.75rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h2 {
-    font-size: 4.7916666667vw;
+    font-size: 1.5555555556rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h2 {
-    font-size: 5.9375vw;
+    font-size: 1.4rem;
   }
   h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
     text-transform: uppercase;
@@ -96,7 +96,7 @@
 }
 @media only screen and (max-width: 384px) {
   h2 {
-    font-size: 7.9166666667vw;
+    font-size: 1.2727272727rem;
   }
   h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
     text-transform: uppercase;
@@ -105,32 +105,32 @@
 
 @media only screen and (max-width: 1920px) {
   h3 {
-    font-size: 1.4583333333vw;
+    font-size: 2.4rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h3 {
-    font-size: 1.4583333333vw;
+    font-size: 2.4rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h3 {
-    font-size: 2.5vw;
+    font-size: 1.7142857143rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h3 {
-    font-size: 3.125vw;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h3 {
-    font-size: 4.1666666667vw;
+    font-size: 1.3333333333rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h3 {
-    font-size: 5vw;
+    font-size: 1.2rem;
   }
   h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
     text-transform: uppercase;
@@ -138,7 +138,7 @@
 }
 @media only screen and (max-width: 384px) {
   h3 {
-    font-size: 6.6666666667vw;
+    font-size: 1.0909090909rem;
   }
   h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
     text-transform: uppercase;
@@ -147,32 +147,32 @@
 
 @media only screen and (max-width: 1920px) {
   h4 {
-    font-size: 1.3541666667vw;
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h4 {
-    font-size: 1.3541666667vw;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h4 {
-    font-size: 2.375vw;
+    font-size: 1.4285714286rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h4 {
-    font-size: 2.96875vw;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h4 {
-    font-size: 3.9583333333vw;
+    font-size: 1.1111111111rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h4 {
-    font-size: 4.6875vw;
+    font-size: 1rem;
   }
   h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
     text-transform: uppercase;
@@ -180,7 +180,7 @@
 }
 @media only screen and (max-width: 384px) {
   h4 {
-    font-size: 6.25vw;
+    font-size: 0.9090909091rem;
   }
   h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
     text-transform: uppercase;
@@ -189,32 +189,32 @@
 
 @media only screen and (max-width: 1920px) {
   h5 {
-    font-size: 1.25vw;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h5 {
-    font-size: 1.25vw;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h5 {
-    font-size: 2.25vw;
+    font-size: 1.2857142857rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h5 {
-    font-size: 2.8125vw;
+    font-size: 1.125rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h5 {
-    font-size: 3.75vw;
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h5 {
-    font-size: 4.375vw;
+    font-size: 0.9rem;
   }
   h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
     text-transform: uppercase;
@@ -222,7 +222,7 @@
 }
 @media only screen and (max-width: 384px) {
   h5 {
-    font-size: 5.8333333333vw;
+    font-size: 0.8181818182rem;
   }
   h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
     text-transform: uppercase;
@@ -231,32 +231,32 @@
 
 @media only screen and (max-width: 1920px) {
   h6 {
-    font-size: 1.1458333333vw;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h6 {
-    font-size: 1.1458333333vw;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h6 {
-    font-size: 2.125vw;
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h6 {
-    font-size: 2.65625vw;
+    font-size: 0.875rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h6 {
-    font-size: 3.5416666667vw;
+    font-size: 0.7777777778rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h6 {
-    font-size: 4.0625vw;
+    font-size: 0.7rem;
   }
   h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
     text-transform: uppercase;
@@ -264,7 +264,7 @@
 }
 @media only screen and (max-width: 384px) {
   h6 {
-    font-size: 5.4166666667vw;
+    font-size: 0.6363636364rem;
   }
   h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
     text-transform: uppercase;

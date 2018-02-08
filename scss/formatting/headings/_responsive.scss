@@ -7,17 +7,17 @@
 
 
 // Maps
-$headings-map: (h1: 38px, h2: 34px, h3: 28px, h4: 26px, h5: 24px, h6: 22px);
+$headings-map: (h1: 3rem, h2: 2.8rem, h3: 2.4rem, h4: 2rem, h5: 1.8rem, h6: 1.4rem);
 
 @each $h, $s in ($headings-map) {
   @each $heading in ($h) {
     #{$heading} {
-      @include min(xlg){ font-size: get-vw($s, 1920); }
-      @include max(lg){ font-size: get-vw($s + 12px, 1600); }
-      @include max(xmd){ font-size: get-vw($s + 12px, 1280); }
-      @include max(md){ font-size: get-vw($s + 12px, 960); }
-      @include max(sm){ font-size: get-vw($s + 4px, 640); }
-      @include max(xs){ font-size: get-vw($s + 4px, 480); }
+      @include min(xlg){ font-size: #{$s};}
+      @include max(lg){ font-size: #{$s / 1.4};}
+      @include max(xmd){ font-size: #{$s / 1.6};}
+      @include max(md){ font-size: $s / 1.8;}
+      @include max(sm){ font-size: $s / 2;}
+      @include max(xs){ font-size: $s / 2.2;}
     }
   }
 }
