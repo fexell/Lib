@@ -54,6 +54,18 @@ html > body {
   -moz-tab-size: 8;
   -o-tab-size: 8;
   tab-size: 8;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  -o-text-overflow: clip;
+     text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
 }
 
 body {
@@ -64,8 +76,7 @@ body {
   white-space: initial;
 }
 
-/* Apply some stuff to both global and text elements */
-article, aside, dialog, footer, header, main, nav, section, details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt {
+article, aside, dialog, footer, header, menu, main, nav, section, details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, figure, picture, b, i, u, s, q, strike, code, tt, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, summary, dfn, caption, ins, legend, cite, var, label, rt {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -84,21 +95,9 @@ article, aside, dialog, footer, header, main, nav, section, details, div, img, v
   border-left-width: thin;
   border-left-style: none;
   border-left-color: transparent;
-  /* Fallback */
-  display: block;
-  /* flow-root is basically the new "clearfix" */
-  display: flow-root;
-  /* Add clear: both; just in case */
-}
-article::before, article::after, aside::before, aside::after, dialog::before, dialog::after, footer::before, footer::after, header::before, header::after, main::before, main::after, nav::before, nav::after, section::before, section::after, details::before, details::after, div::before, div::after, img::before, img::after, video::before, video::after, canvas::before, canvas::after, svg::before, svg::after, embed::before, embed::after, source::before, source::after, track::before, track::after, form::before, form::after, ul::before, ul::after, li::before, li::after, iframe::before, iframe::after, h1::before, h1::after, h2::before, h2::after, h3::before, h3::after, h4::before, h4::after, h5::before, h5::after, h6::before, h6::after, a::before, a::after, p::before, p::after, b::before, b::after, i::before, i::after, u::before, u::after, s::before, s::after, q::before, q::after, strike::before, strike::after, pre::before, pre::after, code::before, code::after, tt::before, tt::after, blockquote::before, blockquote::after, small::before, small::after, font::before, font::after, center::before, center::after, em::before, em::after, strong::before, strong::after, sub::before, sub::after, sup::before, sup::after, del::before, del::after, samp::before, samp::after, big::before, big::after, mark::before, mark::after, abbr::before, abbr::after, bdi::before, bdi::after, address::before, address::after, summary::before, summary::after, dfn::before, dfn::after, caption::before, caption::after, div::before, div::after, ins::before, ins::after, legend::before, legend::after, cite::before, cite::after, var::before, var::after, label::before, label::after, rt::before, rt::after {
-  content: '';
-  /* Clearfix. Works in IE7 and 8 */
-  clear: both;
 }
 
-/* 3.3) $global-text-elements and <details>
------------------------------------------- */
-h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt,
+b, i, u, s, q, strike, code, tt, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, summary, dfn, caption, ins, legend, cite, var, label, rt,
 details {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
@@ -107,7 +106,8 @@ details {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -118,12 +118,33 @@ details {
   direction: ltr;
   /* Font smooth hack */
   text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
+  display: block;
 }
 
-/* 3.4) $global-headings and h1, h2, h3, h4, h5, h6
------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1.1rem;
+em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, font, br, map, area, tt, i, b, u, strike, big, small, sub, sup, input, select, option, textarea, caption, tr, th, td, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: baseline;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  -o-text-overflow: clip;
+     text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
+  word-spacing: 0.01em;
+  word-wrap: break-word;
+  vertical-align: baseline;
+  letter-spacing: 0.1px;
+  direction: ltr;
+  /* Font smooth hack */
+  text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
 }
 
 h1 {
@@ -162,11 +183,12 @@ input, select, option, button, textarea, datalist, output, optgroup {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
-  background: #F1F1F1;
+  background-color: #F1F1F1;
 }
 
 /* Only apply any size related CSS styling to these and NOT radio- or checkbox-buttons */
@@ -178,6 +200,10 @@ input[type=password], input[type=submit], input[type=tel],
 input[type=time], input[type=url], input[type=week],
 select, textarea {
   margin-bottom: 1px;
+}
+
+input[type=image] {
+  background-color: initial;
 }
 
 /* HTML5 Input Elements */
@@ -347,7 +373,8 @@ var {
 
 mark {
   /* Inline unfortunately this creates "Whitespace nodes"... Deal with it ;P */
-  display: inline;
+  display: table;
+  /* F*ck display: inline;.... Seriously... */
   background-color: #FFFF61;
 }
 
@@ -362,6 +389,15 @@ kbd {
 
 summary {
   display: list-item;
+}
+
+img, video {
+  float: left;
+  clear: both;
+}
+
+address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, li, main, nav, ol, output, p, pre, section, table, tfoot, ul, video {
+  display: block;
 }
 
 a {
@@ -395,7 +431,8 @@ table, tbody, thead, tfoot, th, tr, td, colgroup, col {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -462,6 +499,11 @@ video[src=""] {
             text-decoration: underline dotted;
   }
 }
+article, aside, audio, canvas, command, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, track, video, wbr, menu {
+  /* A "fix" for older browsers */
+  display: block;
+}
+
 /**
  * Retrieves a color value from the $material-colors Sass map
  * Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette/
@@ -472,231 +514,265 @@ video[src=""] {
  * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
  *                                          '200', 'a100')
  */
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
 /* Px to vw conversion - credit: http://pxtovw.com/ */
 @media only screen and (max-width: 1920px) {
   h1 {
-    font-size: 1.9791666667vw;
+    font-size: 3rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h1 {
-    font-size: 1.9791666667vw;
+    font-size: 3rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h1 {
-    font-size: 2.375vw;
+    font-size: 2.1428571429rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h1 {
-    font-size: 2.96875vw;
+    font-size: 1.875rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h1 {
-    font-size: 3.9583333333vw;
+    font-size: 1.6666666667rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h1 {
-    font-size: 5.9375vw;
+    font-size: 1.5rem;
+  }
+  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
   h1 {
-    font-size: 7.9166666667vw;
+    font-size: 1.3636363636rem;
+  }
+  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
     text-transform: uppercase;
   }
 }
 
 @media only screen and (max-width: 1920px) {
   h2 {
-    font-size: 1.7708333333vw;
+    font-size: 2.8rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h2 {
-    font-size: 1.7708333333vw;
+    font-size: 2.8rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h2 {
-    font-size: 2.125vw;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h2 {
-    font-size: 2.65625vw;
+    font-size: 1.75rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h2 {
-    font-size: 3.5416666667vw;
+    font-size: 1.5555555556rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h2 {
-    font-size: 5.3125vw;
+    font-size: 1.4rem;
+  }
+  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
   h2 {
-    font-size: 7.0833333333vw;
+    font-size: 1.2727272727rem;
+  }
+  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
     text-transform: uppercase;
   }
 }
 
 @media only screen and (max-width: 1920px) {
   h3 {
-    font-size: 1.4583333333vw;
+    font-size: 2.4rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h3 {
-    font-size: 1.4583333333vw;
+    font-size: 2.4rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h3 {
-    font-size: 1.75vw;
+    font-size: 1.7142857143rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h3 {
-    font-size: 2.1875vw;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h3 {
-    font-size: 2.9166666667vw;
+    font-size: 1.3333333333rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h3 {
-    font-size: 4.375vw;
+    font-size: 1.2rem;
+  }
+  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
   h3 {
-    font-size: 5.8333333333vw;
+    font-size: 1.0909090909rem;
+  }
+  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
     text-transform: uppercase;
   }
 }
 
 @media only screen and (max-width: 1920px) {
   h4 {
-    font-size: 1.3541666667vw;
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h4 {
-    font-size: 1.3541666667vw;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h4 {
-    font-size: 1.625vw;
+    font-size: 1.4285714286rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h4 {
-    font-size: 2.03125vw;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h4 {
-    font-size: 2.7083333333vw;
+    font-size: 1.1111111111rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h4 {
-    font-size: 4.0625vw;
+    font-size: 1rem;
+  }
+  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
   h4 {
-    font-size: 5.4166666667vw;
+    font-size: 0.9090909091rem;
+  }
+  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
     text-transform: uppercase;
   }
 }
 
 @media only screen and (max-width: 1920px) {
   h5 {
-    font-size: 1.25vw;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h5 {
-    font-size: 1.25vw;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h5 {
-    font-size: 1.5vw;
+    font-size: 1.2857142857rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h5 {
-    font-size: 1.875vw;
+    font-size: 1.125rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h5 {
-    font-size: 2.5vw;
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h5 {
-    font-size: 3.75vw;
+    font-size: 0.9rem;
+  }
+  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
   h5 {
-    font-size: 5vw;
+    font-size: 0.8181818182rem;
+  }
+  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
     text-transform: uppercase;
   }
 }
 
 @media only screen and (max-width: 1920px) {
   h6 {
-    font-size: 1.1458333333vw;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   h6 {
-    font-size: 1.1458333333vw;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 1280px) {
   h6 {
-    font-size: 1.375vw;
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 960px) {
   h6 {
-    font-size: 1.71875vw;
+    font-size: 0.875rem;
   }
 }
 @media only screen and (max-width: 640px) {
   h6 {
-    font-size: 2.2916666667vw;
+    font-size: 0.7777777778rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h6 {
-    font-size: 3.4375vw;
+    font-size: 0.7rem;
+  }
+  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
     text-transform: uppercase;
   }
 }
 @media only screen and (max-width: 384px) {
   h6 {
-    font-size: 4.5833333333vw;
+    font-size: 0.6363636364rem;
+  }
+  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
     text-transform: uppercase;
   }
 }
@@ -735,5 +811,194 @@ div.unset, details.unset {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+main {
+  width: 100vw;
+  max-width: 100%;
+}
+
+header {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+/* Start nav */
+nav.nav-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /* Menu */
+}
+nav.nav-container .menu {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 120px;
+  grid-column-gap: 1%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  /* In case of small screen, center everything */
+  /* Give option of spanning the <menu> 100%, but still keep the responsiveness */
+}
+@media only screen and (max-width: 960px) {
+  nav.nav-container .menu {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu {
+    grid-template-columns: 100%;
+  }
+}
+nav.nav-container .menu.logo-top {
+  grid-template-columns: 100%;
+  grid-template-rows: 100% 100%;
+}
+nav.nav-container .menu.logo-right > ul {
+  grid-row: 1;
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu.logo-right > ul {
+    grid-row: 2;
+  }
+}
+nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > ul, nav.nav-container .menu > input {
+  margin-left: auto;
+  margin-right: auto;
+}
+nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > input {
+  height: 100%;
+  /* F*ck you, -webkit- max height bug... */
+  max-height: 100%;
+}
+nav.nav-container .menu > ul {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+nav.nav-container .menu > ul li, nav.nav-container .menu > li {
+  float: left;
+}
+nav.nav-container .menu > ul li a, nav.nav-container .menu > li a {
+  display: block;
+}
+nav.nav-container .menu.fluid {
+  width: 100vw;
+  grid-column-gap: 0;
+}
+nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo, nav.nav-container .menu.fluid > ul, nav.nav-container .menu.fluid > input {
+  margin: 0;
+}
+nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo {
+  justify-self: start;
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo {
+    justify-self: center;
+  }
+}
+nav.nav-container .menu.fluid > ul {
+  justify-self: end;
+}
+@media only screen and (max-width: 640px) {
+  nav.nav-container .menu.fluid > ul {
+    justify-self: center;
+  }
+}
+
+section, .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 640px) {
+  section, .content-container {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+}
+section > article h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section .content h1, section .content h2, section .content h3, section .content h4, section .content h5, section .content h6, section > aside h1, section > aside h2, section > aside h3, section > aside h4, section > aside h5, section > aside h6, section .aside h1, section .aside h2, section .aside h3, section .aside h4, section .aside h5, section .aside h6, .content-container > article h1, .content-container > article h2, .content-container > article h3, .content-container > article h4, .content-container > article h5, .content-container > article h6, .content-container .content h1, .content-container .content h2, .content-container .content h3, .content-container .content h4, .content-container .content h5, .content-container .content h6, .content-container > aside h1, .content-container > aside h2, .content-container > aside h3, .content-container > aside h4, .content-container > aside h5, .content-container > aside h6, .content-container .aside h1, .content-container .aside h2, .content-container .aside h3, .content-container .aside h4, .content-container .aside h5, .content-container .aside h6 {
+  text-align: center;
+}
+section > article, section .content, .content-container > article, .content-container .content {
+  background: #CCC;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+section > aside, section .aside, .content-container > aside, .content-container .aside {
+  background: #333;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+[aria-hidden="true"] {
+  display: none !important;
+}
+
+[aria-hidden="false"] {
+  display: initial !important;
+}
+
+[data-tooltip]:hover {
+  position: relative;
+}
+
+[data-tooltip]::before {
+  content: attr(tooltip);
+  position: absolute;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  color: #000;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 8px -4px #000;
+          box-shadow: 0 0 8px -4px #000;
+}
+
+[data-tooltip]:hover::before {
+  display: block;
+}
+
+[data-tooltip][data-tooltip-offset="top"]::before {
+  top: 0;
+}
+
+[data-tooltip][data-tooltip-offset="bottom"]::before {
+  bottom: 0;
+}
+
+[data-tooltip][data-tooltip-offset="left"]::before {
+  left: 0;
+}
+
+[data-tooltip][data-tooltip-offset="right"]::before {
+  right: 0;
 }

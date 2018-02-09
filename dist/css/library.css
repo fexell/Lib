@@ -957,3 +957,48 @@ section > aside, section .aside, .content-container > aside, .content-container 
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
 }
+
+[aria-hidden="true"] {
+  display: none !important;
+}
+
+[aria-hidden="false"] {
+  display: initial !important;
+}
+
+[data-tooltip]:hover {
+  position: relative;
+}
+
+[data-tooltip]::before {
+  content: attr(tooltip);
+  position: absolute;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  color: #000;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 8px -4px #000;
+          box-shadow: 0 0 8px -4px #000;
+}
+
+[data-tooltip]:hover::before {
+  display: block;
+}
+
+[data-tooltip][data-tooltip-offset="top"]::before {
+  top: 0;
+}
+
+[data-tooltip][data-tooltip-offset="bottom"]::before {
+  bottom: 0;
+}
+
+[data-tooltip][data-tooltip-offset="left"]::before {
+  left: 0;
+}
+
+[data-tooltip][data-tooltip-offset="right"]::before {
+  right: 0;
+}

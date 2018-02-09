@@ -54,6 +54,18 @@ html > body {
   -moz-tab-size: 8;
   -o-tab-size: 8;
   tab-size: 8;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  -o-text-overflow: clip;
+     text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
 }
 
 body {
@@ -64,8 +76,7 @@ body {
   white-space: initial;
 }
 
-/* Apply some stuff to both global and text elements */
-article, aside, dialog, footer, header, main, nav, section, details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt {
+article, aside, dialog, footer, header, menu, main, nav, section, details, div, img, video, canvas, svg, embed, source, track, form, ul, li, iframe, figure, picture, b, i, u, s, q, strike, code, tt, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, summary, dfn, caption, ins, legend, cite, var, label, rt {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -84,21 +95,9 @@ article, aside, dialog, footer, header, main, nav, section, details, div, img, v
   border-left-width: thin;
   border-left-style: none;
   border-left-color: transparent;
-  /* Fallback */
-  display: block;
-  /* flow-root is basically the new "clearfix" */
-  display: flow-root;
-  /* Add clear: both; just in case */
-}
-article::before, article::after, aside::before, aside::after, dialog::before, dialog::after, footer::before, footer::after, header::before, header::after, main::before, main::after, nav::before, nav::after, section::before, section::after, details::before, details::after, div::before, div::after, img::before, img::after, video::before, video::after, canvas::before, canvas::after, svg::before, svg::after, embed::before, embed::after, source::before, source::after, track::before, track::after, form::before, form::after, ul::before, ul::after, li::before, li::after, iframe::before, iframe::after, h1::before, h1::after, h2::before, h2::after, h3::before, h3::after, h4::before, h4::after, h5::before, h5::after, h6::before, h6::after, a::before, a::after, p::before, p::after, b::before, b::after, i::before, i::after, u::before, u::after, s::before, s::after, q::before, q::after, strike::before, strike::after, pre::before, pre::after, code::before, code::after, tt::before, tt::after, blockquote::before, blockquote::after, small::before, small::after, font::before, font::after, center::before, center::after, em::before, em::after, strong::before, strong::after, sub::before, sub::after, sup::before, sup::after, del::before, del::after, samp::before, samp::after, big::before, big::after, mark::before, mark::after, abbr::before, abbr::after, bdi::before, bdi::after, address::before, address::after, summary::before, summary::after, dfn::before, dfn::after, caption::before, caption::after, div::before, div::after, ins::before, ins::after, legend::before, legend::after, cite::before, cite::after, var::before, var::after, label::before, label::after, rt::before, rt::after {
-  content: '';
-  /* Clearfix. Works in IE7 and 8 */
-  clear: both;
 }
 
-/* 3.3) $global-text-elements and <details>
------------------------------------------- */
-h1, h2, h3, h4, h5, h6, a, p, b, i, u, s, q, strike, pre, code, tt, blockquote, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, address, summary, dfn, caption, div, ins, legend, cite, var, label, rt,
+b, i, u, s, q, strike, code, tt, small, font, center, em, strong, sub, sup, del, samp, big, mark, abbr, bdi, summary, dfn, caption, ins, legend, cite, var, label, rt,
 details {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
@@ -107,7 +106,8 @@ details {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -118,12 +118,33 @@ details {
   direction: ltr;
   /* Font smooth hack */
   text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
+  display: block;
 }
 
-/* 3.4) $global-headings and h1, h2, h3, h4, h5, h6
------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1.1rem;
+em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, font, br, map, area, tt, i, b, u, strike, big, small, sub, sup, input, select, option, textarea, caption, tr, th, td, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: baseline;
+  font-family: "Verdana", sans-serif;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size-adjust: 0.54;
+  font-weight: 400;
+  -o-text-overflow: clip;
+     text-overflow: clip;
+  text-align: left;
+  unicode-bidi: embed;
+  line-height: 1.3em;
+  word-spacing: 0.01em;
+  word-wrap: break-word;
+  vertical-align: baseline;
+  letter-spacing: 0.1px;
+  direction: ltr;
+  /* Font smooth hack */
+  text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
 }
 
 h1 {
@@ -162,11 +183,12 @@ input, select, option, button, textarea, datalist, output, optgroup {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
-  background: #F1F1F1;
+  background-color: #F1F1F1;
 }
 
 /* Only apply any size related CSS styling to these and NOT radio- or checkbox-buttons */
@@ -178,6 +200,10 @@ input[type=password], input[type=submit], input[type=tel],
 input[type=time], input[type=url], input[type=week],
 select, textarea {
   margin-bottom: 1px;
+}
+
+input[type=image] {
+  background-color: initial;
 }
 
 /* HTML5 Input Elements */
@@ -347,7 +373,8 @@ var {
 
 mark {
   /* Inline unfortunately this creates "Whitespace nodes"... Deal with it ;P */
-  display: inline;
+  display: table;
+  /* F*ck display: inline;.... Seriously... */
   background-color: #FFFF61;
 }
 
@@ -362,6 +389,15 @@ kbd {
 
 summary {
   display: list-item;
+}
+
+img, video {
+  float: left;
+  clear: both;
+}
+
+address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, li, main, nav, ol, output, p, pre, section, table, tfoot, ul, video {
+  display: block;
 }
 
 a {
@@ -395,7 +431,8 @@ table, tbody, thead, tfoot, th, tr, td, colgroup, col {
   font-size: 1rem;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-overflow: clip;
+  -o-text-overflow: clip;
+     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -461,4 +498,8 @@ video[src=""] {
     -webkit-text-decoration: underline dotted;
             text-decoration: underline dotted;
   }
+}
+article, aside, audio, canvas, command, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, track, video, wbr, menu {
+  /* A "fix" for older browsers */
+  display: block;
 }
