@@ -554,16 +554,10 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
   h1 {
     font-size: 1.5rem;
   }
-  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h1 {
     font-size: 1.3636363636rem;
-  }
-  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -596,16 +590,10 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
   h2 {
     font-size: 1.4rem;
   }
-  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h2 {
     font-size: 1.2727272727rem;
-  }
-  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -638,16 +626,10 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
   h3 {
     font-size: 1.2rem;
   }
-  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h3 {
     font-size: 1.0909090909rem;
-  }
-  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -680,16 +662,10 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
   h4 {
     font-size: 1rem;
   }
-  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h4 {
     font-size: 0.9090909091rem;
-  }
-  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -722,16 +698,10 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
   h5 {
     font-size: 0.9rem;
   }
-  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h5 {
     font-size: 0.8181818182rem;
-  }
-  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -764,16 +734,10 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
   h6 {
     font-size: 0.7rem;
   }
-  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h6 {
     font-size: 0.6363636364rem;
-  }
-  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -815,9 +779,12 @@ div.unset, details.unset {
           transform: translate(-50%, -50%);
 }
 
-main {
+main, .wrapper {
   width: 100vw;
-  max-width: 100%;
+  max-width: 100% !important;
+  min-height: 100vh;
+  max-height: auto;
+  overflow-x: hidden;
 }
 
 header {
@@ -944,34 +911,36 @@ section, .content-container {
             flex-flow: column wrap;
   }
 }
+section > article, section .content, section > aside, section .aside, .content-container > article, .content-container .content, .content-container > aside, .content-container .aside {
+  z-index: 0;
+}
 section > article h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section .content h1, section .content h2, section .content h3, section .content h4, section .content h5, section .content h6, section > aside h1, section > aside h2, section > aside h3, section > aside h4, section > aside h5, section > aside h6, section .aside h1, section .aside h2, section .aside h3, section .aside h4, section .aside h5, section .aside h6, .content-container > article h1, .content-container > article h2, .content-container > article h3, .content-container > article h4, .content-container > article h5, .content-container > article h6, .content-container .content h1, .content-container .content h2, .content-container .content h3, .content-container .content h4, .content-container .content h5, .content-container .content h6, .content-container > aside h1, .content-container > aside h2, .content-container > aside h3, .content-container > aside h4, .content-container > aside h5, .content-container > aside h6, .content-container .aside h1, .content-container .aside h2, .content-container .aside h3, .content-container .aside h4, .content-container .aside h5, .content-container .aside h6 {
   text-align: center;
 }
 section > article, section .content, .content-container > article, .content-container .content {
   background: #CCC;
-  -ms-flex-preferred-size: 80%;
-      flex-basis: 80%;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
 }
 section > aside, section .aside, .content-container > aside, .content-container .aside {
   background: #333;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
-
-[aria-hidden="true"] {
-  display: none !important;
-}
-
-[aria-hidden="false"] {
-  display: initial !important;
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  section > aside, section .aside, .content-container > aside, .content-container .aside {
+    min-width: 384px;
+  }
 }
 
 [data-tooltip]:hover {
   position: relative;
 }
 
-[data-tooltip]::before {
-  content: attr(tooltip);
+[data-tooltip]::after {
+  content: attr(data-tooltip);
   position: absolute;
   display: none;
   margin-left: auto;
@@ -983,22 +952,31 @@ section > aside, section .aside, .content-container > aside, .content-container 
           box-shadow: 0 0 8px -4px #000;
 }
 
-[data-tooltip]:hover::before {
+[data-tooltip]:hover::after {
   display: block;
+  z-index: 9;
 }
 
-[data-tooltip][data-tooltip-offset="top"]::before {
-  top: 0;
+[data-tooltip][data-tooltip-offset="top"]::after {
+  top: -5vh;
 }
 
-[data-tooltip][data-tooltip-offset="bottom"]::before {
-  bottom: 0;
+[data-tooltip][data-tooltip-offset="bottom"]::after {
+  bottom: -13vh;
 }
 
-[data-tooltip][data-tooltip-offset="left"]::before {
+[data-tooltip][data-tooltip-offset="left"]::after {
   left: 0;
 }
 
-[data-tooltip][data-tooltip-offset="right"]::before {
+[data-tooltip][data-tooltip-offset="right"]::after {
   right: 0;
+}
+
+[aria-hidden="true"] {
+  display: none !important;
+}
+
+[aria-hidden="false"] {
+  display: initial !important;
 }

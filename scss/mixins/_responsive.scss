@@ -23,17 +23,11 @@ $xlg: $break !default; // 1920
   @if $device == xs {
     @media only screen and (max-width: $break / 5) {
       @content;
-      h1, h2, h3, h4, h5, h6 {
-        text-transform: uppercase;
-      }
     }
   }
   @else if $device == sm {
     @media only screen and (max-width: $break / 4) {
       @content;
-      h1, h2, h3, h4, h5, h6 {
-        text-transform: uppercase;
-      }
     }
   }
   @else if $device == md {
@@ -65,13 +59,11 @@ $xlg: $break !default; // 1920
   @if $device == xs {
     @media only screen and (min-width: $break / 5) {
       @content;
-      text-transform: uppercase;
     }
   }
   @else if $device == sm {
     @media only screen and (min-width: $break / 4) {
       @content;
-      text-transform: uppercase;
     }
   }
   @else if $device == md {
@@ -97,4 +89,37 @@ $xlg: $break !default; // 1920
       @content;
     }
   }
+}
+
+@mixin minmax($device) {
+    @if $device  == xs {
+        @media only screen and (min-width: $break / 5) and (max-width: $break / 4) {
+            @content;
+        }
+    }
+    @else if $device == sm {
+        @media only screen and (min-width: $break / 4) and (max-width: $break / 3) {
+            @content;
+        }
+    }
+    @else if $device == md {
+        @media only screen and (min-width: $break / 3) and (max-width: $break / 2) {
+            @content;
+        }
+    }
+    @else if $device == xmd {
+        @media only screen and (min-width: $break / 2) and (max-width: $break / 1.5) {
+            @content;
+        }
+    }
+    @else if $device == lg {
+        @media only screen and (min-width: $break / 1.5) and (max-width: $break) {
+            @content;
+        }
+    }
+    @else if $device == xlg {
+        @media only screen and (min-width: $break) {
+            @content;
+        }
+    }
 }

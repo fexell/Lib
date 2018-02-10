@@ -1,0 +1,38 @@
+[data-tooltip]:hover {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    display: none;
+    margin: {
+    left: auto;
+    right: auto;
+    }
+    padding: 10px 20px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 8px -4px #000;
+}
+
+[data-tooltip]:hover::after {
+    display: block;
+    z-index: 9;
+}
+
+[data-tooltip][data-tooltip-offset="top"]::after {
+    top: -5vh;
+}
+
+[data-tooltip][data-tooltip-offset="bottom"]::after {
+    bottom: -13vh;
+}
+
+[data-tooltip][data-tooltip-offset="left"]::after {
+    left: 0;
+}
+
+[data-tooltip][data-tooltip-offset="right"]::after {
+    right: 0;
+}

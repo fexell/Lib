@@ -1,4 +1,7 @@
-main {
-  width: 100vw;
-  max-width: 100%;
+main, .wrapper {
+    width: 100vw;
+    max-width: 100% !important;
+    min-height: 100vh;
+    max-height: auto;
+    overflow-x: hidden;
 }

@@ -6,30 +6,52 @@
     <title>Lib</title>
     <link rel="stylesheet" href="dist/css/library.css" />
     <style>
-      article {
+        article {
         height: 400px;
-      }
+        }
     </style>
   </head>
 <body>
-<header class="align-middle" style="width: 500px; height: 100px; background: #1a1a1a; color: #fff;">Just for testing</header>
-<section>
-  <article tooltip="Just some text in a tooltip. Hooray!" tooltip-offset="bottom" tooltip-bottom="100px">Test</article>
-</section>
+    <main>
+       
+        <header class="align-middle" style="width: 500px; height: 100px; margin:0 auto; background: #CCC; color: #fff;">
+            <table>
+                <tr>
+                    <th>xlg</th>
+                    <th>lg</th>
+                    <th>md</th>
+                    <th>sm</th>
+                    <th>xs</th>
+                    <th>xxs</th>
+                </tr>
+                <tr>
+                    <td>1920</td>
+                    <td>1280</td>
+                    <td>960</td>
+                    <td>640</td>
+                    <td>480</td>
+                    <td>384</td>
+                </tr>
+            </table>
+        </header>
+        <section>
+          <article data-tooltip="Just some text in a tooltip. Hooray!" data-tooltip-offset="top">Test</article>
+        </section>
 
-
-
-<style type="text/css">.menu{position:fixed;right:0;left:0;bottom:0;margin:0 auto;width:300px;height:auto;padding:10px;border: 1px solid #333;background:#F1F1F1}.menu ul{list-style-type:none}</style>
-<div class="menu">
-  <ul>
-    <li><a href="test/normalize.html" tooltip="Normalize">Normalize</a></li>
-    <li><a href="test/headings.html">Headings</a></li>
-    <li><a href="test/tables.html">Tables</a></li>
-    <li><a href="test/forms.html">Forms</a></li>
-    <li><a href="test/meta.html">Meta</a></li>
-    <li><a href="test/texts.html">Texts</a></li>
-    <li><a href="test/layout.html" tooltip="Layout">Layout</a></li>
-  </ul>
-</div>
+        <style type="text/css">.menu{position:fixed;right:0;left:0;bottom:0;margin:0 auto;width:300px;height:auto;padding:10px;border: 1px solid #333;background:#F1F1F1}.menu ul{list-style-type:none}</style>
+        <div class="menu">
+          <ul>
+            <li><a href="test/normalize.html" data-tooltip="Normalize" data-tooltip-offset="top">Normalize</a></li>
+            <li><a href="test/headings.html">Headings</a></li>
+            <li><a href="test/tables.html">Tables</a></li>
+            <li><a href="test/forms.html">Forms</a></li>
+            <li><a href="test/meta.html">Meta</a></li>
+            <li><a href="test/texts.html">Texts</a></li>
+            <li><a href="test/layout.html" data-tooltip="Layout" data-tooltip-offset="bottom">Layout</a></li>
+          </ul>
+        </div>
+        
+    </main>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
