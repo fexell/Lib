@@ -6,15 +6,25 @@
     <title>Lib</title>
     <link rel="stylesheet" href="dist/css/library.css" />
     <style>
+        section {
+            background: #333;
+        }
         article {
-        height: 400px;
+            height: 400px;
+            background: #333;
+        }
+        table {width: 100%; height: 100%;}
+        table, tr th, tr td {
+            border: 1px solid #a1a1a1;
+            text-align: center;
+            vertical-align: middle;
         }
     </style>
   </head>
 <body>
     <main>
        
-        <header class="align-middle" style="width: 500px; height: 100px; margin:0 auto; background: #CCC; color: #fff;">
+        <header style="width: 500px; height: 100px; margin:0 auto; background: #CCC; color: #fff;">
             <table>
                 <tr>
                     <th>xlg</th>
@@ -34,20 +44,17 @@
                 </tr>
             </table>
         </header>
-        <section>
-          <article data-tooltip="Just some text in a tooltip. Hooray!" data-tooltip-offset="top">Test</article>
-        </section>
 
         <style type="text/css">.menu{position:fixed;right:0;left:0;bottom:0;margin:0 auto;width:300px;height:auto;padding:10px;border: 1px solid #333;background:#F1F1F1}.menu ul{list-style-type:none}</style>
         <div class="menu">
           <ul>
-            <li><a href="test/normalize.html" data-tooltip="Normalize" data-tooltip-offset="top">Normalize</a></li>
+            <li><a href="test/normalize.html" data-tooltip="Normalize" data-tooltip-offset="text">Normalize</a></li>
             <li><a href="test/headings.html">Headings</a></li>
             <li><a href="test/tables.html">Tables</a></li>
             <li><a href="test/forms.html">Forms</a></li>
             <li><a href="test/meta.html">Meta</a></li>
             <li><a href="test/texts.html">Texts</a></li>
-            <li><a href="test/layout.html" data-tooltip="Layout" data-tooltip-offset="bottom">Layout</a></li>
+            <li><a href="test/layout.html" data-tooltip="Layout" data-tooltip-offset="left">Layout</a></li>
           </ul>
         </div>
         

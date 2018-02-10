@@ -11,6 +11,9 @@ header {
   width: 100%;
 }
 
+/* MARGIN MIXINS */
+/* PADDING MIXINS */
+/* CLEARFIX MIXIN */
 @media only screen and (max-width: 480px) {
   h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
@@ -25,7 +28,10 @@ header {
 nav.nav-container {
   width: 100%;
   position: relative;
-  overflow: hidden;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   /* Menu */
 }
 nav.nav-container .menu {
@@ -110,6 +116,19 @@ nav.nav-container .menu.fluid > ul {
   }
 }
 
+/* MARGIN MIXINS */
+/* PADDING MIXINS */
+/* CLEARFIX MIXIN */
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
 section, .content-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,24 +151,28 @@ section, .content-container {
 }
 section > article, section .content, section > aside, section .aside, .content-container > article, .content-container .content, .content-container > aside, .content-container .aside {
   z-index: 0;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+section > article::after, section .content::after, section > aside::after, section .aside::after, .content-container > article::after, .content-container .content::after, .content-container > aside::after, .content-container .aside::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 section > article h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section .content h1, section .content h2, section .content h3, section .content h4, section .content h5, section .content h6, section > aside h1, section > aside h2, section > aside h3, section > aside h4, section > aside h5, section > aside h6, section .aside h1, section .aside h2, section .aside h3, section .aside h4, section .aside h5, section .aside h6, .content-container > article h1, .content-container > article h2, .content-container > article h3, .content-container > article h4, .content-container > article h5, .content-container > article h6, .content-container .content h1, .content-container .content h2, .content-container .content h3, .content-container .content h4, .content-container .content h5, .content-container .content h6, .content-container > aside h1, .content-container > aside h2, .content-container > aside h3, .content-container > aside h4, .content-container > aside h5, .content-container > aside h6, .content-container .aside h1, .content-container .aside h2, .content-container .aside h3, .content-container .aside h4, .content-container .aside h5, .content-container .aside h6 {
   text-align: center;
 }
 section > article, section .content, .content-container > article, .content-container .content {
-  background: #CCC;
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
+  -webkit-box-flex: 1;
+      -ms-flex: auto 11;
+          flex: auto 11;
+  /* Why is this working as I intend (as in keeping the ratio of the box)? */
 }
 section > aside, section .aside, .content-container > aside, .content-container .aside {
-  background: #333;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-@media only screen and (min-width: 960px) and (max-width: 1280px) {
-  section > aside, section .aside, .content-container > aside, .content-container .aside {
-    min-width: 384px;
-  }
+      -ms-flex: auto 1;
+          flex: auto 1;
+  /* Why is this working as I intend (as in keeping the ratio of the box)? */
 }

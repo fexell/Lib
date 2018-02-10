@@ -93,27 +93,27 @@ $xlg: $break !default; // 1920
 
 @mixin minmax($device) {
     @if $device  == xs {
-        @media only screen and (min-width: $break / 5) and (max-width: $break / 4) {
+        @media only screen and (min-width: $break / 5 - 1) and (max-width: $break / 4) {
             @content;
         }
     }
     @else if $device == sm {
-        @media only screen and (min-width: $break / 4) and (max-width: $break / 3) {
+        @media only screen and (min-width: $break / 4 - 1) and (max-width: $break / 3) {
             @content;
         }
     }
     @else if $device == md {
-        @media only screen and (min-width: $break / 3) and (max-width: $break / 2) {
+        @media only screen and (min-width: $break / 3 - 1) and (max-width: $break / 2) {
             @content;
         }
     }
     @else if $device == xmd {
-        @media only screen and (min-width: $break / 2) and (max-width: $break / 1.5) {
+        @media only screen and (min-width: $break / 2 - 1) and (max-width: $break / 1.5) {
             @content;
         }
     }
     @else if $device == lg {
-        @media only screen and (min-width: $break / 1.5) and (max-width: $break) {
+        @media only screen and (min-width: $break / 1.5 - 1) and (max-width: $break) {
             @content;
         }
     }
@@ -121,5 +121,19 @@ $xlg: $break !default; // 1920
         @media only screen and (min-width: $break) {
             @content;
         }
+    }
+}
+
+@mixin responsiveScaling($x, $y, $pseudo: false) {
+    $padding: unquote(($y / $x) * 100 + '%');
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    }
+    @else {
+        padding-top: $padding;
     }
 }

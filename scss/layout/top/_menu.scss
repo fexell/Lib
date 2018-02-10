@@ -1,84 +1,81 @@
-@import "../../mixins/responsive";
+@import "../../mixins/mixins";
 
 $height: 140px;
 
 /* Start nav */
 nav.nav-container {
 
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-
-  /* Menu */
-  & .menu {
+    width: 100%;
     position: relative;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 120px;
-    grid-column-gap: 1%;
-    justify-content: center;
-    width: 80vw;
-    margin: {
-      left: auto;
-      right: auto;
-    }
+    @include paddingEnds($x-small);
+    @include paddingSides($x-small);
 
-    /* In case of small screen, center everything */
-    @include max(xmd){width: 100%; justify-content: space-around;}
-    @include max(md){grid-template-columns: 100%;}
-
-    &.logo-top {
-      grid-template-columns: 100%;
-      grid-template-rows: 100% 100%;
-    }
-
-    &.logo-right {
-      &> ul {
-        grid-row: 1;
-        @include max(md){grid-row: 2;}
-      }
-    }
-
-    &> input[type=image], & .logo, &> ul, &> input {
-      margin: {
+    /* Menu */
+    & .menu {
+        position: relative;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 120px;
+        grid-column-gap: 1%;
+        justify-content: center;
+        width: 80vw;
+        margin: {
         left: auto;
         right: auto;
-      }
     }
 
-    &> input[type=image], & .logo, &> input {
-      height: 100%; /* F*ck you, -webkit- max height bug... */
-      max-height: 100%;
-    }
+        /* In case of small screen, center everything */
+        @include max(xmd){width: 100%; justify-content: space-around;}
+        @include max(md){grid-template-columns: 100%;}
 
-    &> ul {
-      align-self: center;
-    }
+        &.logo-top {
+            grid-template-columns: 100%;
+            grid-template-rows: 100% 100%;
+        }
 
-    &> ul li, &> li {
-      float: left;
-    }
+        &.logo-right {
+            &> ul {
+                grid-row: 1;
+                @include max(md){grid-row: 2;}
+            }
+        }
 
-    &> ul li a, &> li a {
-      display: block;
-    }
+        &> input[type=image], & .logo, &> ul, &> input {
+            @include marginAuto;
+        }
 
-    /* Give option of spanning the <menu> 100%, but still keep the responsiveness */
-    &.fluid {
-      width: 100vw;
-      grid-column-gap: 0;
-      &> input[type=image], & .logo, &> ul, &> input {
-        margin: 0;
-      }
-      &> input[type=image], & .logo {
-        justify-self: start;
-        @include max(md) {justify-self: center;}
-      }
-      &> ul {
-        justify-self: end;
-        @include max(md) {justify-self: center;}
-      }
-    }
+        &> input[type=image], & .logo, &> input {
+            height: 100%; /* F*ck you, -webkit- max height bug... */
+            max-height: 100%;
+        }
 
-  }
+        &> ul {
+            align-self: center;
+        }
+
+        &> ul li, &> li {
+            float: left;
+        }
+
+        &> ul li a, &> li a {
+            display: block;
+        }
+
+        /* Give option of spanning the <menu> 100%, but still keep the responsiveness */
+        &.fluid {
+            width: 100vw;
+            grid-column-gap: 0;
+            &> input[type=image], & .logo, &> ul, &> input {
+                margin: 0;
+            }
+            &> input[type=image], & .logo {
+                justify-self: start;
+                @include max(md) {justify-self: center;}
+            }
+            &> ul {
+                justify-self: end;
+                @include max(md) {justify-self: center;}
+            }
+        }
+    }
 }

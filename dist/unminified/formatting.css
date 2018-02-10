@@ -8,6 +8,9 @@
  * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
  *                                          '200', 'a100')
  */
+/* MARGIN MIXINS */
+/* PADDING MIXINS */
+/* CLEARFIX MIXIN */
 @media only screen and (max-width: 480px) {
   h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
@@ -48,16 +51,10 @@
   h1 {
     font-size: 1.5rem;
   }
-  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h1 {
     font-size: 1.3636363636rem;
-  }
-  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -90,16 +87,10 @@
   h2 {
     font-size: 1.4rem;
   }
-  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h2 {
     font-size: 1.2727272727rem;
-  }
-  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -132,16 +123,10 @@
   h3 {
     font-size: 1.2rem;
   }
-  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h3 {
     font-size: 1.0909090909rem;
-  }
-  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -174,16 +159,10 @@
   h4 {
     font-size: 1rem;
   }
-  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h4 {
     font-size: 0.9090909091rem;
-  }
-  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -216,16 +195,10 @@
   h5 {
     font-size: 0.9rem;
   }
-  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h5 {
     font-size: 0.8181818182rem;
-  }
-  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6 {
-    text-transform: uppercase;
   }
 }
 
@@ -258,27 +231,71 @@
   h6 {
     font-size: 0.7rem;
   }
-  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
-    text-transform: uppercase;
-  }
 }
 @media only screen and (max-width: 384px) {
   h6 {
     font-size: 0.6363636364rem;
   }
-  h6 h1, h6 h2, h6 h3, h6 h4, h6 h5, h6 h6 {
-    text-transform: uppercase;
-  }
+}
+
+.italic, .ita {
+  font-style: italic;
+}
+
+.oblique, .obl {
+  font-style: oblique;
+}
+
+.big {
+  font-size: 120%;
+}
+
+.bigger {
+  font-size: 140%;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.smaller {
+  font-size: 60%;
+}
+
+.super {
+  vertical-align: super;
+}
+
+.sub {
+  vertical-align: sub;
 }
 
 .footnote {
   color: #DDD;
 }
-.footnote.small {
-  font-size: 80%;
+.footnote.italic, .footnote.ita {
+  font-style: italic;
+}
+.footnote.oblique, .footnote.obl {
+  font-style: oblique;
 }
 .footnote.big {
   font-size: 120%;
+}
+.footnote.bigger {
+  font-size: 140%;
+}
+.footnote.small {
+  font-size: 80%;
+}
+.footnote.smaller {
+  font-size: 60%;
+}
+.footnote .super {
+  vertical-align: super;
+}
+.footnote.sub {
+  vertical-align: sub;
 }
 .footnote.invert-color {
   color: #222222;

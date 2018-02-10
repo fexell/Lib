@@ -1,0 +1,39 @@
+/* MARGIN MIXINS */
+
+@mixin marginAuto { margin: { left: auto; right: auto; } }
+
+@mixin marginEnds($spacing: $spacing-unit) { margin: { top: $spacing; bottom: $spacing; } }
+
+@mixin marginSides($spacing: $spacing-unit) { margin: { left: $spacing; right: $spacing; } }
+
+@mixin marginOffset($spacing: $spacing-unit) { margin: { left: -$spacing; right: -$spacing; } }
+
+@mixin marginResetEnds { margin: { top: 0; bottom: 0; } }
+@mixin marginResetSides { margin: { left: 0; right: 0; } }
+
+/* PADDING MIXINS */
+
+@mixin paddingEnds($spacing: $spacing-unit) { padding: { top: $spacing; bottom: $spacing; } }
+@mixin paddingSides($spacing: $spacing-unit) { padding: { left: $spacing; right: $spacing; } }
+
+@mixin paddingResetEnds { padding: { top: 0; bottom: 0; } }
+@mixin paddingResetSides { padding: { left: 0; right: 0; } }
+
+/* CLEARFIX MIXIN */
+
+@mixin clearfix { &::after { content: ''; display: table; clear: both; } }
+
+@mixin placeholders {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin hardware($backface: true, $perspective: 1000) {
+    @if $backface {
+        backface-visibility: hidden;
+    }
+    perspective: $perspective;
+}

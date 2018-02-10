@@ -8,6 +8,9 @@
  * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
  *                                          '200', 'a100')
  */
+/* MARGIN MIXINS */
+/* PADDING MIXINS */
+/* CLEARFIX MIXIN */
 @media only screen and (max-width: 480px) {
   h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
@@ -235,14 +238,64 @@
   }
 }
 
+.italic, .ita {
+  font-style: italic;
+}
+
+.oblique, .obl {
+  font-style: oblique;
+}
+
+.big {
+  font-size: 120%;
+}
+
+.bigger {
+  font-size: 140%;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.smaller {
+  font-size: 60%;
+}
+
+.super {
+  vertical-align: super;
+}
+
+.sub {
+  vertical-align: sub;
+}
+
 .footnote {
   color: #DDD;
+}
+.footnote.italic, .footnote.ita {
+  font-style: italic;
+}
+.footnote.oblique, .footnote.obl {
+  font-style: oblique;
+}
+.footnote.big {
+  font-size: 120%;
+}
+.footnote.bigger {
+  font-size: 140%;
 }
 .footnote.small {
   font-size: 80%;
 }
-.footnote.big {
-  font-size: 120%;
+.footnote.smaller {
+  font-size: 60%;
+}
+.footnote .super {
+  vertical-align: super;
+}
+.footnote.sub {
+  vertical-align: sub;
 }
 .footnote.invert-color {
   color: #222222;

@@ -1,3 +1,5 @@
+@import "../../mixins/mixins";
+
 section, .content-container {
     display: flex;
     justify-content: center;
@@ -13,19 +15,20 @@ section, .content-container {
         
         z-index: 0;
         
+        @include clearfix;
+        @include paddingSides($x-small);
+        @include paddingEnds($small);
+        
         h1, h2, h3, h4, h5, h6 {
             text-align: center;
         }
     }
 
     &> article, & .content {
-        background: #CCC;
-        flex: 4;
+        flex: auto 11; /* Why is this working as I intend (as in keeping the ratio of the box)? */
     }
 
     &> aside, & .aside {
-        background: #333;
-        flex: 1;
-        @include minmax(xmd) {min-width: 384px;}
+        flex: auto 1; /* Why is this working as I intend (as in keeping the ratio of the box)? */
     }
 }

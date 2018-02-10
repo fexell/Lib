@@ -57,12 +57,9 @@ html > body {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
           font-kerning: auto;
-  font-size: 1em;
-  font-size: 1rem;
+  font-size: 16px;
   font-size-adjust: 0.54;
   font-weight: 400;
-  -o-text-overflow: clip;
-     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -70,8 +67,8 @@ html > body {
 
 body {
   margin: 0;
-  /* Removes/fixes "Whitespace nodes", (but not for inputs) } Both are needed */
-  /* Removes/fixes "Whitespace nodes", (but not for inputs) } for this fix */
+  /* Removes "Whitespace nodes", (but not for inputs) } Both are needed */
+  /* Removes "Whitespace nodes", (but not for inputs) } for this fix */
   white-space: nowrap;
   white-space: initial;
 }
@@ -102,12 +99,9 @@ details {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
           font-kerning: auto;
-  font-size: 1em;
-  font-size: 1rem;
+  font-size: 16px;
   font-size-adjust: 0.54;
   font-weight: 400;
-  -o-text-overflow: clip;
-     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -129,12 +123,9 @@ em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, fo
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
           font-kerning: auto;
-  font-size: 1em;
-  font-size: 1rem;
+  font-size: 16px;
   font-size-adjust: 0.54;
   font-weight: 400;
-  -o-text-overflow: clip;
-     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -179,12 +170,9 @@ input, select, option, button, textarea, datalist, output, optgroup {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
           font-kerning: auto;
-  font-size: 1em;
-  font-size: 1rem;
+  font-size: 16px;
   font-size-adjust: 0.54;
   font-weight: 400;
-  -o-text-overflow: clip;
-     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -347,7 +335,7 @@ ins {
 
 pre {
   white-space: pre-line;
-  margin: 0.2em 0;
+  margin: 0.2em 0 0;
 }
 
 s {
@@ -427,12 +415,9 @@ table, tbody, thead, tfoot, th, tr, td, colgroup, col {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
           font-kerning: auto;
-  font-size: 1em;
-  font-size: 1rem;
+  font-size: 16px;
   font-size-adjust: 0.54;
   font-weight: 400;
-  -o-text-overflow: clip;
-     text-overflow: clip;
   text-align: left;
   unicode-bidi: embed;
   line-height: 1.3em;
@@ -471,6 +456,11 @@ th {
 }
 
 [hidden] {
+  /* !important In case it gets overriden somewhere */
+  display: none !important;
+}
+
+[visibility="hidden"] {
   /* !important In case it gets overriden somewhere */
   display: none !important;
 }

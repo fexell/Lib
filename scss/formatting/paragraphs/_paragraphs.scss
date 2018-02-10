@@ -1,12 +1,71 @@
-.footnote {
-  color: #DDD;
-  &.small {
-    font-size: 80%;
-  }
-  &.big {
+.italic, .ita {
+    font-style: italic;
+}
+
+.oblique, .obl {
+    font-style: oblique;
+}
+
+.big {
     font-size: 120%;
-  }
-  &.invert-color {
-    color: invert(#DDD);
-  }
+}
+
+.bigger {
+    font-size: 140%;
+}
+
+.small {
+    font-size: 80%;
+}
+
+.smaller {
+    font-size: 60%;
+}
+
+.super {
+    vertical-align: super;
+}
+
+.sub {
+    vertical-align: sub;
+}
+
+.footnote {
+    color: #DDD;
+    
+    &.italic, &.ita {
+    font-style: italic;
+    }
+
+    &.oblique, &.obl {
+        font-style: oblique;
+    }
+
+    &.big {
+        font-size: 120%;
+    }
+
+    &.bigger {
+        font-size: 140%;
+    }
+
+    &.small {
+        font-size: 80%;
+    }
+
+    &.smaller {
+        font-size: 60%;
+    }
+
+    .super {
+        vertical-align: super;
+    }
+
+    &.sub {
+        vertical-align: sub;
+    }
+    
+    &.invert-color {
+        color: invert(#DDD);
+    }
 }
