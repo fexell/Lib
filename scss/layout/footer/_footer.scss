@@ -1,0 +1,10 @@
+@import "../../mixins/mixins";
+
+footer, .footer, #footer {
+	max-width: 100%;
+	width: 100%;
+	
+	&> div {
+		flex: 1;
+	}
+}

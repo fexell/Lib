@@ -1,0 +1,4 @@
+@for $i from 1 through 6 {
+	.grow-#{$i} {flex: 1 * $i;}
+	.shrink-#{$i} {flex: 0 1 * $i; flex-grow: initial; flex-shrink: 1 * $i;}
+}

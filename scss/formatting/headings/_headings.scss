@@ -1,1 +1,59 @@
-@import "responsive";
+@import "../../mixins/mixins";
+
+h1 {
+	@include mq() { font-size: 2rem; }
+	@include mq(big-desktop) { font-size: 1.9rem; }
+	@include mq(desktop) { font-size: 1.8rem; }
+	@include mq(tab-x) { font-size: 1.7rem; }
+	@include mq(tablet) { font-size: 1.6rem; }
+	@include mq(phone) { font-size: 1.5rem; }
+}
+
+h2 {
+	@include mq() { font-size: 1.9rem; }
+	@include mq(big-desktop) { font-size: 1.8rem; }
+	@include mq(desktop) { font-size: 1.7rem; }
+	@include mq(tab-x) { font-size: 1.6rem; }
+	@include mq(tablet) { font-size: 1.5rem; }
+	@include mq(phone) { font-size: 1.4rem; }
+}
+
+h3 {
+	@include mq() { font-size: 1.8rem; }
+	@include mq(big-desktop) { font-size: 1.7rem; }
+	@include mq(desktop) { font-size: 1.6rem; }
+	@include mq(tab-x) { font-size: 1.5rem; }
+	@include mq(tablet) { font-size: 1.4rem; }
+	@include mq(phone) { font-size: 1.3rem; }
+}
+
+h4 {
+	@include mq() { font-size: 1.7rem; }
+	@include mq(big-desktop) { font-size: 1.6rem; }
+	@include mq(desktop) { font-size: 1.5rem; }
+	@include mq(tab-x) { font-size: 1.4rem; }
+	@include mq(tablet) { font-size: 1.3rem; }
+	@include mq(phone) { font-size: 1.2rem; }
+}
+
+h5 {
+	@include mq() { font-size: 1.6rem; }
+	@include mq(big-desktop) { font-size: 1.5rem; }
+	@include mq(desktop) { font-size: 1.4rem; }
+	@include mq(tab-x) { font-size: 1.3rem; }
+	@include mq(tablet) { font-size: 1.2rem; }
+	@include mq(phone) { font-size: 1.1rem; }
+}
+
+h6 {
+	@include mq() { font-size: 1.5rem; }
+	@include mq(big-desktop) { font-size: 1.4rem; }
+	@include mq(desktop) { font-size: 1.3rem; }
+	@include mq(tab-x) { font-size: 1.2rem; }
+	@include mq(tablet) { font-size: 1.1rem; }
+	@include mq(phone) { font-size: 1rem; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include mq(phone) { word-break: break-all; word-wrap: break-word; }
+}

@@ -37,3 +37,9 @@
     }
     perspective: $perspective;
 }
+
+@mixin flexbox {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}

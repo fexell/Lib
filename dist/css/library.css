@@ -517,30 +517,29 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     text-transform: uppercase;
   }
 }
-/* Px to vw conversion - credit: http://pxtovw.com/ */
-@media only screen and (max-width: 1920px) {
-  h1 {
-    font-size: 3rem;
-  }
-}
 @media only screen and (min-width: 1920px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
   h1 {
-    font-size: 2.1428571429rem;
+    font-size: 1.9rem;
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
   h1 {
-    font-size: 1.875rem;
+    font-size: 1.8rem;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   h1 {
-    font-size: 1.6666666667rem;
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  h1 {
+    font-size: 1.6rem;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -548,35 +547,30 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     font-size: 1.5rem;
   }
 }
-@media only screen and (max-width: 384px) {
-  h1 {
-    font-size: 1.3636363636rem;
-  }
-}
 
-@media only screen and (max-width: 1920px) {
-  h2 {
-    font-size: 2.8rem;
-  }
-}
 @media only screen and (min-width: 1920px) {
   h2 {
-    font-size: 2.8rem;
+    font-size: 1.9rem;
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   h2 {
-    font-size: 1.5555555556rem;
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  h2 {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -584,154 +578,140 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     font-size: 1.4rem;
   }
 }
-@media only screen and (max-width: 384px) {
-  h2 {
-    font-size: 1.2727272727rem;
-  }
-}
 
-@media only screen and (max-width: 1920px) {
-  h3 {
-    font-size: 2.4rem;
-  }
-}
 @media only screen and (min-width: 1920px) {
   h3 {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
   h3 {
-    font-size: 1.7142857143rem;
+    font-size: 1.7rem;
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   h3 {
     font-size: 1.5rem;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   h3 {
-    font-size: 1.3333333333rem;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  h4 {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  h4 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  h4 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h4 {
     font-size: 1.2rem;
   }
 }
-@media only screen and (max-width: 384px) {
-  h3 {
-    font-size: 1.0909090909rem;
-  }
-}
 
-@media only screen and (max-width: 1920px) {
-  h4 {
-    font-size: 2rem;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  h4 {
-    font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 1280px) {
-  h4 {
-    font-size: 1.4285714286rem;
-  }
-}
-@media only screen and (max-width: 960px) {
-  h4 {
-    font-size: 1.25rem;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h4 {
-    font-size: 1.1111111111rem;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h4 {
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h4 {
-    font-size: 0.9090909091rem;
-  }
-}
-
-@media only screen and (max-width: 1920px) {
-  h5 {
-    font-size: 1.8rem;
-  }
-}
 @media only screen and (min-width: 1920px) {
   h5 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
   h5 {
-    font-size: 1.2857142857rem;
+    font-size: 1.5rem;
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
   h5 {
-    font-size: 1.125rem;
+    font-size: 1.4rem;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   h5 {
-    font-size: 1rem;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  h5 {
+    font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h5 {
-    font-size: 0.9rem;
-  }
-}
-@media only screen and (max-width: 384px) {
-  h5 {
-    font-size: 0.8181818182rem;
+    font-size: 1.1rem;
   }
 }
 
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1920px) {
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
   h6 {
     font-size: 1.4rem;
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
   h6 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   h6 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
   h6 {
-    font-size: 0.875rem;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h6 {
-    font-size: 0.7777777778rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 480px) {
   h6 {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 }
-@media only screen and (max-width: 384px) {
-  h6 {
-    font-size: 0.6363636364rem;
+
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    word-break: break-all;
+    word-wrap: break-word;
   }
+}
+
+p {
+  font-size: 0.98rem;
 }
 
 .italic, .ita {
@@ -766,34 +746,34 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
   vertical-align: sub;
 }
 
-.footnote {
+p.footnote {
   color: #DDD;
 }
-.footnote.italic, .footnote.ita {
+p.footnote.italic, p.footnote.ita {
   font-style: italic;
 }
-.footnote.oblique, .footnote.obl {
+p.footnote.oblique, p.footnote.obl {
   font-style: oblique;
 }
-.footnote.big {
+p.footnote.big {
   font-size: 120%;
 }
-.footnote.bigger {
+p.footnote.bigger {
   font-size: 140%;
 }
-.footnote.small {
+p.footnote.small {
   font-size: 80%;
 }
-.footnote.smaller {
+p.footnote.smaller {
   font-size: 60%;
 }
-.footnote .super {
+p.footnote .super {
   vertical-align: super;
 }
-.footnote.sub {
+p.footnote.sub {
   vertical-align: sub;
 }
-.footnote.invert-color {
+p.footnote.invert-color {
   color: #222222;
 }
 
@@ -822,6 +802,122 @@ div.unset, details.unset {
           transform: translate(-50%, -50%);
 }
 
+.grow-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.shrink-1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1;
+          flex: 0 1;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.grow-2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.shrink-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 2;
+          flex: 0 2;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+}
+
+.grow-3 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.shrink-3 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 3;
+          flex: 0 3;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+  -ms-flex-negative: 3;
+      flex-shrink: 3;
+}
+
+.grow-4 {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.shrink-4 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 4;
+          flex: 0 4;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+  -ms-flex-negative: 4;
+      flex-shrink: 4;
+}
+
+.grow-5 {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.shrink-5 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 5;
+          flex: 0 5;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+  -ms-flex-negative: 5;
+      flex-shrink: 5;
+}
+
+.grow-6 {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+.shrink-6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 6;
+          flex: 0 6;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+  -ms-flex-negative: 6;
+      flex-shrink: 6;
+}
+
+/* Wrapper / <Main> */
+/* MARGIN MIXINS */
+/* PADDING MIXINS */
+/* CLEARFIX MIXIN */
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
 main, .wrapper {
   width: 100vw;
   max-width: 100% !important;
@@ -829,7 +925,39 @@ main, .wrapper {
   max-height: auto;
   overflow-x: hidden;
 }
+main.fixed-container, .wrapper.fixed-container {
+  width: 80vw;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.fixed-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 1920px) {
+  .fixed-container {
+    max-width: 1280px;
+  }
+}
+@media only screen and (min-width: 1279px) and (max-width: 1920px) {
+  .fixed-container {
+    max-width: 1280px;
+  }
+}
+@media only screen and (min-width: 959px) and (max-width: 1280px) {
+  .fixed-container {
+    max-width: 1000px;
+  }
+}
+@media only screen and (min-width: 639px) and (max-width: 960px) {
+  .fixed-container {
+    max-width: 800px;
+  }
+}
+
+/* Top - Header, menu, etc. */
 header {
   max-width: 100%;
   width: 100%;
@@ -889,6 +1017,11 @@ nav.nav-container .menu.logo-top {
   grid-template-columns: 100%;
   grid-template-rows: 100% 100%;
 }
+nav.nav-container .menu.logo-top > input[type=image], nav.nav-container .menu.logo-top .logo, nav.nav-container .menu.logo-top .logo > img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
 nav.nav-container .menu.logo-right > ul {
   grid-row: 1;
 }
@@ -897,11 +1030,11 @@ nav.nav-container .menu.logo-right > ul {
     grid-row: 2;
   }
 }
-nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > ul, nav.nav-container .menu > input {
+nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu .logo > img, nav.nav-container .menu > ul, nav.nav-container .menu > input {
   margin-left: auto;
   margin-right: auto;
 }
-nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu > input {
+nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu .logo > img, nav.nav-container .menu > input {
   height: 100%;
   /* F*ck you, -webkit- max height bug... */
   max-height: 100%;
@@ -915,6 +1048,8 @@ nav.nav-container .menu > ul li, nav.nav-container .menu > li {
 }
 nav.nav-container .menu > ul li a, nav.nav-container .menu > li a {
   display: block;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 nav.nav-container .menu.fluid {
   width: 100vw;
@@ -940,6 +1075,103 @@ nav.nav-container .menu.fluid > ul {
   }
 }
 
+/* Content - <Section>, <Article>, <Aside>, etc. */
+/* MARGIN MIXINS */
+/* PADDING MIXINS */
+/* CLEARFIX MIXIN */
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+section, .content-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.aside-left, .content-container.aside-left {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
+}
+section > article, section > .content, section > aside, section > .aside, .content-container > article, .content-container > .content, .content-container > aside, .content-container > .aside {
+  z-index: 0;
+}
+section > article, section > .content, .content-container > article, .content-container > .content {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 0 80%;
+          flex: 3 0 80%;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  section > article, section > .content, .content-container > article, .content-container > .content {
+    -webkit-box-flex: 3;
+        -ms-flex: 3 0 75%;
+            flex: 3 0 75%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  section > article, section > .content, .content-container > article, .content-container > .content {
+    -webkit-box-flex: 3;
+        -ms-flex: 3 0 70%;
+            flex: 3 0 70%;
+  }
+}
+section > article > div, section > .content > div, .content-container > article > div, .content-container > .content > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+section > aside, section > .aside, .content-container > aside, .content-container > .aside {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  section > aside, section > .aside, .content-container > aside, .content-container > .aside {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 25%;
+            flex: 1 0 25%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  section > aside, section > .aside, .content-container > aside, .content-container > .aside {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%;
+  }
+}
+
+/* Footer - <Footer>, .footer, #footer, etc. */
+/* MARGIN MIXINS */
+/* PADDING MIXINS */
+/* CLEARFIX MIXIN */
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+footer, .footer, #footer {
+  max-width: 100%;
+  width: 100%;
+}
+footer > div, .footer > div, #footer > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* Responsive fixes */
 /* MARGIN MIXINS */
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
@@ -957,48 +1189,145 @@ section, .content-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
-@media only screen and (max-width: 640px) {
-  section, .content-container {
+section::after, .content-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+section > article, section > .content,
+.content-container > article, .content-container > .content,
+footer, .footer, #footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section > article::after, section > .content::after,
+.content-container > article::after, .content-container > .content::after,
+footer::after, .footer::after, #footer::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  section > article, section > .content,
+  .content-container > article, .content-container > .content,
+  footer, .footer, #footer {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
-section > article, section .content, section > aside, section .aside, .content-container > article, .content-container .content, .content-container > aside, .content-container .aside {
-  z-index: 0;
+section > article > h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section > .content > h1, section > .content h2, section > .content h3, section > .content h4, section > .content h5, section > .content h6,
+.content-container > article > h1,
+.content-container > article h2,
+.content-container > article h3,
+.content-container > article h4,
+.content-container > article h5,
+.content-container > article h6, .content-container > .content > h1, .content-container > .content h2, .content-container > .content h3, .content-container > .content h4, .content-container > .content h5, .content-container > .content h6,
+footer > h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6, .footer > h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6, #footer > h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+  text-align: center;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
+}
+section > article > p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content > p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
+.content-container > article > p,
+.content-container > article span,
+.content-container > article blockquote,
+.content-container > article div,
+.content-container > article ul,
+.content-container > article ol, .content-container > .content > p, .content-container > .content span, .content-container > .content blockquote, .content-container > .content div, .content-container > .content ul, .content-container > .content ol,
+footer > p,
+footer span,
+footer blockquote,
+footer div,
+footer ul,
+footer ol, .footer > p, .footer span, .footer blockquote, .footer div, .footer ul, .footer ol, #footer > p, #footer span, #footer blockquote, #footer div, #footer ul, #footer ol {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
-section > article::after, section .content::after, section > aside::after, section .aside::after, .content-container > article::after, .content-container .content::after, .content-container > aside::after, .content-container .aside::after {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  section > article > p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content > p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
+  .content-container > article > p,
+  .content-container > article span,
+  .content-container > article blockquote,
+  .content-container > article div,
+  .content-container > article ul,
+  .content-container > article ol, .content-container > .content > p, .content-container > .content span, .content-container > .content blockquote, .content-container > .content div, .content-container > .content ul, .content-container > .content ol,
+  footer > p,
+  footer span,
+  footer blockquote,
+  footer div,
+  footer ul,
+  footer ol, .footer > p, .footer span, .footer blockquote, .footer div, .footer ul, .footer ol, #footer > p, #footer span, #footer blockquote, #footer div, #footer ul, #footer ol {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+section > aside::after, section > .aside::after,
+.content-container > aside::after, .content-container > .aside::after {
   content: '';
   display: table;
   clear: both;
 }
-section > article h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section .content h1, section .content h2, section .content h3, section .content h4, section .content h5, section .content h6, section > aside h1, section > aside h2, section > aside h3, section > aside h4, section > aside h5, section > aside h6, section .aside h1, section .aside h2, section .aside h3, section .aside h4, section .aside h5, section .aside h6, .content-container > article h1, .content-container > article h2, .content-container > article h3, .content-container > article h4, .content-container > article h5, .content-container > article h6, .content-container .content h1, .content-container .content h2, .content-container .content h3, .content-container .content h4, .content-container .content h5, .content-container .content h6, .content-container > aside h1, .content-container > aside h2, .content-container > aside h3, .content-container > aside h4, .content-container > aside h5, .content-container > aside h6, .content-container .aside h1, .content-container .aside h2, .content-container .aside h3, .content-container .aside h4, .content-container .aside h5, .content-container .aside h6 {
+section > aside > p, section > aside span, section > aside blockquote, section > aside div, section > aside ul, section > aside ol, section > .aside > p, section > .aside span, section > .aside blockquote, section > .aside div, section > .aside ul, section > .aside ol,
+.content-container > aside > p,
+.content-container > aside span,
+.content-container > aside blockquote,
+.content-container > aside div,
+.content-container > aside ul,
+.content-container > aside ol, .content-container > .aside > p, .content-container > .aside span, .content-container > .aside blockquote, .content-container > .aside div, .content-container > .aside ul, .content-container > .aside ol {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+section > aside > h1, section > aside h2, section > aside h3, section > aside h4, section > aside h5, section > aside h6, section > .aside > h1, section > .aside h2, section > .aside h3, section > .aside h4, section > .aside h5, section > .aside h6,
+.content-container > aside > h1,
+.content-container > aside h2,
+.content-container > aside h3,
+.content-container > aside h4,
+.content-container > aside h5,
+.content-container > aside h6, .content-container > .aside > h1, .content-container > .aside h2, .content-container > .aside h3, .content-container > .aside h4, .content-container > .aside h5, .content-container > .aside h6 {
   text-align: center;
-}
-section > article, section .content, .content-container > article, .content-container .content {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 11;
-          flex: auto 11;
-  /* Why is this working as I intend (as in keeping the ratio of the box)? */
-}
-section > aside, section .aside, .content-container > aside, .content-container .aside {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 1;
-          flex: auto 1;
-  /* Why is this working as I intend (as in keeping the ratio of the box)? */
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 
 [data-tooltip]:hover {

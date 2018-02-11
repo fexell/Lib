@@ -1,3 +1,19 @@
+/* Wrapper / <Main> */
+
 @import "wrapper/wrapper";
+
+/* Top - Header, menu, etc. */
+
 @import "top/top";
+
+/* Content - <Section>, <Article>, <Aside>, etc. */
+
 @import "content/content";
+
+/* Footer - <Footer>, .footer, #footer, etc. */
+
+@import "footer/footer";
+
+/* Responsive fixes */
+
+@import "responsive/responsive";

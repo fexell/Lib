@@ -124,6 +124,78 @@ $xlg: $break !default; // 1920
     }
 }
 
+@mixin vp($viewport: null) {
+	@if ($viewport == "phone") {
+		@viewport {
+			max-width: 480px;
+			@content;
+		}
+	}
+	@else if ($viewport == "tablet") {
+		@viewport {
+			max-width: 768px;
+			@content;
+		}
+	}
+	@else if ($viewport == "tab-landscape") {
+		@viewport {
+			max-width: 1024px;
+			@content;
+		}
+	}
+	@else if ($viewport == "desktop") {
+		@viewport {
+			max-width: 1600px;
+			@content;
+		}
+	}
+	@else if ($viewport ==  "big-desktop") {
+		@viewport {
+			min-width: 1920px;
+			@content;
+		}
+	}
+	@else if ($viewport) {
+		@viewport {
+			min-width: 1920px;
+			@content;
+		}
+	}
+}
+
+@mixin mq($mq: null) {
+	@if ($mq == phone) {
+		@media only screen and(max-width: 480px) {
+			@content;
+		}
+	}
+	@else if ($mq == tablet) {
+		@media only screen and(min-width: 481px) and (max-width: 767px) {
+			@content;
+		}
+	}
+	@else if ($mq == tab-x) {
+		@media only screen and(min-width: 768px) and (max-width: 1023px) {
+			@content;
+		}
+	}
+	@else if ($mq == desktop) {
+		@media only screen and(min-width: 1024px) and (max-width: 1599px) {
+			@content;
+		}
+	}
+	@else if ($mq == big-desktop) {
+		@media only screen and(min-width: 1600px) and (max-width: 1919px) {
+			@content;
+		}
+	}
+	@else if($mq == null) {
+		@media only screen and(min-width: 1920px) {
+			@content;
+		}
+	}
+}
+
 @mixin responsiveScaling($x, $y, $pseudo: false) {
     $padding: unquote(($y / $x) * 100 + '%');
     @if $pseudo {

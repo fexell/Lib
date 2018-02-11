@@ -1,34 +1,33 @@
 @import "../../mixins/mixins";
 
 section, .content-container {
-    display: flex;
-    justify-content: center;
     width: 100%;
     margin: {
         left: auto;
         right: auto;
     }
+	
+	&.aside-left {
+		flex-flow: row-reverse wrap;
+	}
 
-    @include max(md) {width: 100%; flex-flow: column wrap;}
-
-    &> article, & .content, &> aside, & .aside {
-        
+    &> article, &> .content, &> aside, &> .aside {
         z-index: 0;
-        
-        @include clearfix;
-        @include paddingSides($x-small);
-        @include paddingEnds($small);
-        
-        h1, h2, h3, h4, h5, h6 {
-            text-align: center;
-        }
     }
 
-    &> article, & .content {
-        flex: auto 11; /* Why is this working as I intend (as in keeping the ratio of the box)? */
+    &> article, &> .content {
+        flex: 3 0 80%;
+		@include mq(desktop) {flex: 3 0 75%;}
+		@include mq(tab-x) {flex: 3 0 70%;}
+		
+		&> div {
+			flex: 1;
+		}
     }
 
-    &> aside, & .aside {
-        flex: auto 1; /* Why is this working as I intend (as in keeping the ratio of the box)? */
+    &> aside, &> .aside {
+        flex: 1 0 20%;
+		@include mq(desktop) {flex: 1 0 25%;}
+		@include mq(tab-x) {flex: 1 0 30%;}
     }
 }
