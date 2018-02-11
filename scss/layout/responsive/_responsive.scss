@@ -13,18 +13,20 @@ section > article, section > .content,
 footer, .footer, #footer {
 	@include flexbox;
 	@include clearfix;
-	@include mq(tablet) {width: 100%; flex-flow: column wrap; flex-basis: 100%;}
+	@include mq(tablet) { width: 100%; flex-flow: column wrap; flex-basis: 100%; }
+	@include mq(phone) { width: 100%; flex-flow: column wrap; flex-basis: 100%; }
 	
-	&> #{$headings} {
+	& #{$headings} {
 		text-align: center;
 		@include paddingEnds($x-small);
 		@include paddingSides($x-small);
 	}
 	
-	&> #{$innerElements} {
+	& #{$innerElements} {
 		@include paddingEnds($small);
 		@include paddingSides($small);
-		@include mq(tablet) {width: 100%; flex-flow: column wrap; flex-basis: 100%;}
+		@include mq(tablet) { width: 100%; flex-flow: column wrap; flex-basis: 100%; }
+		@include mq(phone) { width: 100%; flex-flow: column wrap; flex-basis: 100%; }
 	}
 }
 
@@ -32,12 +34,12 @@ section > aside, section > .aside,
 .content-container > aside, .content-container > .aside {
 	@include clearfix;
 	
-	&> #{$innerElements} {
+	& #{$innerElements} {
 		@include paddingEnds($small);
 		@include paddingSides($small);
 	}
 	
-	&> #{$headings} {
+	& #{$headings} {
 		text-align: center;
 		@include paddingEnds($x-small);
 		@include paddingSides($x-small);
