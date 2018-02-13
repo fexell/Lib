@@ -318,7 +318,7 @@ footer::after, .footer::after, #footer::after {
   display: table;
   clear: both;
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   section > article, section > .content,
   .content-container > article, .content-container > .content,
   footer, .footer, #footer {
@@ -381,7 +381,7 @@ footer ol, .footer p, .footer span, .footer blockquote, .footer div, .footer ul,
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   section > article p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
   .content-container > article p,
   .content-container > article span,

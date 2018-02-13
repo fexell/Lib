@@ -1,0 +1,11 @@
+html, body, main, .wrapper {
+	max-width: 100%;
+	width: 100%;
+	/* Ugly hack to keep the whole layout stay at 100% width */
+	overflow-x: hidden;
+}
+
+@import "formatting";
+@import "classes";
+@import "header";
+@import "content";

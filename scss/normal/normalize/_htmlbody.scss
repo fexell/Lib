@@ -13,10 +13,11 @@ html > body {
   @include global-font;
 }
 
-#{$body} {
-  margin: 0;
-  /* Removes "Whitespace nodes", (but not for inputs) } Both are needed */
-  /* Removes "Whitespace nodes", (but not for inputs) } for this fix */
-  white-space: nowrap;
-  white-space: initial;
+#{$htmlbody} {
+	margin: 0;
+	padding: 0;
+	/* Removes "Whitespace nodes", (but not for inputs) } Both are needed */
+	/* Removes "Whitespace nodes", (but not for inputs) } for this fix */
+	white-space: nowrap;
+	white-space: initial;
 }

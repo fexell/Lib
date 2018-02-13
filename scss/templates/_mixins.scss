@@ -1,0 +1,80 @@
+@mixin template-flexbox {
+	display: flex;
+	justify-content: center;
+	
+	@include mq() {
+		flex-flow: row wrap;
+	}
+	@include mq(big-desktop) {
+		flex-flow: row wrap;
+	}
+	@include mq(desktop) {
+		flex-flow: row wrap;
+	}
+	@include mq(tab-x) {
+		flex-flow: row wrap;
+	}
+	@include mq(tablet) {
+		flex-flow: column wrap;
+	}
+	@include mq(phone) {
+		flex-flow: column wrap;
+	}
+}
+
+@mixin gtc { grid-auto-flow: column; grid-auto-columns: 50%; }
+@mixin gtc-tablet { grid-auto-flow: column; grid-auto-columns: 100%; }
+@mixin gtr { grid-auto-flow: row; grid-auto-columns: 100%; grid-template-rows: 100% 100%; }
+
+@mixin template-grid {
+	display: grid;
+	
+	@include mq() {
+		@include gtc;
+	}
+	
+	@include mq(big-desktop) {
+		@include gtc;
+	}
+	
+	@include mq(desktop) {
+		@include gtc;
+	}
+	
+	@include mq(tab-x) {
+		@include gtc;
+	}
+	
+	@include mq(tablet) {
+		@include gtr;
+	}
+	
+	@include mq(phone) {
+		@include gtr;
+	}
+}
+
+@mixin innerWidth {
+	@include mq() {
+		min-width: 1600px;
+		max-width: 1920px;
+	}
+	@include mq(big-desktop) {
+		min-width: 1024px;
+		max-width: 1600px;
+	}
+	@include mq(tab-x) {
+		min-width: 768px;
+		max-width: 1024px;
+	}
+	@include mq(tablet) {
+		min-width: 100%;
+		max-width: 100%;
+	}
+	@include mq(phone) {
+		min-width: 100%;
+		max-width: 100%;
+	}
+	
+	//width: 100%;
+}

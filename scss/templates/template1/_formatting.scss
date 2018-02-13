@@ -1,0 +1,54 @@
+@each $heading, $size in (h1: 3rem, h2: 2.6rem, h3: 2.2rem, h4: 1.8rem, h5: 1.4, h6: 1) {
+	#{$heading} {
+		font-size: $size;
+		
+		&.bread-title {
+			color: #CCC;
+			font-size: $size / 1.5;
+			
+			&-i {
+				@extend .bread-title;
+				font-style: italic;
+			}
+		}
+	}
+}
+
+html {
+	@include mq() {
+		font-size: 16px;
+	}
+	@include mq(big-desktop) {
+		font-size: 16px;
+	}
+	@include mq(desktop) {
+		font-size: 16px;
+	}
+	@include mq(tab-x) {
+		font-size: 16px;
+	}
+	@include mq(tablet) {
+		font-size: 16px;
+	}
+	@include mq(phone) {
+		font-size: 12px;
+	}
+}
+
+#{$textContent},
+#{$inlineTextContent} {
+	font-size: 0.98rem;
+}
+
+#{$textContent} {
+	display: block;
+}
+
+#{$inlineTextContent} {
+	display: inline;
+}
+
+.bread-text {
+	color: #CCC;
+	font-size: 0.90rem;
+}

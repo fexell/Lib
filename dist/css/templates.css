@@ -494,3 +494,312 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
   /* A "fix" for older browsers */
   display: block;
 }
+
+/* MARGIN MIXINS */
+/* PADDING MIXINS */
+/* CLEARFIX MIXIN */
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 384px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+}
+html, body, main, .wrapper {
+  max-width: 100%;
+  width: 100%;
+  /* Ugly hack to keep the whole layout stay at 100% width */
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h1.bread-title, h1.bread-title-i {
+  color: #CCC;
+  font-size: 2rem;
+}
+h1.bread-title-i {
+  font-style: italic;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+h2.bread-title, h2.bread-title-i {
+  color: #CCC;
+  font-size: 1.7333333333rem;
+}
+h2.bread-title-i {
+  font-style: italic;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+h3.bread-title, h3.bread-title-i {
+  color: #CCC;
+  font-size: 1.4666666667rem;
+}
+h3.bread-title-i {
+  font-style: italic;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+h4.bread-title, h4.bread-title-i {
+  color: #CCC;
+  font-size: 1.2rem;
+}
+h4.bread-title-i {
+  font-style: italic;
+}
+
+h5 {
+  font-size: 1.4;
+}
+h5.bread-title, h5.bread-title-i {
+  color: #CCC;
+  font-size: 0.9333333333;
+}
+h5.bread-title-i {
+  font-style: italic;
+}
+
+h6 {
+  font-size: 1;
+}
+h6.bread-title, h6.bread-title-i {
+  color: #CCC;
+  font-size: 0.6666666667;
+}
+h6.bread-title-i {
+  font-style: italic;
+}
+
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+blockquote, dd, dir, div, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul,
+a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, rt, rtc, ruby, s, samp, small, span, strong, sub, time, tt, u, var, wbr {
+  font-size: 0.98rem;
+}
+
+blockquote, dd, dir, div, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul {
+  display: block;
+}
+
+a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, rt, rtc, ruby, s, samp, small, span, strong, sub, time, tt, u, var, wbr {
+  display: inline;
+}
+
+.bread-text {
+  color: #CCC;
+  font-size: 0.90rem;
+}
+
+/* Don't use <menu> or <menuitem> as it is Deprecated and WILL be removed */
+header, .header {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  width: 100%;
+}
+header > nav, header .navigation, .header > nav, .header .navigation {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 100px;
+}
+@media only screen and (min-width: 1920px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    grid-auto-flow: row;
+    grid-auto-columns: 100%;
+    grid-template-rows: 100% 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    grid-auto-flow: row;
+    grid-auto-columns: 100%;
+    grid-template-rows: 100% 100%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    min-width: 1600px;
+    max-width: 1920px;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    min-width: 1024px;
+    max-width: 1600px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    min-width: 768px;
+    max-width: 1024px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    height: auto;
+    grid-template-rows: 120px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
+    height: auto;
+    grid-template-rows: 120px;
+  }
+}
+header > nav .logo, header > nav .logotype, header .navigation .logo, header .navigation .logotype, .header > nav .logo, .header > nav .logotype, .header .navigation .logo, .header .navigation .logotype {
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+header > nav .logo.right, header > nav .logotype.right, header .navigation .logo.right, header .navigation .logotype.right, .header > nav .logo.right, .header > nav .logotype.right, .header .navigation .logo.right, .header .navigation .logotype.right {
+  justify-self: end;
+}
+header > nav .logo.center, header > nav .logotype.center, header .navigation .logo.center, header .navigation .logotype.center, .header > nav .logo.center, .header > nav .logotype.center, .header .navigation .logo.center, .header .navigation .logotype.center {
+  justify-self: center;
+}
+header > nav .logo > img, header > nav .logotype > img, header .navigation .logo > img, header .navigation .logotype > img, .header > nav .logo > img, .header > nav .logotype > img, .header .navigation .logo > img, .header .navigation .logotype > img {
+  height: 100%;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  header > nav .logo, header > nav .logotype, header .navigation .logo, header .navigation .logotype, .header > nav .logo, .header > nav .logotype, .header .navigation .logo, .header .navigation .logotype {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header > nav .logo, header > nav .logotype, header .navigation .logo, header .navigation .logotype, .header > nav .logo, .header > nav .logotype, .header .navigation .logo, .header .navigation .logotype {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+  }
+}
+header > nav ul, header > nav ul.menu, header .navigation ul, header .navigation ul.menu, .header > nav ul, .header > nav ul.menu, .header .navigation ul, .header .navigation ul.menu {
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  white-space: nowrap;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  header > nav ul, header > nav ul.menu, header .navigation ul, header .navigation ul.menu, .header > nav ul, .header > nav ul.menu, .header .navigation ul, .header .navigation ul.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header > nav ul > li, header > nav ul.menu > li, header .navigation ul > li, header .navigation ul.menu > li, .header > nav ul > li, .header > nav ul.menu > li, .header .navigation ul > li, .header .navigation ul.menu > li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+header > nav ul > li, header > nav ul.menu > li, header .navigation ul > li, header .navigation ul.menu > li, .header > nav ul > li, .header > nav ul.menu > li, .header .navigation ul > li, .header .navigation ul.menu > li {
+  display: inline-block;
+  position: relative;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  header > nav ul > li, header > nav ul.menu > li, header .navigation ul > li, header .navigation ul.menu > li, .header > nav ul > li, .header > nav ul.menu > li, .header .navigation ul > li, .header .navigation ul.menu > li {
+    display: block;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header > nav ul > li, header > nav ul.menu > li, header .navigation ul > li, header .navigation ul.menu > li, .header > nav ul > li, .header > nav ul.menu > li, .header .navigation ul > li, .header .navigation ul.menu > li {
+    display: block;
+  }
+}
+header > nav ul > li > a, header > nav ul.menu > li > a, header .navigation ul > li > a, header .navigation ul.menu > li > a, .header > nav ul > li > a, .header > nav ul.menu > li > a, .header .navigation ul > li > a, .header .navigation ul.menu > li > a {
+  display: block;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}

@@ -65,8 +65,9 @@ html > body {
   line-height: 1.3em;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
   /* Removes "Whitespace nodes", (but not for inputs) } Both are needed */
   /* Removes "Whitespace nodes", (but not for inputs) } for this fix */
   white-space: nowrap;
@@ -537,7 +538,7 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     font-size: 1.7rem;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   h1 {
     font-size: 1.6rem;
   }
@@ -568,7 +569,7 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     font-size: 1.6rem;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   h2 {
     font-size: 1.5rem;
   }
@@ -599,7 +600,7 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   h3 {
     font-size: 1.4rem;
   }
@@ -630,7 +631,7 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     font-size: 1.4rem;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   h4 {
     font-size: 1.3rem;
   }
@@ -661,7 +662,7 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     font-size: 1.3rem;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   h5 {
     font-size: 1.2rem;
   }
@@ -692,7 +693,7 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
     font-size: 1.2rem;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   h6 {
     font-size: 1.1rem;
   }
@@ -1224,7 +1225,7 @@ footer::after, .footer::after, #footer::after {
   display: table;
   clear: both;
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   section > article, section > .content,
   .content-container > article, .content-container > .content,
   footer, .footer, #footer {
@@ -1237,57 +1238,93 @@ footer::after, .footer::after, #footer::after {
         flex-basis: 100%;
   }
 }
-section > article > h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section > .content > h1, section > .content h2, section > .content h3, section > .content h4, section > .content h5, section > .content h6,
-.content-container > article > h1,
+@media only screen and (max-width: 480px) {
+  section > article, section > .content,
+  .content-container > article, .content-container > .content,
+  footer, .footer, #footer {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+section > article h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section > .content h1, section > .content h2, section > .content h3, section > .content h4, section > .content h5, section > .content h6,
+.content-container > article h1,
 .content-container > article h2,
 .content-container > article h3,
 .content-container > article h4,
 .content-container > article h5,
-.content-container > article h6, .content-container > .content > h1, .content-container > .content h2, .content-container > .content h3, .content-container > .content h4, .content-container > .content h5, .content-container > .content h6,
-footer > h1,
+.content-container > article h6, .content-container > .content h1, .content-container > .content h2, .content-container > .content h3, .content-container > .content h4, .content-container > .content h5, .content-container > .content h6,
+footer h1,
 footer h2,
 footer h3,
 footer h4,
 footer h5,
-footer h6, .footer > h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6, #footer > h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+footer h6, .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
   text-align: center;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
 }
-section > article > p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content > p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
-.content-container > article > p,
+section > article p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
+.content-container > article p,
 .content-container > article span,
 .content-container > article blockquote,
 .content-container > article div,
 .content-container > article ul,
-.content-container > article ol, .content-container > .content > p, .content-container > .content span, .content-container > .content blockquote, .content-container > .content div, .content-container > .content ul, .content-container > .content ol,
-footer > p,
+.content-container > article ol, .content-container > .content p, .content-container > .content span, .content-container > .content blockquote, .content-container > .content div, .content-container > .content ul, .content-container > .content ol,
+footer p,
 footer span,
 footer blockquote,
 footer div,
 footer ul,
-footer ol, .footer > p, .footer span, .footer blockquote, .footer div, .footer ul, .footer ol, #footer > p, #footer span, #footer blockquote, #footer div, #footer ul, #footer ol {
+footer ol, .footer p, .footer span, .footer blockquote, .footer div, .footer ul, .footer ol, #footer p, #footer span, #footer blockquote, #footer div, #footer ul, #footer ol {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  section > article > p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content > p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
-  .content-container > article > p,
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  section > article p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
+  .content-container > article p,
   .content-container > article span,
   .content-container > article blockquote,
   .content-container > article div,
   .content-container > article ul,
-  .content-container > article ol, .content-container > .content > p, .content-container > .content span, .content-container > .content blockquote, .content-container > .content div, .content-container > .content ul, .content-container > .content ol,
-  footer > p,
+  .content-container > article ol, .content-container > .content p, .content-container > .content span, .content-container > .content blockquote, .content-container > .content div, .content-container > .content ul, .content-container > .content ol,
+  footer p,
   footer span,
   footer blockquote,
   footer div,
   footer ul,
-  footer ol, .footer > p, .footer span, .footer blockquote, .footer div, .footer ul, .footer ol, #footer > p, #footer span, #footer blockquote, #footer div, #footer ul, #footer ol {
+  footer ol, .footer p, .footer span, .footer blockquote, .footer div, .footer ul, .footer ol, #footer p, #footer span, #footer blockquote, #footer div, #footer ul, #footer ol {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  section > article p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
+  .content-container > article p,
+  .content-container > article span,
+  .content-container > article blockquote,
+  .content-container > article div,
+  .content-container > article ul,
+  .content-container > article ol, .content-container > .content p, .content-container > .content span, .content-container > .content blockquote, .content-container > .content div, .content-container > .content ul, .content-container > .content ol,
+  footer p,
+  footer span,
+  footer blockquote,
+  footer div,
+  footer ul,
+  footer ol, .footer p, .footer span, .footer blockquote, .footer div, .footer ul, .footer ol, #footer p, #footer span, #footer blockquote, #footer div, #footer ul, #footer ol {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1304,25 +1341,25 @@ section > aside::after, section > .aside::after,
   display: table;
   clear: both;
 }
-section > aside > p, section > aside span, section > aside blockquote, section > aside div, section > aside ul, section > aside ol, section > .aside > p, section > .aside span, section > .aside blockquote, section > .aside div, section > .aside ul, section > .aside ol,
-.content-container > aside > p,
+section > aside p, section > aside span, section > aside blockquote, section > aside div, section > aside ul, section > aside ol, section > .aside p, section > .aside span, section > .aside blockquote, section > .aside div, section > .aside ul, section > .aside ol,
+.content-container > aside p,
 .content-container > aside span,
 .content-container > aside blockquote,
 .content-container > aside div,
 .content-container > aside ul,
-.content-container > aside ol, .content-container > .aside > p, .content-container > .aside span, .content-container > .aside blockquote, .content-container > .aside div, .content-container > .aside ul, .content-container > .aside ol {
+.content-container > aside ol, .content-container > .aside p, .content-container > .aside span, .content-container > .aside blockquote, .content-container > .aside div, .content-container > .aside ul, .content-container > .aside ol {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-section > aside > h1, section > aside h2, section > aside h3, section > aside h4, section > aside h5, section > aside h6, section > .aside > h1, section > .aside h2, section > .aside h3, section > .aside h4, section > .aside h5, section > .aside h6,
-.content-container > aside > h1,
+section > aside h1, section > aside h2, section > aside h3, section > aside h4, section > aside h5, section > aside h6, section > .aside h1, section > .aside h2, section > .aside h3, section > .aside h4, section > .aside h5, section > .aside h6,
+.content-container > aside h1,
 .content-container > aside h2,
 .content-container > aside h3,
 .content-container > aside h4,
 .content-container > aside h5,
-.content-container > aside h6, .content-container > .aside > h1, .content-container > .aside h2, .content-container > .aside h3, .content-container > .aside h4, .content-container > .aside h5, .content-container > .aside h6 {
+.content-container > aside h6, .content-container > .aside h1, .content-container > .aside h2, .content-container > .aside h3, .content-container > .aside h4, .content-container > .aside h5, .content-container > .aside h6 {
   text-align: center;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
