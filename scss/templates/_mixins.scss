@@ -56,10 +56,14 @@
 
 @mixin innerWidth {
 	@include mq() {
+		min-width: 1920px;
+		max-width: auto;
+	}
+	@include mq(big-desktop) {
 		min-width: 1600px;
 		max-width: 1920px;
 	}
-	@include mq(big-desktop) {
+	@include mq(desktop) {
 		min-width: 1024px;
 		max-width: 1600px;
 	}

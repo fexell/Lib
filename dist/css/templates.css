@@ -515,6 +515,20 @@ html, body, main, .wrapper {
   overflow-x: hidden;
 }
 
+body {
+  min-height: 100%;
+}
+
+body > main, body > .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -685,11 +699,17 @@ header > nav, header .navigation, .header > nav, .header .navigation {
 }
 @media only screen and (min-width: 1920px) {
   header > nav, header .navigation, .header > nav, .header .navigation {
+    min-width: 1920px;
+    max-width: auto;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  header > nav, header .navigation, .header > nav, .header .navigation {
     min-width: 1600px;
     max-width: 1920px;
   }
 }
-@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
   header > nav, header .navigation, .header > nav, .header .navigation {
     min-width: 1024px;
     max-width: 1600px;
@@ -833,13 +853,24 @@ header > nav ul > li > a, header > nav ul.menu > li > a, header .navigation ul >
   white-space: nowrap;
 }
 
+section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
 @media only screen and (min-width: 1920px) {
+  section {
+    min-width: 1920px;
+    max-width: auto;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
   section {
     min-width: 1600px;
     max-width: 1920px;
   }
 }
-@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
   section {
     min-width: 1024px;
     max-width: 1600px;
