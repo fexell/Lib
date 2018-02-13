@@ -15,9 +15,24 @@ $menu: ul, "ul.menu"; /* Don't use <menu> or <menuitem> as it is Deprecated and 
 		@include template-grid;
 		@include marginAuto;
 		@include innerWidth;
-		justify-content: center;
 		position: relative;
 		height: 100px;
+		
+		&.space-between {
+			justify-content: space-between;
+		}
+		
+		&.start {
+			justify-content: start;
+		}
+		
+		&.end {
+			justify-content: end;
+		}
+		
+		&.center {
+			justify-content: center;
+		}
 		
 		@include mq(tablet) { height: auto; grid-template-rows: 120px; }
 		@include mq(phone) { height: auto; grid-template-rows: 120px; }
@@ -46,10 +61,14 @@ $menu: ul, "ul.menu"; /* Don't use <menu> or <menuitem> as it is Deprecated and 
 			
 			@include mq(tablet) {
 				@include marginAuto;
+				display: flex;
+				justify-content: center;
 				justify-self: center;
 			}
 			@include mq(phone) {
 				@include marginAuto;
+				display: flex;
+				justify-content: center;
 				justify-self: center;
 			}
 		}
