@@ -19,33 +19,33 @@ $xlg: $break !default; // 1920
   }
 }
 
-@mixin max($device) {
-  @if $device == xs {
+@mixin max($device: null) {
+  @if $device == phone {
     @media only screen and (max-width: $break / 5) {
       @content;
     }
   }
-  @else if $device == sm {
+  @else if $device == tablet {
     @media only screen and (max-width: $break / 4) {
       @content;
     }
   }
-  @else if $device == md {
+  @else if $device == tab-x {
     @media only screen and (max-width: $break / 3) {
       @content;
     }
   }
-  @else if $device == xmd {
+  @else if $device == desktop {
     @media only screen and (max-width: $break / 2) {
       @content;
     }
   }
-  @else if $device == lg {
+  @else if $device == big-desktop {
     @media only screen and (max-width: $break / 1.5) {
       @content;
     }
   }
-  @else if $device == xlg {
+  @else if $device == null {
     @media only screen and (min-width: $break) {
       @content;
     }
@@ -55,33 +55,33 @@ $xlg: $break !default; // 1920
   }
 }
 
-@mixin min($device) {
-  @if $device == xs {
-    @media only screen and (min-width: $break / 5) {
+@mixin min($device: null) {
+  @if $device == phone {
+    @media only screen and (min-width: 480px) {
       @content;
     }
   }
-  @else if $device == sm {
-    @media only screen and (min-width: $break / 4) {
+  @else if $device == tablet {
+    @media only screen and (min-width: 768px) {
       @content;
     }
   }
-  @else if $device == md {
-    @media only screen and (min-width: $break / 3) {
+  @else if $device == tab-x {
+    @media only screen and (min-width: 1024px) {
       @content;
     }
   }
-  @else if $device == xmd {
-    @media only screen and (min-width: $break / 2) {
+  @else if $device == desktop {
+    @media only screen and (min-width: 1600px) {
       @content;
     }
   }
-  @else if $device == lg {
-    @media only screen and (min-width: $break / 1.5) {
+  @else if $device == big-desktop {
+    @media only screen and (min-width: 1920px) {
       @content;
     }
   }
-  @else if $device == xlg {
+  @else if $device == null {
     @media only screen and (max-width: $break) {
       @content;
     }
@@ -91,33 +91,33 @@ $xlg: $break !default; // 1920
   }
 }
 
-@mixin minmax($device) {
-    @if $device  == xs {
+@mixin minmax($device: null) {
+    @if $device  == phone {
         @media only screen and (min-width: $break / 5 - 1) and (max-width: $break / 4) {
             @content;
         }
     }
-    @else if $device == sm {
+    @else if $device == tablet {
         @media only screen and (min-width: $break / 4 - 1) and (max-width: $break / 3) {
             @content;
         }
     }
-    @else if $device == md {
+    @else if $device == tab-x {
         @media only screen and (min-width: $break / 3 - 1) and (max-width: $break / 2) {
             @content;
         }
     }
-    @else if $device == xmd {
+    @else if $device == desktop {
         @media only screen and (min-width: $break / 2 - 1) and (max-width: $break / 1.5) {
             @content;
         }
     }
-    @else if $device == lg {
+    @else if $device == big-desktop {
         @media only screen and (min-width: $break / 1.5 - 1) and (max-width: $break) {
             @content;
         }
     }
-    @else if $device == xlg {
+    @else if $device == null {
         @media only screen and (min-width: $break) {
             @content;
         }
@@ -125,37 +125,37 @@ $xlg: $break !default; // 1920
 }
 
 @mixin vp($viewport: null) {
-	@if ($viewport == "phone") {
+	@if ($viewport == phone) {
 		@viewport {
 			max-width: 480px;
 			@content;
 		}
 	}
-	@else if ($viewport == "tablet") {
+	@else if ($viewport == tablet) {
 		@viewport {
 			max-width: 768px;
 			@content;
 		}
 	}
-	@else if ($viewport == "tab-landscape") {
+	@else if ($viewport == tab-x) {
 		@viewport {
 			max-width: 1024px;
 			@content;
 		}
 	}
-	@else if ($viewport == "desktop") {
+	@else if ($viewport == desktop) {
 		@viewport {
 			max-width: 1600px;
 			@content;
 		}
 	}
-	@else if ($viewport ==  "big-desktop") {
+	@else if ($viewport ==  big-desktop) {
 		@viewport {
 			min-width: 1920px;
 			@content;
 		}
 	}
-	@else if ($viewport) {
+	@else if ($viewport == null) {
 		@viewport {
 			min-width: 1920px;
 			@content;

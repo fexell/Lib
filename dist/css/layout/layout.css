@@ -30,26 +30,6 @@ main.fixed-container, .wrapper.fixed-container {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (min-width: 1920px) {
-  .fixed-container {
-    max-width: 1280px;
-  }
-}
-@media only screen and (min-width: 1279px) and (max-width: 1920px) {
-  .fixed-container {
-    max-width: 1280px;
-  }
-}
-@media only screen and (min-width: 959px) and (max-width: 1280px) {
-  .fixed-container {
-    max-width: 1000px;
-  }
-}
-@media only screen and (min-width: 639px) and (max-width: 960px) {
-  .fixed-container {
-    max-width: 800px;
-  }
-}
 
 /* Top - Header, menu, etc. */
 header {
@@ -95,18 +75,6 @@ nav.nav-container .menu {
   /* In case of small screen, center everything */
   /* Give option of spanning the <menu> 100%, but still keep the responsiveness */
 }
-@media only screen and (max-width: 960px) {
-  nav.nav-container .menu {
-    width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-@media only screen and (max-width: 640px) {
-  nav.nav-container .menu {
-    grid-template-columns: 100%;
-  }
-}
 nav.nav-container .menu.logo-top {
   grid-template-columns: 100%;
   grid-template-rows: 100% 100%;
@@ -118,11 +86,6 @@ nav.nav-container .menu.logo-top > input[type=image], nav.nav-container .menu.lo
 }
 nav.nav-container .menu.logo-right > ul {
   grid-row: 1;
-}
-@media only screen and (max-width: 640px) {
-  nav.nav-container .menu.logo-right > ul {
-    grid-row: 2;
-  }
 }
 nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu .logo > img, nav.nav-container .menu > ul, nav.nav-container .menu > input {
   margin-left: auto;
@@ -155,18 +118,8 @@ nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid
 nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo {
   justify-self: start;
 }
-@media only screen and (max-width: 640px) {
-  nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo {
-    justify-self: center;
-  }
-}
 nav.nav-container .menu.fluid > ul {
   justify-self: end;
-}
-@media only screen and (max-width: 640px) {
-  nav.nav-container .menu.fluid > ul {
-    justify-self: center;
-  }
 }
 
 /* Content - <Section>, <Article>, <Aside>, etc. */
