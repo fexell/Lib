@@ -48,3 +48,8 @@ Temporary Items
 
 # Ignore Folders
 /dist/*
+
+# Ignore Files
+config.rb
+package-lock.json
+prepros-6.config
