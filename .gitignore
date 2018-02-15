@@ -50,6 +50,7 @@ Temporary Items
 /dist/*
 
 # Ignore Files
-config.rb
-package-lock.json
-prepros-6.config
+*.rb
+*.config
+*.json
+*.haml

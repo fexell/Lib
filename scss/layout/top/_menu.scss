@@ -25,8 +25,8 @@ nav.nav-container {
     }
 
         /* In case of small screen, center everything */
-        @include max(xmd){width: 100%; justify-content: space-around;}
-        @include max(md){grid-template-columns: 100%;}
+        @include mq(tablet){width: 100%; justify-content: space-around;}
+        @include mq(phone){grid-template-columns: 100%;}
 
         &.logo-top {
             grid-template-columns: 100%;
@@ -41,7 +41,7 @@ nav.nav-container {
         &.logo-right {
             &> ul {
                 grid-row: 1;
-                @include max(md){grid-row: 2;}
+                @include mq(tablet){grid-row: 2;}
             }
         }
 
