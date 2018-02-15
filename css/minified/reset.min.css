@@ -1,1 +1,1 @@
-.unset,.unset-children>*,aside.unset>*,body.unset>*,details.unset,div.unset,fieldset.unset>*,footer.unset>*,form.unset>*,header.unset>*,section.unset>*,table.unset>*{all:unset}
+aside.unset>*,body.unset>*,fieldset.unset>*,footer.unset>*,form.unset>*,header.unset>*,section.unset>*,table.unset>*{all:initial;all:unset}details.unset,div.unset{all:initial;all:unset}.unset,.unset-children>*{all:initial;all:unset}
