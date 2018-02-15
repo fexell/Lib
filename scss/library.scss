@@ -1,20 +1,21 @@
 // Normal
-@import "normal/normalize";
+@import "normalize";
+@import "reset";
+
+// Mixins
+@import "mixins";
 
 // Formatting
-@import "formatting/formatting";
-
-// Reset
-@import "normal/reset";
+@import "formatting";
 
 // Classes
-@import "classes/classes";
+@import "classes";
 
 // Flex
-@import "flex/flex";
+@import "flex";
 
 // Layout
-@import "layout/layout";
+@import "layout";
 
 // Attributes
-@import "attributes/attributes";
+@import "attributes";

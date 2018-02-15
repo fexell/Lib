@@ -36,6 +36,10 @@ $positions: 'fixed', 'absolute', 'relative';
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
+
+			&-marginauto {
+				@include marginAuto;
+			}
         }
     }
 
@@ -46,7 +50,9 @@ $positions: 'fixed', 'absolute', 'relative';
 .cf {
     &:after {
         content: ' ';
+		display: table;
         clear: both;
+		display: unset;
     }
 }
 
