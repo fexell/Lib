@@ -1,0 +1,74 @@
+$options-y: 'top', 'bottom';
+$options-x: 'left', 'right';
+$positions: 'fixed', 'absolute', 'relative';
+
+/* Helper  */
+
+.block-center {
+    display: block;
+    @include marginAuto;
+}
+
+/* Position helper classes */
+
+@each $position in $positions {
+    @each $option-y in $options-y {
+        .#{$position} {
+            
+            position: #{$position};
+
+            &-#{$option-y} {
+                @extend .#{$position};
+                #{$option-y}: 0;
+
+                @each $option-x in $options-x {
+                    &-#{$option-x} {
+                        @extend .#{$position}-#{$option-y};
+                        #{$option-x}: 0;
+                    }
+                }
+
+            } // /#{$option-y}
+
+            &-middle {
+                @extend .#{$position};
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+}
+
+/* Clearfix helper class */
+
+.cf {
+    &:after {
+        content: ' ';
+        clear: both;
+    }
+}
+
+/* Show/Hide helper classes */
+
+.dis {
+    &-show {
+        display: initial !important;
+        display: unset !important;
+        @at-root .vis {
+            &-show {
+                visibility: initial !important;
+                visibility: unset !important;
+            }
+        }
+    }
+    &-hide {
+        display: none !important;
+        @at-root .vis {
+            &-hide {
+                visibility: hidden !important;
+            }
+        }
+    }
+}
