@@ -1,13 +1,13 @@
 @mixin global-font {
-    font: {
+  font: {
     family: "Verdana", sans-serif;
     kerning: auto;
-    size: 16px;
+    size: inherit;
     size-adjust: 0.54;
     weight: 400;
   }
   text: {
-    align: left;
+    align: inherit;
   }
     unicode-bidi: embed;
     line-height: 1.3em;

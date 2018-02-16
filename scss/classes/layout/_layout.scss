@@ -1,48 +1,128 @@
-.row-container {
+// Flex
+
+.flex-container {
 	display: flex;
 	flex-flow: row wrap;
 }
 
 @include mq(tablet) {
-	.row-container {
-		flex-flow: column wrap;
+	.flex-container {
+		flex-flow: row wrap;
 	}
 }
 
 @include mq(phone) {
-	.row-container {
-		flex-flow: column wrap;
+	.flex-container {
+		flex-flow: column nowrap;
 	}
 }
 
 @for $i from 1 through 6 {
-	.column-#{$i} {
-		flex: 1 0 (100% / $i);
-		display: block;
-		
-		max-width: 100 / $i + vmax;
-		width: 100%;
-		min-height: 100px;
-		
-		@include clearfix;
-		@include mq(null) { min-width: 1920 / $i + px; }
-		@include mq(big-desktop) { min-width: 1600 / $i + px; }
-		@include mq(desktop) { min-width: 1024 / $i + px; }
-	}
-	
-	@include mq(tablet) {
-		.row-container > .column-#{$i} {
-			flex-basis: (100vmin / $i);
-			max-width: 100%;
-			width: 100%;
-		}
-	}
-	
-	@include mq(phone) {
-		.row-container > .column-#{$i} {
-			flex-basis: (100vmin / $i);
-			max-width: 100%;
-			width: 100%;
-		}
-	}
+  .flex-container {
+    &> .column-#{$i} {
+        flex: 1 0 (100% / $i);
+        display: block;
+
+        max-width: 100 / $i + vmax;
+        width: 100%;
+        min-height: 100px;
+
+        @include clearfix;
+        @include mq(null) { min-width: 100% / $i; }
+        @include mq(big-desktop) { min-width: 1600 / $i - 17 + px; }
+        @include mq(desktop) { min-width: 1024 / $i - 17 + px; }
+    }
+    @if $i >= 4 {
+      @include mq(tablet) {
+          & .column-#{$i} {
+              flex-basis: auto;
+              max-width: 100%;
+              width: 100%;
+          }
+      }
+    }
+
+      @include mq(phone) {
+          & .column-#{$i} {
+              flex-basis: auto;
+              max-width: 100%;
+              width: 100%;
+          }
+      }
+  }
+}
+
+// Grid
+
+.grid-container {
+  display: grid;
+  //grid-auto-columns: 12fr;
+  grid-auto-flow: row dense;
+  grid-auto-columns: (100% / 12);
+  max-width: 100%;
+  
+  @include clearfix;
+  @include mq(tablet) { grid-auto-rows: 100%; }
+}
+
+@for $i from 1 through 5 {
+  .grid-container {
+    &> .column-#{$i} {
+      //grid-column: span $i / 6;
+      grid-column: span round(12 / $i);
+      @include clearfix;
+      @if $i >= 4 {
+        @include mq(tablet) { grid-column: span 12 ; }
+      }
+      @if $i >= 2 {
+        @include mq(phone) { grid-column: span 12; }
+      }
+    }
+  }
+}
+
+
+
+.grid-container > .column-6 {
+  grid-column: span 1;
+  @include clearfix;
+  @include mq(tab-x) { grid-column: span 2; }
+  @include mq(tablet) { grid-column: span 12; }
+  @include mq(phone) { grid-column: span 12; }
+}
+
+// Percentage
+
+.p-container {
+  max-width: 100%;
+  min-width: 100%;
+  width: 100vw;
+  
+  @for $i from 0 through 6 {
+    & .column-#{$i} {
+      @include mq(null) { min-width: 1600px / $i};
+      @include mq(big-desktop) { min-width: 1024px / $i};
+      @include mq(desktop) { min-width: 768px / $i};
+      max-width: 100% / $i;
+      width: 100% / $i;
+      float: left;
+      clear: right;
+      @include clearfix;
+      @include mq(tablet) {
+        @if $i >= 4 {
+          float: unset;
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+      @include mq(phone) {
+        @if $i >= 3 {
+          float: unset;
+          max-width: 100%;
+          width: 100%;
+          @include clearfix;
+        }
+      }
+    }
+  }
 }

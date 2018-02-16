@@ -56,10 +56,10 @@ html > body {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
   font-kerning: auto;
-  font-size: 16px;
+  font-size: inherit;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-align: left;
+  text-align: inherit;
   unicode-bidi: embed;
   line-height: 1.3em; }
 
@@ -97,10 +97,10 @@ details {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
   font-kerning: auto;
-  font-size: 16px;
+  font-size: inherit;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-align: left;
+  text-align: inherit;
   unicode-bidi: embed;
   line-height: 1.3em;
   word-spacing: 0.01em;
@@ -109,8 +109,13 @@ details {
   letter-spacing: 0.1px;
   direction: ltr;
   /* Font smooth hack */
-  text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4);
+  text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4); }
+
+blockquote, dd, dir, div, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul {
   display: block; }
+
+a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, rt, rtc, ruby, s, samp, small, span, strong, sub, time, tt, u, var, wbr {
+  display: inline; }
 
 em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, font, br, map, area, tt, i, b, u, strike, big, small, sub, sup, input, select, option, textarea, caption, tr, th, td, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -120,10 +125,10 @@ em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, fo
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
   font-kerning: auto;
-  font-size: 16px;
+  font-size: inherit;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-align: left;
+  text-align: inherit;
   unicode-bidi: embed;
   line-height: 1.3em;
   word-spacing: 0.01em;
@@ -160,10 +165,10 @@ input, select, option, button, textarea, datalist, output, optgroup {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
   font-kerning: auto;
-  font-size: 16px;
+  font-size: inherit;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-align: left;
+  text-align: inherit;
   unicode-bidi: embed;
   line-height: 1.3em;
   background-color: #F1F1F1; }
@@ -367,10 +372,10 @@ table, tbody, thead, tfoot, th, tr, td, colgroup, col {
   font-family: "Verdana", sans-serif;
   -webkit-font-kerning: auto;
   font-kerning: auto;
-  font-size: 16px;
+  font-size: inherit;
   font-size-adjust: 0.54;
   font-weight: 400;
-  text-align: left;
+  text-align: inherit;
   unicode-bidi: embed;
   line-height: 1.3em; }
 

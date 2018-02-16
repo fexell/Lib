@@ -53,4 +53,4 @@ Temporary Items
 *.rb
 *.config
 *.json
-*.haml
+*.pug

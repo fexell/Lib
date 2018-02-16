@@ -8,7 +8,14 @@
 details {
   @include global-font;
   @include text-reset;
+}
+
+#{$textContent} {
   display: block;
+}
+
+#{$inlineTextContent} {
+  display: inline;
 }
 
 #{$text-level-elements}, #{$global-headings} {

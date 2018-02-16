@@ -30,6 +30,12 @@ $text-level-elements: em, strong, dfn, code, samp, kbd, var, cite, a, basefont,
 img, applet, param, font, br, map, area, tt, i, b, u, strike, big, small, sub,
 sup, input, select, option, textarea, caption, tr, th, td;
 
+// Text Content
+$textContent: blockquote, dd, dir, div, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul;
+
+// Inline Text Content
+$inlineTextContent: a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, rt, rtc, ruby, s, samp, small, span, strong, sub, time, tt, u, var, wbr;
+
 // \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\
 // ------------------------------- $ELEMENTs -----------------------------
 // /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/

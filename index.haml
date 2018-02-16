@@ -1,0 +1,62 @@
+!!!
+%html
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.00002", :name => "viewport"}/
+    %title Lib
+    %link{:href => "css/library.css", :rel => "stylesheet"}/
+    :css
+      section {
+          background: #333;
+      }
+      article {
+          height: 400px;
+          background: #333;
+      }
+      table {width: 100%; height: 100%;}
+      table, tr th, tr td {
+          border: 1px solid #a1a1a1;
+          text-align: center;
+          vertical-align: middle;
+      }
+  %body
+    %main
+      %header{:style => "width: 500px; height: 100px; margin:0 auto; background: #CCC; color: #fff;"}
+        %table
+          %tr
+            %th xlg
+            %th lg
+            %th md
+            %th sm
+            %th xs
+            %th xxs
+          %tr
+            %td 1920
+            %td 1280
+            %td 960
+            %td 640
+            %td 480
+            %td 384
+      :css
+        .menu{position:fixed;right:0;left:0;bottom:0;margin:0 auto;width:300px;height:auto;padding:10px;border: 1px solid #333;background:#F1F1F1}.menu ul{list-style-type:none}
+      .menu
+        %ul
+          %li
+            %a{"data-tooltip" => "Normalize", "data-tooltip-offset" => "text", :href => "test/normalize.html"} Normalize
+          %li
+            %a{:href => "test/headings.html"} Headings
+          %li
+            %a{:href => "test/tables.html"} Tables
+          %li
+            %a{:href => "test/forms.html"} Forms
+          %li
+            %a{:href => "test/meta.html"} Meta
+          %li
+            %a{:href => "test/texts.html"} Texts
+          %li
+            %a{:href => "test/classes.html"} Classes
+          %li
+            %a{:href => "test/layout.html"} Layout
+          %li
+            %a{:href => "templates/temp1.html"} Template 1
+    %script{:src => "assets/js/scripts.js"}
