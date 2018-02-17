@@ -210,9 +210,10 @@ section, .content-container {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  section::after, .content-container::after {
-    content: '';
-    display: table;
+  section:before, section:after, .content-container:before, .content-container:after {
+    content: " ";
+    display: block; }
+  section:after, .content-container:after {
     clear: both; }
 
 section > article, section > .content,
@@ -228,11 +229,16 @@ footer, .footer, #footer {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  section > article::after, section > .content::after,
-  .content-container > article::after, .content-container > .content::after,
-  footer::after, .footer::after, #footer::after {
-    content: '';
-    display: table;
+  section > article:before, section > article:after, section > .content:before, section > .content:after,
+  .content-container > article:before,
+  .content-container > article:after, .content-container > .content:before, .content-container > .content:after,
+  footer:before,
+  footer:after, .footer:before, .footer:after, #footer:before, #footer:after {
+    content: " ";
+    display: block; }
+  section > article:after, section > .content:after,
+  .content-container > article:after, .content-container > .content:after,
+  footer:after, .footer:after, #footer:after {
     clear: both; }
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     section > article, section > .content,
@@ -334,10 +340,14 @@ footer, .footer, #footer {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%; } }
 
-section > aside::after, section > .aside::after,
-.content-container > aside::after, .content-container > .aside::after {
-  content: '';
-  display: table;
+section > aside:before, section > aside:after, section > .aside:before, section > .aside:after,
+.content-container > aside:before,
+.content-container > aside:after, .content-container > .aside:before, .content-container > .aside:after {
+  content: " ";
+  display: block; }
+
+section > aside:after, section > .aside:after,
+.content-container > aside:after, .content-container > .aside:after {
   clear: both; }
 
 section > aside p, section > aside span, section > aside blockquote, section > aside div, section > aside ul, section > aside ol, section > .aside p, section > .aside span, section > .aside blockquote, section > .aside div, section > .aside ul, section > .aside ol,

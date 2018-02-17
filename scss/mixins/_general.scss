@@ -21,7 +21,27 @@
 
 /* CLEARFIX MIXIN */
 
-@mixin clearfix { &::after { content: ''; display: table; clear: both; } }
+@mixin clearfix {
+  &:before, &:after {
+    content: " ";
+    display: block;
+  }
+  
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin childClearfix {
+  &:before, &:after {
+    content: " ";
+    display: contents;
+  }
+  
+  &:after {
+    clear: both;
+  }
+}
 
 @mixin placeholders {
     &.placeholder { @content; }

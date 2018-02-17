@@ -48,12 +48,8 @@ $positions: 'fixed', 'absolute', 'relative';
 /* Clearfix helper class */
 
 .cf {
-    &:after {
-        content: ' ';
-		display: table;
-        clear: both;
-		display: unset;
-    }
+  @include clearfix;
+  *zoom: 1;
 }
 
 /* Show/Hide helper classes */

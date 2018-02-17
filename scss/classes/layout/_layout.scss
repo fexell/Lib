@@ -1,8 +1,20 @@
-// Flex
+/*
+** Container **
+*/
+
+.container {
+  clear: both;
+}
+
+/*
+** Containers and columns **
+*/
+
+/* Flex Container */
 
 .flex-container {
-	display: flex;
-	flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 @include mq(tablet) {
@@ -20,14 +32,10 @@
 @for $i from 1 through 6 {
   .flex-container {
     &> .column-#{$i} {
-        flex: 1 0 (100% / $i);
-        display: block;
+        flex: $i 0 (100% / $i);
 
         max-width: 100 / $i + vmax;
-        width: 100%;
-        min-height: 100px;
-
-        @include clearfix;
+        
         @include mq(null) { min-width: 100% / $i; }
         @include mq(big-desktop) { min-width: 1600 / $i - 17 + px; }
         @include mq(desktop) { min-width: 1024 / $i - 17 + px; }
@@ -36,6 +44,7 @@
       @include mq(tablet) {
           & .column-#{$i} {
               flex-basis: auto;
+              flex-shrink: auto;
               max-width: 100%;
               width: 100%;
           }
@@ -45,6 +54,7 @@
       @include mq(phone) {
           & .column-#{$i} {
               flex-basis: auto;
+              flex-shrink: auto;
               max-width: 100%;
               width: 100%;
           }
@@ -52,7 +62,7 @@
   }
 }
 
-// Grid
+/* Grid Container */
 
 .grid-container {
   display: grid;
@@ -60,8 +70,6 @@
   grid-auto-flow: row dense;
   grid-auto-columns: (100% / 12);
   max-width: 100%;
-  
-  @include clearfix;
   @include mq(tablet) { grid-auto-rows: 100%; }
 }
 
@@ -70,7 +78,7 @@
     &> .column-#{$i} {
       //grid-column: span $i / 6;
       grid-column: span round(12 / $i);
-      @include clearfix;
+      
       @if $i >= 4 {
         @include mq(tablet) { grid-column: span 12 ; }
       }
@@ -85,13 +93,12 @@
 
 .grid-container > .column-6 {
   grid-column: span 1;
-  @include clearfix;
   @include mq(tab-x) { grid-column: span 2; }
   @include mq(tablet) { grid-column: span 12; }
   @include mq(phone) { grid-column: span 12; }
 }
 
-// Percentage
+/* Percentage Container */
 
 .p-container {
   max-width: 100%;
@@ -106,13 +113,13 @@
       max-width: 100% / $i;
       width: 100% / $i;
       float: left;
-      clear: right;
       @include clearfix;
       @include mq(tablet) {
         @if $i >= 4 {
           float: unset;
           max-width: 100%;
           width: 100%;
+          @include clearfix;
         }
       }
       @include mq(phone) {
@@ -122,6 +129,32 @@
           width: 100%;
           @include clearfix;
         }
+      }
+    }
+  }
+}
+
+/*
+** Text containers and columns **
+*/
+
+@for $i from 1 through 6 {
+  .text-col-#{$i} {
+    @include clearfix;
+    columns: (50vw / $i) $i;
+    columns: (50vmin / $i) $i;
+    clear: both;
+    
+    @include mq(tablet) {
+      @if $i >= 5 {
+        columns: 100vw;
+        columns: 100vmin;
+      }
+    }
+    @include mq(phone) {
+      @if $i >= 3 {
+        columns: 100vw;
+        columns: 100vmin;
       }
     }
   }
