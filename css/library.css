@@ -1121,25 +1121,6 @@ html[xmlns] .cf {
   max-width: 100%;
   min-width: 100%;
   width: 100vw; }
-  .p-container .column-0 {
-    max-width: Infinity;
-    width: Infinity;
-    float: left; }
-    @media only screen and (min-width: 1920px) {
-      .p-container .column-0 {
-        min-width: Infinity; } }
-    @media only screen and (min-width: 1600px) and (max-width: 1919px) {
-      .p-container .column-0 {
-        min-width: Infinity; } }
-    @media only screen and (min-width: 1024px) and (max-width: 1599px) {
-      .p-container .column-0 {
-        min-width: Infinity; } }
-    .p-container .column-0::after {
-      display: block;
-      clear: both;
-      line-height: 0;
-      height: 0;
-      content: " "; }
   .p-container .column-1 {
     max-width: 100%;
     width: 100%;

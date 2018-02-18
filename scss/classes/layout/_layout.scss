@@ -106,7 +106,7 @@
   min-width: 100%;
   width: 100vw;
   
-  @for $i from 0 through 6 {
+  @for $i from 1 through 6 {
     & .column-#{$i} {
       @include mq(null) { min-width: 1600px / $i};
       @include mq(big-desktop) { min-width: 1024px / $i};
