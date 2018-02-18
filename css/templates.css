@@ -157,6 +157,13 @@ h5 {
 h6 {
   font-size: 70%; }
 
+br {
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+  content: " "; }
+
 input, select, option, button, textarea, datalist, output, optgroup {
   margin: 0;
   padding: 0;
@@ -441,6 +448,7 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
 /* MARGIN MIXINS */
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
+/* MIN HEIGHT */
 @media only screen and (max-width: 480px) {
   h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase; } }

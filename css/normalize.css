@@ -157,6 +157,13 @@ h5 {
 h6 {
   font-size: 70%; }
 
+br {
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+  content: " "; }
+
 input, select, option, button, textarea, datalist, output, optgroup {
   margin: 0;
   padding: 0;

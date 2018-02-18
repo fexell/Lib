@@ -53,3 +53,11 @@ h6 {
   // Default
   font-size: 70%;
 }
+
+br {
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+  content: " ";
+}

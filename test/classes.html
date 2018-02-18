@@ -21,11 +21,16 @@
     vertical-align: middle;
     }
     
+    * {
+    text-align: center;
+    }
+    
     div > div {
     background: #f0f0f0;
     text-align: center;
     margin: 1px 0;
     min-height: 100px;
+    height: auto;
     }
     
     [class*="text-col-"] {
@@ -75,7 +80,9 @@
   <div class="column-1">.flex-container .column-1
     <p class="text-col-4">Test with .text-col-4<br>Test with .text-col-4<br>Test with .text-col-4<br>Test with .text-col-4</p>
   </div>
-  <div class="column-2">.flex-container .column-2</div>
+  <div class="column-2">.flex-container .column-2
+    <p class="text-col-2">Test with .text-col-2<br>Test with .text-col-2</p>
+  </div>
   <div class="column-2">.flex-container .column-2</div>
   <div class="column-3">.flex-container .column-3</div>
   <div class="column-3">.flex-container .column-3</div>
@@ -140,7 +147,7 @@
     <p>
       These boxes (including this one) utilize <em>percentage (%)</em>. A container with the class <code>".p-container"</code> is needed to enable this percentage "system".<br>The breakpoints for the percentage system are the same as for <a href="#flex">flex</a>.
       Please don't use in "real projects" yet as this is still under development.<br><i>Dev notes</i>: These boxes uses <code>"float: left;"</code> to align them side by side and have
-      <code>"clear: right;"</code enabled.
+      <code>"clear: right;"</code> enabled.
     </p>
   </div>
   <div class="column-1">.p-container .column-1
@@ -168,6 +175,14 @@
   <div class="column-6">.p-container .column-6</div>
 </div>
 <div class="container">
+  <p class="text-col-1">Text Columns</p>
+  <p class="text-col-1">.text-col-1</p>
+  <p class="text-col-2">.text-col-2<br>.text-col-2</p>
+  <p class="text-col-3">.text-col-3<br>.text-col-3<br>.text-col-3</p>
+  <p class="text-col-4">.text-col-4<br>.text-col-4<br>.text-col-4<br>.text-col-4</p>
+  <p class="text-col-5">.text-col-5<br>.text-col-5<br>.text-col-5<br>.text-col-5<br>.text-col-5</p>
+  <p class="text-col-6">.text-col-6<br>.text-col-6<br>.text-col-6<br>.text-col-6<br>.text-col-6<br>.text-col-6</p>
+  <!-- Wrapped-->
   <div class="text-col-1">Text Columns</div>
   <div class="text-col-1">.text-col-1</div>
   <div class="text-col-2">.text-col-2<br>.text-col-2</div>

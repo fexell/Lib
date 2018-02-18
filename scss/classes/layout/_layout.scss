@@ -3,6 +3,7 @@
 */
 
 .container {
+  //display: contents;
   clear: both;
 }
 
@@ -35,7 +36,7 @@
         flex: $i 0 (100% / $i);
 
         max-width: 100 / $i + vmax;
-        
+      
         @include mq(null) { min-width: 100% / $i; }
         @include mq(big-desktop) { min-width: 1600 / $i - 17 + px; }
         @include mq(desktop) { min-width: 1024 / $i - 17 + px; }
@@ -110,24 +111,22 @@
       @include mq(null) { min-width: 1600px / $i};
       @include mq(big-desktop) { min-width: 1024px / $i};
       @include mq(desktop) { min-width: 768px / $i};
+      
       max-width: 100% / $i;
       width: 100% / $i;
       float: left;
+
       @include clearfix;
       @include mq(tablet) {
         @if $i >= 4 {
-          float: unset;
           max-width: 100%;
           width: 100%;
-          @include clearfix;
         }
       }
       @include mq(phone) {
         @if $i >= 3 {
-          float: unset;
           max-width: 100%;
           width: 100%;
-          @include clearfix;
         }
       }
     }
@@ -140,21 +139,24 @@
 
 @for $i from 1 through 6 {
   .text-col-#{$i} {
-    @include clearfix;
-    columns: (50vw / $i) $i;
-    columns: (50vmin / $i) $i;
-    clear: both;
+    //-webkit-columns: (100vmin / $i) $i;
+    //-moz-columns: (50vmin / $i) $i;
+    columns: $i;
     
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    
+    @include clearfix;
     @include mq(tablet) {
       @if $i >= 5 {
-        columns: 100vw;
-        columns: 100vmin;
+        clear: both;
+        columns: 2;
       }
     }
     @include mq(phone) {
       @if $i >= 3 {
-        columns: 100vw;
-        columns: 100vmin;
+        columns: 2;
       }
     }
   }

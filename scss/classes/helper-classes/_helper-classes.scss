@@ -52,6 +52,18 @@ $positions: 'fixed', 'absolute', 'relative';
   *zoom: 1;
 }
 
+.cf {
+  display: inline-block;
+}
+
+html[xmlns] .cf {
+  display: block;
+}
+
+* html .cf {
+  height: 1%;
+}
+
 /* Show/Hide helper classes */
 
 .dis {

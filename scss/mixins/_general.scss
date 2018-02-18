@@ -21,10 +21,21 @@
 
 /* CLEARFIX MIXIN */
 
-@mixin clearfix {
-  &:before, &:after {
-    content: " ";
+@mixin clearfix() {
+  &::after {
     display: block;
+    clear: both;
+    line-height: 0;
+    height: 0;
+    content: " ";
+  }
+}
+
+@mixin ccf() {
+  &:before, &:after {
+    display: contents;
+    clear: both;
+    content: " ";
   }
   
   &:after {
@@ -32,15 +43,10 @@
   }
 }
 
-@mixin childClearfix {
-  &:before, &:after {
-    content: " ";
-    display: contents;
-  }
-  
-  &:after {
-    clear: both;
-  }
+/* MIN HEIGHT */
+
+@mixin minHeight() {
+  min-height: 1px;
 }
 
 @mixin placeholders {
