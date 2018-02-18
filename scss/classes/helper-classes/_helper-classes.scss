@@ -86,3 +86,29 @@ html[xmlns] .cf {
         }
     }
 }
+
+.hide {
+  &-big-desktop { @include mq(big-desktop) { display: none; } @extend .hide-desktop; @extend .hide-tab-x; @extend .hide-tablet; @extend .hide-phone; }
+  &-desktop { @include mq(desktop) { display: none; } @extend .hide-tab-x; @extend .hide-tablet; @extend .hide-phone; }
+  &-tab-x { @include mq(tab-x) { display: none; } @extend .hide-tablet; @extend .hide-phone; }
+  &-tablet { @include mq(tablet) { display: none; } @extend .hide-phone; }
+  &-phone { @include mq(phone) { display: none; } }
+}
+
+.show {
+  &-big-desktop { @include mq(big-desktop) {
+    display: initial; display: unset; } @include mq() { display: none; }
+  }
+  &-desktop { @include mq(desktop) {
+    display: initial; display: unset; } @include mq() { display: none; } @include mq(big-desktop) { display: none; }
+  }
+  &-tab-x { @include mq(tab-x) {
+    display: initial; display: unset; } @include mq() { display: none; } @include mq(big-desktop) { display: none; } @include mq(desktop) { display: none; }
+  }
+  &-tablet { @include mq(tablet) {
+    display: initial; display: unset; } @include mq() { display: none; } @include mq(big-desktop) { display: none; } @include mq(desktop) { display: none; } @include mq(tab-x) { display: none; }
+  }
+  &-phone { @include mq(phone) {
+    display: initial; display: unset; } @include mq() { display: none; } @include mq(big-desktop) { display: none; } @include mq(desktop) { display: none; } @include mq(tab-x) { display: none; } @include mq(tablet) { display: none; }
+  }
+}

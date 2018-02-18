@@ -425,11 +425,11 @@ th {
   font-weight: bold; }
 
 [hidden] {
-  /* !important In case it gets overriden somewhere */
+  /* In case it gets overriden somewhere */
   display: none !important; }
 
 [visibility="hidden"] {
-  /* !important In case it gets overriden somewhere */
+  /* In case it gets overriden somewhere */
   visibility: hidden !important; }
 
 [dir="ltr"] {
