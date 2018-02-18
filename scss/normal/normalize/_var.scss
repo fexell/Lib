@@ -5,7 +5,7 @@ $htmlbody:             $html, $body;
 
 
 // \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\
-// ------------------------------- $GLOBAL's -----------------------------
+// ------------------------------- $GLOBALs ------------------------------
 // /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
 // Elements used for containing / "wrapping"
@@ -21,19 +21,17 @@ var, label, rt;
 $global-inputs: input, select, option, button, textarea, datalist,
 output, optgroup;
 
-$block-level-elements: address, article, aside, blockquote, canvas, dd, div,
-dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
-header, hgroup, hr, li, main, nav, ol, output, p, pre, section, table, tfoot,
-ul, video;
+$block-level-elements: address, article, aside, canvas, div, fieldset, footer, form, h1, h2, h3, h4, h5, h6,
+header, hgroup, nav, output, section, table, tfoot, video;
 
 $text-level-elements: em, strong, dfn, code, samp, kbd, var, cite, a, basefont,
 img, applet, param, font, br, map, area, tt, i, b, u, strike, big, small, sub,
 sup, input, select, option, textarea, caption, tr, th, td;
 
-// Text Content
-$textContent: blockquote, dd, dir, div, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul;
+// Text Content (Block level)
+$textContent: blockquote, dd, dir, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul;
 
-// Inline Text Content
+// Inline Text Content (Inline level)
 $inlineTextContent: a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, rt, rtc, ruby, s, samp, small, span, strong, sub, time, tt, u, var, wbr;
 
 // \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\

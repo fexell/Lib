@@ -5,5 +5,17 @@
 
 [visibility="hidden"] {
     /* !important In case it gets overriden somewhere */
-    display: none !important;
+    visibility: hidden !important;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="auto"] {
+  direction: inherit;
 }

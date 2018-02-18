@@ -61,7 +61,8 @@ html > body {
   font-weight: 400;
   text-align: inherit;
   unicode-bidi: embed;
-  line-height: 1.3em; }
+  line-height: 1.4em;
+  color: inherit; }
 
 html, body {
   margin: 0;
@@ -102,7 +103,8 @@ details {
   font-weight: 400;
   text-align: inherit;
   unicode-bidi: embed;
-  line-height: 1.3em;
+  line-height: 1.4em;
+  color: inherit;
   word-spacing: 0.01em;
   word-wrap: break-word;
   vertical-align: baseline;
@@ -111,7 +113,7 @@ details {
   /* Font smooth hack */
   text-shadow: 0.1px 0.1px 0 rgba(0, 0, 0, 0.4); }
 
-blockquote, dd, dir, div, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul {
+blockquote, dd, dir, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul {
   display: block; }
 
 a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, rt, rtc, ruby, s, samp, small, span, strong, sub, time, tt, u, var, wbr {
@@ -130,7 +132,8 @@ em, strong, dfn, code, samp, kbd, var, cite, a, basefont, img, applet, param, fo
   font-weight: 400;
   text-align: inherit;
   unicode-bidi: embed;
-  line-height: 1.3em;
+  line-height: 1.4em;
+  color: inherit;
   word-spacing: 0.01em;
   word-wrap: break-word;
   vertical-align: baseline;
@@ -158,11 +161,7 @@ h6 {
   font-size: 70%; }
 
 br {
-  display: block;
-  clear: both;
-  line-height: 0;
-  height: 0;
-  content: " "; }
+  clear: both; }
 
 input, select, option, button, textarea, datalist, output, optgroup {
   margin: 0;
@@ -177,16 +176,17 @@ input, select, option, button, textarea, datalist, output, optgroup {
   font-weight: 400;
   text-align: inherit;
   unicode-bidi: embed;
-  line-height: 1.3em;
+  line-height: 1.4em;
+  color: inherit;
   background-color: #F1F1F1; }
 
 /* Only apply any size related CSS styling to these and NOT radio- or checkbox-buttons */
-input[type=text], input[type=button], input[type=color],
-input[type=date], input[type=datetime-local], input[type=email],
-input[type=file], input[type=image], input[type=month],
-input[type=number], input[type=range], input[type=reset],
-input[type=password], input[type=submit], input[type=tel],
-input[type=time], input[type=url], input[type=week],
+input[type="text"], input[type="button"], input[type="color"],
+input[type="date"], input[type="datetime-local"], input[type="email"],
+input[type="file"], input[type="image"], input[type="month"],
+input[type="number"], input[type="range"], input[type="reset"],
+input[type="password"], input[type="submit"], input[type="tel"],
+input[type="time"], input[type="url"], input[type="week"],
 select, textarea {
   margin-bottom: 1px; }
 
@@ -194,17 +194,17 @@ input[type=image] {
   background-color: initial; }
 
 /* HTML5 Input Elements */
-input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=range], input[type=date],
-input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color] {
+input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="range"], input[type="date"],
+input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"] {
   display: block; }
 
 /* IE8 & where src hasn't been given source */
-* + html input[type=image],
-input[type=image][src=""],
+* + html input[type="image"],
+input[type="image"][src=""],
 input[src=""] {
   display: none; }
 
-input[type=file] {
+input[type="file"] {
   /* Vertically centers text and button */
   line-height: 250%; }
 
@@ -215,8 +215,13 @@ input, select, textarea, button {
   /* Fixes IE7 */
   padding: 1px; }
 
-input[type=button], input[type=submit], button {
+[type="button"], [type="submit"], [type="reset"] button {
+  -webkit-appearance: button;
   border: 0; }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
 
 /* For <input type="file"> for -webkit-, such as: Opera, Chrome, etc. */
 ::-webkit-file-upload-button {
@@ -246,7 +251,11 @@ form {
   display: table; }
 
 form > fieldset {
-  display: inline; }
+  display: inline;
+  padding: 0.35em 0.75em 0.625em; }
+
+form > legend {
+  display: table; }
 
 form > input,
 form > textarea,
@@ -266,10 +275,10 @@ form > button {
   float: left\9;
   clear: both\9; }
 
-form > fieldset > input[type=radio], form > fieldset > input[type=checkbox] {
+form > fieldset > input[type="radio"], form > fieldset > input[type="checkbox"] {
   display: table-cell; }
 
-input[type=radio], input[type=checkbox] {
+input[type="radio"], input[type="checkbox"] {
   display: table-cell;
   clear: initial; }
 
@@ -306,21 +315,21 @@ cite, i, var, dfn {
 em {
   font-style: oblique; }
 
-code, samp, pre {
-  font-family: monospace; }
+code, samp, pre, kbd {
+  font-family: monospace, monospace; }
 
 ins {
   text-decoration: underline; }
 
 pre {
-  white-space: pre-line;
+  white-space: pre;
   margin: 0.2em 0 0; }
 
 s {
   text-decoration: line-through; }
 
 b, strong {
-  font-weight: bold; }
+  font-weight: bolder; }
 
 sub {
   vertical-align: sub; }
@@ -348,11 +357,14 @@ kbd {
 summary {
   display: list-item; }
 
+blockquote {
+  margin: 0; }
+
 img, video {
   float: left;
   clear: both; }
 
-address, article, aside, blockquote, canvas, dd, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, li, main, nav, ol, output, p, pre, section, table, tfoot, ul, video {
+address, article, aside, canvas, div, fieldset, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, nav, output, section, table, tfoot, video {
   display: block; }
 
 a {
@@ -384,7 +396,8 @@ table, tbody, thead, tfoot, th, tr, td, colgroup, col {
   font-weight: 400;
   text-align: inherit;
   unicode-bidi: embed;
-  line-height: 1.3em; }
+  line-height: 1.4em;
+  color: inherit; }
 
 table {
   /* Even though the "user-agent"-default is table-row-group, but table is better (in my opinion) since "margin: 0 auto" can be used with it, even without "width" */
@@ -417,7 +430,16 @@ th {
 
 [visibility="hidden"] {
   /* !important In case it gets overriden somewhere */
-  display: none !important; }
+  visibility: hidden !important; }
+
+[dir="ltr"] {
+  direction: ltr; }
+
+[dir="rtl"] {
+  direction: rtl; }
+
+[dir="auto"] {
+  direction: inherit; }
 
 /*
 * ------------- 9) Display none / [src=""] ------------- *

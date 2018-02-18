@@ -6,12 +6,12 @@
 
 
 /* Only apply any size related CSS styling to these and NOT radio- or checkbox-buttons */
-input[type=text], input[type=button], input[type=color],
-input[type=date], input[type=datetime-local], input[type=email],
-input[type=file], input[type=image], input[type=month],
-input[type=number], input[type=range], input[type=reset],
-input[type=password], input[type=submit], input[type=tel],
-input[type=time], input[type=url], input[type=week],
+input[type="text"], input[type="button"], input[type="color"],
+input[type="date"], input[type="datetime-local"], input[type="email"],
+input[type="file"], input[type="image"], input[type="month"],
+input[type="number"], input[type="range"], input[type="reset"],
+input[type="password"], input[type="submit"], input[type="tel"],
+input[type="time"], input[type="url"], input[type="week"],
 select, textarea {
   margin-bottom: 1px;
 }
@@ -21,19 +21,19 @@ input[type=image] {
 }
 
 /* HTML5 Input Elements */
-input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=range], input[type=date],
-input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color] {
+input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="range"], input[type="date"],
+input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"] {
     display: block;
 }
 
 /* IE8 & where src hasn't been given source */
-*+html input[type=image],
-input[type=image][src=""],
+*+html input[type="image"],
+input[type="image"][src=""],
 input[src=""] {
   display: none;
 }
 
-input[type=file] {
+input[type="file"] {
   /* Vertically centers text and button */
   line-height: 250%;
 }
@@ -46,8 +46,14 @@ input, select, textarea, button {
   padding: 1px;
 }
 
-input[type=button], input[type=submit], button {
+[type="button"], [type="submit"], [type="reset"] button {
+  -webkit-appearance: button;
   border: 0;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
 
 /* For <input type="file"> for -webkit-, such as: Opera, Chrome, etc. */
@@ -81,6 +87,11 @@ form {
 
 form > fieldset {
   display: inline;
+  padding: 0.35em 0.75em 0.625em;
+}
+
+form > legend {
+  display: table;
 }
 
 form > input,
@@ -101,11 +112,11 @@ form > button {
   clear: both\9;
 }
 
-form > fieldset > input[type=radio], form > fieldset > input[type=checkbox] {
+form > fieldset > input[type="radio"], form > fieldset > input[type="checkbox"] {
   display: table-cell;
 }
 
-input[type=radio], input[type=checkbox] {
+input[type="radio"], input[type="checkbox"] {
   display: table-cell;
   clear: initial;
 }
