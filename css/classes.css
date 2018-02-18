@@ -598,10 +598,7 @@ html[xmlns] .cf {
 */
 .text-col-1 {
   -webkit-columns: 1;
-  columns: 1;
-  word-break: break-all;
-  word-wrap: break-word;
-  overflow: hidden; }
+  columns: 1; }
   .text-col-1::after {
     display: block;
     clear: both;
@@ -611,10 +608,7 @@ html[xmlns] .cf {
 
 .text-col-2 {
   -webkit-columns: 2;
-  columns: 2;
-  word-break: break-all;
-  word-wrap: break-word;
-  overflow: hidden; }
+  columns: 2; }
   .text-col-2::after {
     display: block;
     clear: both;
@@ -624,10 +618,7 @@ html[xmlns] .cf {
 
 .text-col-3 {
   -webkit-columns: 3;
-  columns: 3;
-  word-break: break-all;
-  word-wrap: break-word;
-  overflow: hidden; }
+  columns: 3; }
   .text-col-3::after {
     display: block;
     clear: both;
@@ -636,15 +627,12 @@ html[xmlns] .cf {
     content: " "; }
   @media only screen and (max-width: 480px) {
     .text-col-3 {
-      -webkit-columns: 2;
-      columns: 2; } }
+      -webkit-columns: 1;
+      columns: 1; } }
 
 .text-col-4 {
   -webkit-columns: 4;
-  columns: 4;
-  word-break: break-all;
-  word-wrap: break-word;
-  overflow: hidden; }
+  columns: 4; }
   .text-col-4::after {
     display: block;
     clear: both;
@@ -653,15 +641,12 @@ html[xmlns] .cf {
     content: " "; }
   @media only screen and (max-width: 480px) {
     .text-col-4 {
-      -webkit-columns: 2;
-      columns: 2; } }
+      -webkit-columns: 1;
+      columns: 1; } }
 
 .text-col-5 {
   -webkit-columns: 5;
-  columns: 5;
-  word-break: break-all;
-  word-wrap: break-word;
-  overflow: hidden; }
+  columns: 5; }
   .text-col-5::after {
     display: block;
     clear: both;
@@ -675,15 +660,12 @@ html[xmlns] .cf {
       columns: 2; } }
   @media only screen and (max-width: 480px) {
     .text-col-5 {
-      -webkit-columns: 2;
-      columns: 2; } }
+      -webkit-columns: 1;
+      columns: 1; } }
 
 .text-col-6 {
   -webkit-columns: 6;
-  columns: 6;
-  word-break: break-all;
-  word-wrap: break-word;
-  overflow: hidden; }
+  columns: 6; }
   .text-col-6::after {
     display: block;
     clear: both;
@@ -697,5 +679,5 @@ html[xmlns] .cf {
       columns: 2; } }
   @media only screen and (max-width: 480px) {
     .text-col-6 {
-      -webkit-columns: 2;
-      columns: 2; } }
+      -webkit-columns: 1;
+      columns: 1; } }

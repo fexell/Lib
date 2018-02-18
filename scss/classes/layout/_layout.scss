@@ -143,10 +143,6 @@
     //-moz-columns: (50vmin / $i) $i;
     columns: $i;
     
-    word-break: break-all;
-    word-wrap: break-word;
-    overflow: hidden;
-    
     @include clearfix;
     @include mq(tablet) {
       @if $i >= 5 {
@@ -156,7 +152,7 @@
     }
     @include mq(phone) {
       @if $i >= 3 {
-        columns: 2;
+        columns: 1;
       }
     }
   }
