@@ -3,9 +3,7 @@
 */
 
 .container {
-  break-before: avoid-column;
-  break-after: avoid-column;
-  break-inside: avoid-column;
+  
 }
 
 /*
@@ -143,7 +141,7 @@
 @for $i from 1 through 6 {
   .text-col-#{$i} {
     width: 100%;
-    columns: $i;
+    column-count: $i;
     
     @include clearfix;
     @include mq(tablet) {
