@@ -138,6 +138,7 @@
 
 @for $i from 1 through 6 {
   .text-col-#{$i} {
+    width: 100%;
     columns: $i;
     
     @include clearfix;
