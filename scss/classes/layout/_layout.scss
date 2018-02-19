@@ -138,9 +138,9 @@
 
 @for $i from 1 through 6 {
   .text-col-#{$i} {
-    //-webkit-columns: (100vmin / $i) $i;
-    //-moz-columns: (50vmin / $i) $i;
+    width: 100%;
     columns: $i;
+    -webkit-columns: $i;
     
     @include clearfix;
     @include mq(tablet) {

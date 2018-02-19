@@ -96,8 +96,9 @@ html[xmlns] .cf {
 }
 
 .show {
-  &-big-desktop { @include mq(big-desktop) {
-    display: initial; display: unset; } @include mq() { display: none; }
+  &-big-desktop { 
+    @include mq() { display: initial; display: unset; }
+    @include mq(big-desktop) { display: initial; display: unset; }
   }
   &-desktop { @include mq(desktop) {
     display: initial; display: unset; } @include mq() { display: none; } @include mq(big-desktop) { display: none; }

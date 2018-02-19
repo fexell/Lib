@@ -1,0 +1,337 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(content='width=device-width, initial-scale=1.00002', name='viewport')
+  title Lib
+  link(href='../css/library.css', rel='stylesheet')
+  
+  style.
+    section {
+    background: #333;
+    }
+    
+    article {
+    height: 400px;
+    background: #333;
+    }
+    
+    table {width: 100%; height: 100%;}
+    table, tr th, tr td {
+    border: 1px solid #a1a1a1;
+    text-align: center;
+    vertical-align: middle;
+    }
+    
+    * {
+    text-align: center;
+    }
+    
+    div > div {
+    background: #f0f0f0;
+    text-align: center;
+    margin: 1px 0;
+    min-height: 100px;
+    height: auto;
+    }
+    
+    [class*="text-col-"] {
+    color: red;
+    }
+    
+    div > div:nth-child(odd),
+    div > div:nth-child(3n),
+    div > div:nth-child(4n) {
+    color: #CCC;
+    }
+    
+    div > div:nth-child(odd) {
+    background: #333;
+    }
+    
+    div > div:nth-child(1) {
+    position: sticky;
+    top: 1px;
+    background: red;
+    
+    color: #1a1a1a;
+    }
+    
+    div > div:nth-child(3n) {
+    background: #1a1a1a;
+    }
+    
+    div > div:nth-child(4n) {
+    background: #000;
+    }
+    
+    div.helperclasses > div {
+    min-height: 200px;
+    width: 200px;
+    }
+  
+.flex-container#flex
+  .column-1 Flex System
+    p These boxes (including this one) utilize <em>"display flex"</em>. 
+      | A container with the class <code>".flex-container"</code> is needed to enable this flex "system".
+      br
+      | The breakpoints for the flex boxses are <b>"max-width: 768px;"</b> and <b>"max-width: 480px;"</b>
+      | Please don't use in "real projects" yet as this is still under development.
+      
+  .column-1 .flex-container .column-1
+    p.text-col-4 Test with .text-col-4
+      br
+      | Test with .text-col-4
+      br
+      | Test with .text-col-4
+      br
+      | Test with .text-col-4
+  
+  .column-2 .flex-container .column-2
+    p.text-col-2 Test with .text-col-2
+      br
+      | Test with .text-col-2
+  .column-2 .flex-container .column-2
+  
+  .column-3 .flex-container .column-3
+  .column-3 .flex-container .column-3
+  .column-3 .flex-container .column-3
+  
+  .column-4 .flex-container .column-4
+  .column-4 .flex-container .column-4
+  .column-4 .flex-container .column-4
+  .column-4 .flex-container .column-4
+  
+  .column-5 .flex-container .column-5
+  .column-5 .flex-container .column-5
+  .column-5 .flex-container .column-5
+  .column-5 .flex-container .column-5
+  .column-5 .flex-container .column-5
+  
+  .column-6 .flex-container .column-6
+  .column-6 .flex-container .column-6
+  .column-6 .flex-container .column-6
+  .column-6 .flex-container .column-6
+  .column-6 .flex-container .column-6
+  .column-6 .flex-container .column-6
+  
+.grid-container#grid
+  .column-1 Grid System
+    p These boxes (including this one) utilize <em>"display grid"</em>. 
+      | A container with the class <code>".grid-container"</code> is needed to enable this grid "system".
+      br
+      | The breakpoints for the grid system are the same as for <a href="#flex">flex</a>.
+      | Please don't use in "real projects" yet as this is still under development.
+      br
+      | <i>Devs notes:</i> Unfortunatly <code>"grid-column"</code> and <code>"grid-row"</code>
+      | do not accept decimals as a value (example: 1.5), hence the .column-6 being as they are.
+      
+  .column-1 .grid-container .column-1
+    p.text-col-5 Test with .text-col-5
+          br
+          | Test with .text-col-5
+          br
+          | Test with .text-col-5
+          br
+          | Test with .text-col-5
+          br
+          | Test with .text-col-5
+  
+  .column-2 .grid-container .column-2
+  .column-2 .grid-container .column-2
+  
+  .column-3 .grid-container .column-3
+  .column-3 .grid-container .column-3
+  .column-3 .grid-container .column-3
+  
+  .column-4 .grid-container .column-4
+  .column-4 .grid-container .column-4
+  .column-4 .grid-container .column-4
+  .column-4 .grid-container .column-4
+  
+  .column-5 .grid-container .column-5
+  .column-5 .grid-container .column-5
+  .column-5 .grid-container .column-5
+  .column-5 .grid-container .column-5
+  .column-5 .grid-container .column-5
+  .column-5 .grid-container .column-5
+  
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+  .column-6 .grid-container .column-6
+
+.p-container#p-container
+  .column-1 Percentage System
+    p These boxes (including this one) utilize <em>percentage (%)</em>. 
+      | A container with the class <code>".p-container"</code> is needed to enable this percentage "system".
+      br
+      | The breakpoints for the percentage system are the same as for <a href="#flex">flex</a>.
+      | Please don't use in "real projects" yet as this is still under development.
+      br
+      | <i>Dev notes</i>: These boxes uses <code>"float: left;"</code> to align them side by side and have
+      | <code>"clear: right;"</code> enabled.
+      
+  .column-1 .p-container .column-1
+    p.text-col-6 Test with .text-col-6
+        br
+        | Test with .text-col-6
+        br
+        | Test with .text-col-6
+        br
+        | Test with .text-col-6
+        br
+        | Test with .text-col-6
+        br
+        | Test with .text-col-6
+
+  .column-2 .p-container .column-2
+  .column-2 .p-container .column-2
+
+  .column-3 .p-container .column-3
+  .column-3 .p-container .column-3
+  .column-3 .p-container .column-3
+
+  .column-4 .p-container .column-4
+  .column-4 .p-container .column-4
+  .column-4 .p-container .column-4
+  .column-4 .p-container .column-4
+
+  .column-5 .p-container .column-5
+  .column-5 .p-container .column-5
+  .column-5 .p-container .column-5
+  .column-5 .p-container .column-5
+  .column-5 .p-container .column-5
+
+  .column-6 .p-container .column-6
+  .column-6 .p-container .column-6
+  .column-6 .p-container .column-6
+  .column-6 .p-container .column-6
+  .column-6 .p-container .column-6
+  .column-6 .p-container .column-6
+  
+.p-container#hide-show-classes
+  .column-1 Hidden / Show classes
+  .column-5.hide-phone .hide-phone
+  .column-5.hide-tablet .hide-tablet
+  .column-5.hide-tab-x .hide-tab-x
+  .column-5.hide-desktop .hide-desktop
+  .column-5.hide-big-desktop .hide-big-desktop
+  
+  .column-5.show-big-desktop .show-big-desktop
+  .column-5.show-desktop .show-desktop
+  .column-5.show-tab-x .show-tab-x
+  .column-5.show-tablet .show-tablet
+  .column-5.show-phone .show-phone
+  
+.container
+  p.text-col-1 Text Columns
+  
+  p.text-col-1 .text-col-1
+  
+  p.text-col-2
+    | .text-col-2
+    br/
+    | .text-col-2
+    
+  p.text-col-3
+    | .text-col-3
+    br/
+    | .text-col-3
+    br/
+    | .text-col-3
+    
+  p.text-col-4
+    | .text-col-4
+    br/
+    | .text-col-4
+    br/
+    | .text-col-4
+    br/
+    | .text-col-4
+    
+  p.text-col-5
+    | .text-col-5
+    br/
+    | .text-col-5
+    br/
+    | .text-col-5
+    br/
+    | .text-col-5
+    br/
+    | .text-col-5
+    
+  p.text-col-6
+    | .text-col-6
+    br/
+    | .text-col-6
+    br/
+    | .text-col-6
+    br/
+    | .text-col-6
+    br/
+    | .text-col-6
+    br/
+    | .text-col-6
+    
+  // Wrapped
+ 
+.container
+  .text-col-1 Text Columns
+
+  .text-col-1 .text-col-1
+
+  .text-col-2
+    | .text-col-2
+    br
+    | .text-col-2
+
+  .text-col-3
+    | .text-col-3
+    br/
+    | .text-col-3
+    br/
+    | .text-col-3
+
+  .text-col-4
+    | .text-col-4
+    br/
+    | .text-col-4
+    br/
+    | .text-col-4
+    br/
+    | .text-col-4
+
+  .text-col-5
+    | .text-col-5
+    br/
+    | .text-col-5
+    br/
+    | .text-col-5
+    br/
+    | .text-col-5
+    br/
+    | .text-col-5
+
+  .text-col-6
+    | .text-col-6
+    br/
+    | .text-col-6
+    br/
+    | .text-col-6
+    br/
+    | .text-col-6
+    br/
+    | .text-col-6
+    br/
+    | .text-col-6
+
+- for (var x = 1; x < 6; x++)
+  div(class='text-col-' + x)

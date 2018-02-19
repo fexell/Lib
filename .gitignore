@@ -53,5 +53,4 @@ Temporary Items
 *.rb
 *.config
 *.json
-*.pug
 playground*
