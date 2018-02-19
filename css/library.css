@@ -300,6 +300,12 @@ form, input, textarea, button, legend, select, option {
   -moz-padding-end: 0;
   padding-inline-end: 0; }
 
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0; }
+
 caption {
   caption-side: top; }
 
@@ -1395,7 +1401,10 @@ html[xmlns] .cf {
 .text-col-1 {
   width: 100%;
   -webkit-columns: 1;
-  columns: 1; }
+  columns: 1;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid; }
   .text-col-1::after {
     display: block;
     clear: both;
@@ -1406,7 +1415,10 @@ html[xmlns] .cf {
 .text-col-2 {
   width: 100%;
   -webkit-columns: 2;
-  columns: 2; }
+  columns: 2;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid; }
   .text-col-2::after {
     display: block;
     clear: both;
@@ -1417,7 +1429,10 @@ html[xmlns] .cf {
 .text-col-3 {
   width: 100%;
   -webkit-columns: 3;
-  columns: 3; }
+  columns: 3;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid; }
   .text-col-3::after {
     display: block;
     clear: both;
@@ -1432,7 +1447,10 @@ html[xmlns] .cf {
 .text-col-4 {
   width: 100%;
   -webkit-columns: 4;
-  columns: 4; }
+  columns: 4;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid; }
   .text-col-4::after {
     display: block;
     clear: both;
@@ -1447,7 +1465,10 @@ html[xmlns] .cf {
 .text-col-5 {
   width: 100%;
   -webkit-columns: 5;
-  columns: 5; }
+  columns: 5;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid; }
   .text-col-5::after {
     display: block;
     clear: both;
@@ -1467,7 +1488,10 @@ html[xmlns] .cf {
 .text-col-6 {
   width: 100%;
   -webkit-columns: 6;
-  columns: 6; }
+  columns: 6;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid; }
   .text-col-6::after {
     display: block;
     clear: both;
