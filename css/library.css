@@ -898,18 +898,15 @@ html[xmlns] .cf {
 
 @media only screen and (min-width: 1920px) {
   .show-big-desktop {
-    display: initial;
-    display: unset; } }
+    display: inherit; } }
 
 @media only screen and (min-width: 1600px) and (max-width: 1919px) {
   .show-big-desktop {
-    display: initial;
-    display: unset; } }
+    display: inherit; } }
 
 @media only screen and (min-width: 1024px) and (max-width: 1599px) {
   .show-desktop {
-    display: initial;
-    display: unset; } }
+    display: inherit; } }
 
 @media only screen and (min-width: 1920px) {
   .show-desktop {
@@ -921,8 +918,7 @@ html[xmlns] .cf {
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .show-tab-x {
-    display: initial;
-    display: unset; } }
+    display: inherit; } }
 
 @media only screen and (min-width: 1920px) {
   .show-tab-x {
@@ -938,8 +934,7 @@ html[xmlns] .cf {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .show-tablet {
-    display: initial;
-    display: unset; } }
+    display: inherit; } }
 
 @media only screen and (min-width: 1920px) {
   .show-tablet {
@@ -959,8 +954,7 @@ html[xmlns] .cf {
 
 @media only screen and (max-width: 480px) {
   .show-phone {
-    display: initial;
-    display: unset; } }
+    display: inherit; } }
 
 @media only screen and (min-width: 1920px) {
   .show-phone {
