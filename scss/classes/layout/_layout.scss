@@ -3,7 +3,7 @@
 */
 
 .container {
-  clear: both;
+  
 }
 
 /*
@@ -138,9 +138,7 @@
 
 @for $i from 1 through 6 {
   .text-col-#{$i} {
-    width: 100%;
     columns: $i;
-    -webkit-columns: $i;
     
     @include clearfix;
     @include mq(tablet) {

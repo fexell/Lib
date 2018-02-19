@@ -276,9 +276,6 @@ html[xmlns] .cf {
 /*
 ** Container **
 */
-.container {
-  clear: both; }
-
 /*
 ** Containers and columns **
 */
@@ -684,9 +681,8 @@ html[xmlns] .cf {
 ** Text containers and columns **
 */
 .text-col-1 {
-  width: 100%;
-  columns: 1;
-  -webkit-columns: 1; }
+  -webkit-columns: 1;
+  columns: 1; }
   .text-col-1::after {
     display: block;
     clear: both;
@@ -695,9 +691,8 @@ html[xmlns] .cf {
     content: " "; }
 
 .text-col-2 {
-  width: 100%;
-  columns: 2;
-  -webkit-columns: 2; }
+  -webkit-columns: 2;
+  columns: 2; }
   .text-col-2::after {
     display: block;
     clear: both;
@@ -706,9 +701,8 @@ html[xmlns] .cf {
     content: " "; }
 
 .text-col-3 {
-  width: 100%;
-  columns: 3;
-  -webkit-columns: 3; }
+  -webkit-columns: 3;
+  columns: 3; }
   .text-col-3::after {
     display: block;
     clear: both;
@@ -721,9 +715,8 @@ html[xmlns] .cf {
       columns: 1; } }
 
 .text-col-4 {
-  width: 100%;
-  columns: 4;
-  -webkit-columns: 4; }
+  -webkit-columns: 4;
+  columns: 4; }
   .text-col-4::after {
     display: block;
     clear: both;
@@ -736,9 +729,8 @@ html[xmlns] .cf {
       columns: 1; } }
 
 .text-col-5 {
-  width: 100%;
-  columns: 5;
-  -webkit-columns: 5; }
+  -webkit-columns: 5;
+  columns: 5; }
   .text-col-5::after {
     display: block;
     clear: both;
@@ -756,9 +748,8 @@ html[xmlns] .cf {
       columns: 1; } }
 
 .text-col-6 {
-  width: 100%;
-  columns: 6;
-  -webkit-columns: 6; }
+  -webkit-columns: 6;
+  columns: 6; }
   .text-col-6::after {
     display: block;
     clear: both;
