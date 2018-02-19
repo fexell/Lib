@@ -69,6 +69,9 @@ head
     width: 200px;
     }
   
+.p-container
+  .column-1(style="background:#fff;color:green;") All of these "systems" utilize the ">" selector so nesting is possible.
+  
 .flex-container#flex
   .column-1 Flex System
     p These boxes (including this one) utilize <em>"display flex"</em>. 
@@ -90,29 +93,29 @@ head
     p.text-col-2 Test with .text-col-2
       br
       | Test with .text-col-2
-  .column-2 .flex-container .column-2
+  .column-2 .flex-container > .column-2
   
-  .column-3 .flex-container .column-3
-  .column-3 .flex-container .column-3
-  .column-3 .flex-container .column-3
+  .column-3 .flex-container > .column-3
+  .column-3 .flex-container > .column-3
+  .column-3 .flex-container > .column-3
   
-  .column-4 .flex-container .column-4
-  .column-4 .flex-container .column-4
-  .column-4 .flex-container .column-4
-  .column-4 .flex-container .column-4
+  .column-4 .flex-container > .column-4
+  .column-4 .flex-container > .column-4
+  .column-4 .flex-container > .column-4
+  .column-4 .flex-container > .column-4
   
-  .column-5 .flex-container .column-5
-  .column-5 .flex-container .column-5
-  .column-5 .flex-container .column-5
-  .column-5 .flex-container .column-5
-  .column-5 .flex-container .column-5
+  .column-5 .flex-container > .column-5
+  .column-5 .flex-container > .column-5
+  .column-5 .flex-container > .column-5
+  .column-5 .flex-container > .column-5
+  .column-5 .flex-container > .column-5
   
-  .column-6 .flex-container .column-6
-  .column-6 .flex-container .column-6
-  .column-6 .flex-container .column-6
-  .column-6 .flex-container .column-6
-  .column-6 .flex-container .column-6
-  .column-6 .flex-container .column-6
+  .column-6 .flex-container > .column-6
+  .column-6 .flex-container > .column-6
+  .column-6 .flex-container > .column-6
+  .column-6 .flex-container > .column-6
+  .column-6 .flex-container > .column-6
+  .column-6 .flex-container > .column-6
   
 .grid-container#grid
   .column-1 Grid System
@@ -136,37 +139,37 @@ head
           br
           | Test with .text-col-5
   
-  .column-2 .grid-container .column-2
-  .column-2 .grid-container .column-2
+  .column-2 .grid-container > .column-2
+  .column-2 .grid-container > .column-2
   
-  .column-3 .grid-container .column-3
-  .column-3 .grid-container .column-3
-  .column-3 .grid-container .column-3
+  .column-3 .grid-container > .column-3
+  .column-3 .grid-container > .column-3
+  .column-3 .grid-container > .column-3
   
-  .column-4 .grid-container .column-4
-  .column-4 .grid-container .column-4
-  .column-4 .grid-container .column-4
-  .column-4 .grid-container .column-4
+  .column-4 .grid-container > .column-4
+  .column-4 .grid-container > .column-4
+  .column-4 .grid-container > .column-4
+  .column-4 .grid-container > .column-4
   
-  .column-5 .grid-container .column-5
-  .column-5 .grid-container .column-5
-  .column-5 .grid-container .column-5
-  .column-5 .grid-container .column-5
-  .column-5 .grid-container .column-5
-  .column-5 .grid-container .column-5
+  .column-5 .grid-container > .column-5
+  .column-5 .grid-container > .column-5
+  .column-5 .grid-container > .column-5
+  .column-5 .grid-container > .column-5
+  .column-5 .grid-container > .column-5
+  .column-5 .grid-container > .column-5
   
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
-  .column-6 .grid-container .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
+  .column-6 .grid-container > .column-6
 
 .p-container#p-container
   .column-1 Percentage System
@@ -192,30 +195,30 @@ head
         br
         | Test with .text-col-6
 
-  .column-2 .p-container .column-2
-  .column-2 .p-container .column-2
+  .column-2 .p-container > .column-2
+  .column-2 .p-container > .column-2
 
-  .column-3 .p-container .column-3
-  .column-3 .p-container .column-3
-  .column-3 .p-container .column-3
+  .column-3 .p-container > .column-3
+  .column-3 .p-container > .column-3
+  .column-3 .p-container > .column-3
 
-  .column-4 .p-container .column-4
-  .column-4 .p-container .column-4
-  .column-4 .p-container .column-4
-  .column-4 .p-container .column-4
+  .column-4 .p-container > .column-4
+  .column-4 .p-container > .column-4
+  .column-4 .p-container > .column-4
+  .column-4 .p-container > .column-4
 
-  .column-5 .p-container .column-5
-  .column-5 .p-container .column-5
-  .column-5 .p-container .column-5
-  .column-5 .p-container .column-5
-  .column-5 .p-container .column-5
+  .column-5 .p-container > .column-5
+  .column-5 .p-container > .column-5
+  .column-5 .p-container > .column-5
+  .column-5 .p-container > .column-5
+  .column-5 .p-container > .column-5
 
-  .column-6 .p-container .column-6
-  .column-6 .p-container .column-6
-  .column-6 .p-container .column-6
-  .column-6 .p-container .column-6
-  .column-6 .p-container .column-6
-  .column-6 .p-container .column-6
+  .column-6 .p-container > .column-6
+  .column-6 .p-container > .column-6
+  .column-6 .p-container > .column-6
+  .column-6 .p-container > .column-6
+  .column-6 .p-container > .column-6
+  .column-6 .p-container > .column-6
   
 .p-container#hide-show-classes
   .column-1 Hidden / Show classes
@@ -332,6 +335,3 @@ head
     | .text-col-6
     br/
     | .text-col-6
-
-- for (var x = 1; x < 6; x++)
-  div(class='text-col-' + x)

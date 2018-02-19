@@ -3,7 +3,9 @@
 */
 
 .container {
-  
+  break-before: avoid-column;
+  break-after: avoid-column;
+  break-inside: avoid-column;
 }
 
 /*
@@ -66,10 +68,11 @@
 
 .grid-container {
   display: grid;
-  //grid-auto-columns: 12fr;
   grid-auto-flow: row dense;
-  grid-auto-columns: (100% / 12);
+  //grid-auto-columns: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   max-width: 100%;
+  
   @include mq(tablet) { grid-auto-rows: 100%; }
 }
 
@@ -105,8 +108,9 @@
   min-width: 100%;
   width: 100vw;
   
+  @include clearfix;
   @for $i from 1 through 6 {
-    & .column-#{$i} {
+    &> .column-#{$i} {
       @include mq(null) { min-width: 1600px / $i};
       @include mq(big-desktop) { min-width: 1024px / $i};
       @include mq(desktop) { min-width: 768px / $i};
@@ -140,9 +144,6 @@
   .text-col-#{$i} {
     width: 100%;
     columns: $i;
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid;
     
     @include clearfix;
     @include mq(tablet) {
