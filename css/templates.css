@@ -375,7 +375,7 @@ address, article, aside, canvas, div, fieldset, footer, form, h1, h2, h3, h4, h5
 
 a {
   outline: none; }
-  a, a:visited {
+  a:visited {
     text-decoration: none;
     color: #0008ff; }
   a:hover, a:focus, a:active {

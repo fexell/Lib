@@ -41,7 +41,7 @@ head
     div > div:nth-child(odd),
     div > div:nth-child(3n),
     div > div:nth-child(4n) {
-    color: #CCC;
+    color: #fff;
     }
     
     div > div:nth-child(odd) {
@@ -51,7 +51,7 @@ head
     div > div:nth-child(1) {
     position: sticky;
     top: 1px;
-    background: red;
+    background: #C4232B;
     
     color: #1a1a1a;
     }
@@ -221,18 +221,29 @@ head
   .column-6 .p-container > .column-6
   
 .p-container#hide-show-classes
-  .column-1 Hidden / Show classes
-  .column-2.hide-phone(style="background:#3E0074;color:#fff;") .hide-phone
-  .column-2.hide-tablet(style="background:#511981;color:#fff;") .hide-tablet
-  .column-2.hide-tab-x(style="background:#64328f;color:#fff;") .hide-tab-x
-  .column-2.hide-desktop(style="background:#774c9d;color:#fff;") .hide-desktop
-  .column-1.hide-big-desktop(style="background:#8b66ab;") .hide-big-desktop
+  .column-1 Hide / Show classes
+  .column-2.hide-phone(style="background:#3E0074;color:#fff;")
+    p .hide-phone 
+     span(style="color: #C4232B;") :: hide if screen is < 480px
+    
+  .column-2.hide-tablet(style="background:#511981;color:#fff;")
+    p .hide-tablet 
+      span(style="color: #C4232B;") :: hide if screen is < 767px
+  .column-2.hide-tab-x(style="background:#64328f;color:#fff;")
+    p .hide-tab-x 
+     span(style="color: #C4232B;") :: hide if screen is < 1023px
+  .column-2.hide-desktop(style="background:#774c9d;color:#fff;")
+    p .hide-desktop 
+      span(style="color: #C4232B;") :: hide if screen is < 1599px
+  .column-1.hide-big-desktop(style="background:#8b66ab;")
+    p .hide-big-desktop 
+      span(style="color: #000;") :: hide if screen is < 1919px
   
-  .column-2.show-phone(style="background:#2A80F7;color:#fff;") .show-phone
-  .column-2.show-tablet(style="background:#3f8cf7;color:#fff;") .show-tablet
-  .column-2.show-tab-x(style="background:#5499f8;color:#fff;") .show-tab-x
-  .column-2.show-desktop(style="background:#69a6f9;color:#fff;") .show-desktop
-  .column-1.show-big-desktop(style="background:#7fb2fa;") .show-big-desktop
+  .column-2.show-phone(style="background:#2A80F7;color:#fff;") .show-phone :: show if screen is < 480px
+  .column-2.show-tablet(style="background:#3f8cf7;color:#fff;") .show-tablet :: show if screen is > 480px and < 767px
+  .column-2.show-tab-x(style="background:#5499f8;color:#fff;") .show-tab-x :: show if screen is > 768px and < 1023px
+  .column-2.show-desktop(style="background:#69a6f9;color:#fff;") .show-desktop :: show if screen is > 1024px and < 1599px
+  .column-1.show-big-desktop(style="background:#7fb2fa;") .show-big-desktop :: show if screen > 1599
   
 .container
   p.text-col-1#text-cols Text Columns

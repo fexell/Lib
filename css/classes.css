@@ -267,6 +267,16 @@ html[xmlns] .cf {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
+.sticky-box {
+  position: -webkit-sticky;
+  position: sticky; }
+  .sticky-box::after {
+    display: block;
+    clear: both;
+    line-height: 0;
+    height: 0;
+    content: " "; }
+
 /*
 ** Container **
 */
