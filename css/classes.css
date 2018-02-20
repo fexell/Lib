@@ -270,6 +270,13 @@ html[xmlns] .cf {
 /*
 ** Container **
 */
+.container::after {
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+  content: " "; }
+
 /*
 ** Containers and columns **
 */

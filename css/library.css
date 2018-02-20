@@ -988,6 +988,13 @@ html[xmlns] .cf {
 /*
 ** Container **
 */
+.container::after {
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+  content: " "; }
+
 /*
 ** Containers and columns **
 */
@@ -1489,6 +1496,15 @@ html[xmlns] .cf {
     .text-col-6 {
       -webkit-columns: 1;
       columns: 1; } }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap; }
 
 .grow-1 {
   -webkit-box-flex: 1;
