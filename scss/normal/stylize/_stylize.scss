@@ -1,4 +1,9 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-flow: column nowrap;
+  scroll-behavior: smooth; /* Smooth scrolling to anchors without using Javascript or jQuery ( only works in Firefox and Chrome as of writing moment https://caniuse.com/#search=scroll-behavior ) */
 }

@@ -57,7 +57,8 @@
 @mixin innerWidth {
 	@include mq() {
 		min-width: 1920px;
-		max-width: auto;
+		max-width: 1920px;
+        @include marginAuto;
 	}
 	@include mq(big-desktop) {
 		min-width: 1600px;

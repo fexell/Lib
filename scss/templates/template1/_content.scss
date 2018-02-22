@@ -1,4 +1,13 @@
 section {
 	@include innerWidth;
+    display: flex;
 	flex: 1 0 auto;
+    
+    @include mq(tablet) { flex-flow: column wrap; }
+    @include mq(phone) { flex-flow: column wrap; }
+}
+
+section > article {
+    @include paddingEnds($small);
+    @include paddingSides($small);
 }

@@ -73,7 +73,7 @@ head
   .column-1(style="background:#fff;color:green;") All of these "systems" utilize the ">" selector so nesting is possible.
   
 .flex-container#flex
-  .column-1 Flex System
+  .column-1.push-p Flex System
     p These boxes (including this one) utilize <em>"display flex"</em>. 
       | A container with the class <code>".flex-container"</code> is needed to enable this flex "system".
       br
@@ -118,7 +118,7 @@ head
   .column-6 .flex-container > .column-6
   
 .grid-container#grid
-  .column-1 Grid System
+  .column-1.push-p Grid System
     p These boxes (including this one) utilize <em>"display grid"</em>. 
       | A container with the class <code>".grid-container"</code> is needed to enable this grid "system".
       br
@@ -172,7 +172,7 @@ head
   .column-6 .grid-container > .column-6
 
 .p-container#p-container
-  .column-1 Percentage System
+  .column-1.push-p Percentage System
     p These boxes (including this one) utilize <em>percentage (%)</em>. 
       | A container with the class <code>".p-container"</code> is needed to enable this percentage "system".
       br
@@ -221,7 +221,7 @@ head
   .column-6 .p-container > .column-6
   
 .p-container#hide-show-classes
-  .column-1 Hide / Show classes
+  .column-1.push-p Hide / Show classes
   .column-2.hide-phone(style="background:#3E0074;color:#fff;")
     p .hide-phone 
      span(style="color: #C4232B;") :: hide if screen is < 480px
@@ -246,7 +246,7 @@ head
   .column-1.show-big-desktop(style="background:#7fb2fa;") .show-big-desktop :: show if screen > 1599
   
 .container
-  p.text-col-1#text-cols Text Columns
+  p.text-col-1#text-cols.push-p Text Columns
   
   p.text-col-1 .text-col-1
   
@@ -298,7 +298,7 @@ head
   // Wrapped
  
 .container
-  .text-col-1 Text Columns
+  .text-col-1.push-p Text Columns
 
   .text-col-1 .text-col-1
 

@@ -375,7 +375,7 @@ address, article, aside, canvas, div, fieldset, footer, form, h1, h2, h3, h4, h5
 
 a {
   outline: none; }
-  a:visited {
+  a, a:visited {
     text-decoration: none;
     color: #0008ff; }
   a:hover, a:focus, a:active {
@@ -477,14 +477,7 @@ article, aside, audio, canvas, command, details, embed, figcaption, figure, foot
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
-@media only screen and (max-width: 480px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
-@media only screen and (max-width: 384px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
+/* PUSH */
 html, body, main, .wrapper {
   max-width: 100%;
   width: 100%;
@@ -492,16 +485,17 @@ html, body, main, .wrapper {
   overflow-x: hidden; }
 
 body {
-  min-height: 100%; }
-
-body > main, body > .wrapper {
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 h1 {
   font-size: 3rem; }
@@ -589,6 +583,18 @@ a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, 
   color: #CCC;
   font-size: 0.90rem; }
 
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap; }
+
 /* Don't use <menu> or <menuitem> as it is Deprecated and WILL be removed */
 header, .header {
   padding-top: 1.25rem;
@@ -631,7 +637,9 @@ header, .header {
     @media only screen and (min-width: 1920px) {
       header > nav, header .navigation, .header > nav, .header .navigation {
         min-width: 1920px;
-        max-width: auto; } }
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto; } }
     @media only screen and (min-width: 1600px) and (max-width: 1919px) {
       header > nav, header .navigation, .header > nav, .header .navigation {
         min-width: 1600px;
@@ -747,13 +755,18 @@ header, .header {
           white-space: nowrap; }
 
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
   @media only screen and (min-width: 1920px) {
     section {
       min-width: 1920px;
-      max-width: auto; } }
+      max-width: 1920px;
+      margin-left: auto;
+      margin-right: auto; } }
   @media only screen and (min-width: 1600px) and (max-width: 1919px) {
     section {
       min-width: 1600px;
@@ -774,3 +787,21 @@ section {
     section {
       min-width: 100%;
       max-width: 100%; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+      flex-flow: column wrap; } }
+  @media only screen and (max-width: 480px) {
+    section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+      flex-flow: column wrap; } }
+
+section > article {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; }

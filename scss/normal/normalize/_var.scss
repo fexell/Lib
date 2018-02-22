@@ -21,9 +21,11 @@ var, label, rt;
 $global-inputs: input, select, option, button, textarea, datalist,
 output, optgroup;
 
+// Block level elements
 $block-level-elements: address, article, aside, canvas, div, fieldset, footer, form, h1, h2, h3, h4, h5, h6,
 header, hgroup, nav, output, section, table, tfoot, video;
 
+// Text (inline) level elements
 $text-level-elements: em, strong, dfn, code, samp, kbd, var, cite, a, basefont,
 img, applet, param, font, br, map, area, tt, i, b, u, strike, big, small, sub,
 sup, input, select, option, textarea, caption, tr, th, td;
@@ -33,6 +35,9 @@ $textContent: blockquote, dd, dir, dl, dt, figcaption, figure, hr, li, main, ol,
 
 // Inline Text Content (Inline level)
 $inlineTextContent: a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, rt, rtc, ruby, s, samp, small, span, strong, sub, time, tt, u, var, wbr;
+
+// Everything
+$everything: #{$global-elements}, #{$global-text-elements}, #{$global-inputs};
 
 // \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\
 // ------------------------------- $ELEMENTs -----------------------------

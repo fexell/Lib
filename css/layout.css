@@ -3,14 +3,7 @@
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
-@media only screen and (max-width: 480px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
-@media only screen and (max-width: 384px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
+/* PUSH */
 main, .wrapper {
   width: 100vw;
   max-width: 100% !important;
@@ -36,14 +29,7 @@ header {
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
-@media only screen and (max-width: 480px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
-@media only screen and (max-width: 384px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
+/* PUSH */
 /* Start nav */
 nav.nav-container {
   width: 100%;
@@ -118,14 +104,7 @@ nav.nav-container {
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
-@media only screen and (max-width: 480px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
-@media only screen and (max-width: 384px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
+/* PUSH */
 section, .content-container {
   width: 100%;
   margin-left: auto;
@@ -175,14 +154,7 @@ section, .content-container {
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
-@media only screen and (max-width: 480px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
-@media only screen and (max-width: 384px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
+/* PUSH */
 footer, .footer, #footer {
   max-width: 100%;
   width: 100%; }
@@ -196,14 +168,7 @@ footer, .footer, #footer {
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
-@media only screen and (max-width: 480px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
-@media only screen and (max-width: 384px) {
-  h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase; } }
-
+/* PUSH */
 section, .content-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,8 +217,8 @@ footer, .footer, #footer {
       -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
       flex-flow: column wrap;
-      -ms-flex-preferred-size: 100%;
-      flex-basis: 100%; } }
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto; } }
   @media only screen and (max-width: 480px) {
     section > article, section > .content,
     .content-container > article, .content-container > .content,
@@ -263,8 +228,8 @@ footer, .footer, #footer {
       -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
       flex-flow: column wrap;
-      -ms-flex-preferred-size: 100%;
-      flex-basis: 100%; } }
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto; } }
   section > article h1, section > article h2, section > article h3, section > article h4, section > article h5, section > article h6, section > .content h1, section > .content h2, section > .content h3, section > .content h4, section > .content h5, section > .content h6,
   .content-container > article h1,
   .content-container > article h2,
@@ -319,8 +284,8 @@ footer, .footer, #footer {
         -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
         flex-flow: column wrap;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; } }
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto; } }
     @media only screen and (max-width: 480px) {
       section > article p, section > article span, section > article blockquote, section > article div, section > article ul, section > article ol, section > .content p, section > .content span, section > .content blockquote, section > .content div, section > .content ul, section > .content ol,
       .content-container > article p,
@@ -340,8 +305,8 @@ footer, .footer, #footer {
         -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
         flex-flow: column wrap;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; } }
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto; } }
 
 section > aside::after, section > .aside::after,
 .content-container > aside::after, .content-container > .aside::after {

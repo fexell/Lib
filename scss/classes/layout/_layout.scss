@@ -15,12 +15,25 @@
 .flex-container {
   display: flex;
   flex-flow: row wrap;
+  
+  &.flow {
+    &-row-rev {
+      flex-flow: row-reverse wrap;
+    }
+    &-column {
+      max-width: 100%;
+      flex-flow: column wrap;
+      
+      &-rev {
+        max-width: 100%;
+        flex-flow: column-reverse wrap;
+      }
+    }
+  }
 }
 
 @include mq(tablet) {
-	.flex-container {
-		flex-flow: row wrap;
-	}
+	@extend .flex-container;
 }
 
 @include mq(phone) {
@@ -66,12 +79,11 @@
 
 .grid-container {
   display: grid;
-  grid-auto-flow: row dense;
-  //grid-auto-columns: auto;
+  grid-auto-flow: row;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   max-width: 100%;
   
-  @include mq(tablet) { grid-auto-rows: 100%; }
+  @include mq(tab-x) { grid-auto-columns: 100%; }
 }
 
 @for $i from 1 through 5 {
@@ -94,6 +106,7 @@
 
 .grid-container > .column-6 {
   grid-column: span 1;
+  @include mq(desktop) { grid-column: span 2; }
   @include mq(tab-x) { grid-column: span 2; }
   @include mq(tablet) { grid-column: span 12; }
   @include mq(phone) { grid-column: span 12; }

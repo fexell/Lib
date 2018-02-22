@@ -13,8 +13,8 @@ section > article, section > .content,
 footer, .footer, #footer {
 	@include flexbox;
 	@include clearfix;
-	@include mq(tablet) { width: 100%; flex-flow: column wrap; flex-basis: 100%; }
-	@include mq(phone) { width: 100%; flex-flow: column wrap; flex-basis: 100%; }
+	@include mq(tablet) { width: 100%; flex-flow: column wrap; flex-basis: auto; }
+	@include mq(phone) { width: 100%; flex-flow: column wrap; flex-basis: auto; }
 	
 	& #{$headings} {
 		text-align: center;
@@ -25,8 +25,8 @@ footer, .footer, #footer {
 	& #{$innerElements} {
 		@include paddingEnds($small);
 		@include paddingSides($small);
-		@include mq(tablet) { width: 100%; flex-flow: column wrap; flex-basis: 100%; }
-		@include mq(phone) { width: 100%; flex-flow: column wrap; flex-basis: 100%; }
+		@include mq(tablet) { width: 100%; flex-flow: column wrap; flex-basis: auto; }
+		@include mq(phone) { width: 100%; flex-flow: column wrap; flex-basis: auto; }
 	}
 }
 

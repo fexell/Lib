@@ -95,7 +95,7 @@ a {
 
   outline:           none;
 
-  &:visited {
+  &, &:visited {
     text-decoration: none;
     color:           #0008ff;
   }

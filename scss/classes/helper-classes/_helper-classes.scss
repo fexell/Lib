@@ -38,6 +38,7 @@ $positions: 'fixed', 'absolute', 'relative';
             }
 
 			&-marginauto {
+                display: block;
 				@include marginAuto;
 			}
         }
@@ -64,7 +65,7 @@ html[xmlns] .cf {
   height: 1%;
 }
 
-/* Show/Hide helper classes */
+/* Show/Hide/Display/Visibility helper classes */
 
 .dis {
     &-show {
@@ -87,13 +88,28 @@ html[xmlns] .cf {
     }
 }
 
+/* Hide Classes */
+
 .hide {
   &-big-desktop { @include mq(big-desktop) { display: none; } @extend .hide-desktop; @extend .hide-tab-x; @extend .hide-tablet; @extend .hide-phone; }
   &-desktop { @include mq(desktop) { display: none; } @extend .hide-tab-x; @extend .hide-tablet; @extend .hide-phone; }
   &-tab-x { @include mq(tab-x) { display: none; } @extend .hide-tablet; @extend .hide-phone; }
   &-tablet { @include mq(tablet) { display: none; } @extend .hide-phone; }
   &-phone { @include mq(phone) { display: none; } }
+  
+  /* IE Hide Classes */
+  &-ie {
+    display: none\9;
+    visibility: hidden\9;
+  }
+  
+  &-lte-ie6 { /* Lower than and equal to IE6 */
+    display/**/: none;
+    visibility/**/: none;
+  }
 }
+
+/* Show Classes */
 
 .show {
   &-big-desktop { 
@@ -112,5 +128,106 @@ html[xmlns] .cf {
   &-phone { @include mq(phone) {
     display: inherit; } @include mq() { display: none; } @include mq(big-desktop) { display: none; } @include mq(desktop) { display: none; } @include mq(tab-x) { display: none; } @include mq(tablet) { display: none; }
   }
+  
+  /* IE Show Classes */
+  &-ie {
+    display: block\9;
+    visibility: visible\9;
+  }
+  
+  &-lte-ie6 { /* Lower than and equal to IE6 */
+    display/**/: block;
+    visibility/**/: visible;
+  }
 }
 
+/* Push Classes */
+
+/* Margin */
+
+.push {
+  
+  &-m {
+    & {
+      // -m
+      margin: {
+        top: $spacing-unit;
+        right: $spacing-unit;
+        bottom: $spacing-unit;
+        left: $spacing-unit;
+      }
+    }
+    // -left-right
+    &-lr {
+      margin: {
+        left: $spacing-unit;
+        right: $spacing-unit;
+      }
+    }
+    // -top-bottom
+    &-tb {
+      margin: {
+        top: $spacing-unit;
+        bottom: $spacing-unit;
+      }
+    }
+    // -left, -right
+    @each $option-x in $options-x {
+      &-#{$option-x} {
+        margin: {
+          #{$option-x}: $spacing-unit;
+        }
+      }
+    }
+    // -top, -bottom
+    @each $option-y in $options-y {
+      &-#{$option-y} {
+        margin: {
+          #{$option-y}: $spacing-unit;
+        }
+      }
+    }
+  }
+  
+  /* Padding */
+  
+  &-p {
+    & {
+      // -m
+      padding: {
+        top: $spacing-unit;
+        right: $spacing-unit;
+        bottom: $spacing-unit;
+        left: $spacing-unit;
+      }
+    }
+    // -left-right
+    &-lr {
+      padding: {
+        left: $spacing-unit;
+        right: $spacing-unit;
+      }
+    }
+    // -top-bottom
+    &-tb {
+      padding: {
+        top: $spacing-unit;
+        bottom: $spacing-unit;
+      }
+    }
+    @each $option-x in $options-x {
+      &-#{$option-x} {
+        padding: {
+          #{$option-x}: $spacing-unit;
+        }
+      }
+    }
+    @each $option-y in $options-y {
+      &-#{$option-y} {
+        padding: {
+          #{$option-y}: $spacing-unit;
+        }
+      }
+    }
+  }
+}

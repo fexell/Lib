@@ -7,11 +7,9 @@ html, body, main, .wrapper {
 
 body {
 	min-height: 100%;
-}
-
-body > main, body > .wrapper {
-	display: flex;
+    display: flex;
 	flex-flow: column nowrap;
+    justify-content: center;
 }
 
 @import "formatting";
