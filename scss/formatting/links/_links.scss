@@ -1,0 +1,11 @@
+a {
+  &.danger, &.red {
+    color: #EF4836;
+  }
+  &.success, &.green {
+    color: #87D37C;
+  }
+  &.message, &.blue {
+    color: #4B77BE;
+  }
+}

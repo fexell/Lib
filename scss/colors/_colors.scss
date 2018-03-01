@@ -1,0 +1,30 @@
+$colors: (
+  white: "#ECF0F1",
+  gray: "#6C7A89",
+  black: "#333333",
+  red: "#EF4836",
+  burntorange: "#D35400",
+  crustred: "#F2784B",
+  orange: "#F64747",
+  caliorange: "#F89406",
+  pink: "#D2527F",
+  purple: "#663399",
+  studiopurple: "#8E44AD",
+  blue: "4183D7",
+  marineblue: "#446CB3",
+  deepblue: "#013243",
+  lightblue: "#6BB9F0",
+  green: "#00e640",
+  gossipgreen: "#87D37C",
+  salemgreen: "#1E824C",
+  yellow: "#F7CA18"
+);
+
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: #{$value};
+  }
+  .color-#{$color} {
+    color: #{$value};
+  }
+}
