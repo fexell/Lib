@@ -70,7 +70,8 @@ head
     }
   
 .p-container
-  .column-1(style="background:#fff;color:green;") All of these "systems" utilize the ">" selector so nesting is possible.
+  .column-1(style="background:#fff;color:green;")
+    p.force-middle All of these "systems" utilize the ">" selector so nesting is possible.
   
 .flex-container#flex
   .column-1.push-p Flex System
@@ -127,6 +128,7 @@ head
       br
       | <i>Devs notes:</i> Unfortunatly <code>"grid-column"</code> and <code>"grid-row"</code>
       | do not accept decimals as a value (example: 1.5), hence the .column-6 being as they are.
+      | Neither are grid items flexible, so it won't automatically fill empty spaces.
       
   .column-1 .grid-container .column-1
     p.text-col-5 Test with .text-col-5
@@ -170,6 +172,9 @@ head
   .column-6 .grid-container > .column-6
   .column-6 .grid-container > .column-6
   .column-6 .grid-container > .column-6
+  
+  .column-2 .grid-container > .column-2
+  .column-4 .grid-container > .column-4
 
 .p-container#p-container
   .column-1.push-p Percentage System

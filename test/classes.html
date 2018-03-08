@@ -71,7 +71,9 @@
   </style>
 </head>
 <div class="p-container">
-  <div class="column-1" style="background:#fff;color:green;">All of these "systems" utilize the ">" selector so nesting is possible.</div>
+  <div class="column-1" style="background:#fff;color:green;">
+    <p class="force-middle">All of these "systems" utilize the ">" selector so nesting is possible.</p>
+  </div>
 </div>
 <div class="flex-container" id="flex">
   <div class="column-1 push-p">Flex System
@@ -112,6 +114,7 @@
       These boxes (including this one) utilize <em>"display grid"</em>. A container with the class <code>".grid-container"</code> is needed to enable this grid "system".<br>The breakpoints for the grid system are the same as for <a href="#flex">flex</a>.
       Please don't use in "real projects" yet as this is still under development.<br><i>Devs notes:</i> Unfortunatly <code>"grid-column"</code> and <code>"grid-row"</code>
       do not accept decimals as a value (example: 1.5), hence the .column-6 being as they are.
+      Neither are grid items flexible, so it won't automatically fill empty spaces.
     </p>
   </div>
   <div class="column-1">.grid-container .column-1
@@ -144,6 +147,8 @@
   <div class="column-6">.grid-container > .column-6</div>
   <div class="column-6">.grid-container > .column-6</div>
   <div class="column-6">.grid-container > .column-6</div>
+  <div class="column-2">.grid-container > .column-2</div>
+  <div class="column-4">.grid-container > .column-4</div>
 </div>
 <div class="p-container" id="p-container">
   <div class="column-1 push-p">Percentage System

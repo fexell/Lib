@@ -3,45 +3,18 @@
 $innerElements: p, span, blockquote, div, ul, ol;
 $headings: h1, h2, h3, h4, h5, h6;
 
-section, .content-container {
-	@include flexbox;
-	@include clearfix;
-}
-
-section > article, section > .content,
-.content-container > article, .content-container > .content,
-footer, .footer, #footer {
-	@include flexbox;
-	@include clearfix;
-	@include mq(tablet) { width: 100%; flex-flow: column wrap; flex-basis: auto; }
-	@include mq(phone) { width: 100%; flex-flow: column wrap; flex-basis: auto; }
-	
-	& #{$headings} {
-		text-align: center;
-		@include paddingEnds($x-small);
-		@include paddingSides($x-small);
-	}
-	
-	& #{$innerElements} {
-		@include paddingEnds($small);
-		@include paddingSides($small);
-		@include mq(tablet) { width: 100%; flex-flow: column wrap; flex-basis: auto; }
-		@include mq(phone) { width: 100%; flex-flow: column wrap; flex-basis: auto; }
-	}
-}
-
-section > aside, section > .aside,
-.content-container > aside, .content-container > .aside {
-	@include clearfix;
-	
-	& #{$innerElements} {
-		@include paddingEnds($small);
-		@include paddingSides($small);
-	}
-	
-	& #{$headings} {
-		text-align: center;
-		@include paddingEnds($x-small);
-		@include paddingSides($x-small);
-	}
+section {
+  max-width: 1400px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  
+  @include mq(tablet) {
+    max-width: 100%;
+  }
+  
+  @include mq(phone) {
+    max-width: 100%;
+  }
 }

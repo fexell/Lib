@@ -32,8 +32,10 @@
   }
 }
 
-@include mq(tablet) {
-	@extend .flex-container;
+@include mq(tablet) {  
+  .flex-container {
+    flex-flow: column wrap;
+  }
 }
 
 @include mq(phone) {
@@ -46,20 +48,20 @@
   .flex-container {
     &> .column-#{$i} {
         flex: $i 0 (100% / $i);
-
-        max-width: 100 / $i + vmax;
-      
-        @include mq(null) { min-width: 100% / $i; }
-        @include mq(big-desktop) { min-width: 1600 / $i - 17 + px; }
-        @include mq(desktop) { min-width: 1024 / $i - 17 + px; }
     }
+    
     @if $i >= 4 {
+      @include mq(tab-x) {
+        & .column-#{$i} {
+          flex: 1 0 100%;
+        }
+      }
+    }
+    
+    @if $i >= 3 {
       @include mq(tablet) {
           & .column-#{$i} {
-              flex-basis: auto;
-              flex-shrink: auto;
-              max-width: 100%;
-              width: 100%;
+              flex: 1 0 100%;
           }
       }
     }
@@ -81,18 +83,16 @@
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  max-width: 100%;
-  
   @include mq(tab-x) { grid-auto-columns: 100%; }
 }
 
 @for $i from 1 through 5 {
   .grid-container {
     &> .column-#{$i} {
-      //grid-column: span $i / 6;
       grid-column: span round(12 / $i);
       
       @if $i >= 4 {
+        @include mq(tab-x) { grid-column: span 12; }
         @include mq(tablet) { grid-column: span 12 ; }
       }
       @if $i >= 2 {
@@ -107,7 +107,7 @@
 .grid-container > .column-6 {
   grid-column: span 1;
   @include mq(desktop) { grid-column: span 2; }
-  @include mq(tab-x) { grid-column: span 2; }
+  @include mq(tab-x) { grid-column: span 12; }
   @include mq(tablet) { grid-column: span 12; }
   @include mq(phone) { grid-column: span 12; }
 }
@@ -115,22 +115,23 @@
 /* Percentage Container */
 
 .p-container {
-  max-width: 100%;
-  min-width: 100%;
-  width: 100vw;
+  width: 100%;
   
   @include clearfix;
   @for $i from 1 through 6 {
     &> .column-#{$i} {
-      @include mq(null) { min-width: 1600px / $i};
-      @include mq(big-desktop) { min-width: 1024px / $i};
-      @include mq(desktop) { min-width: 768px / $i};
       
-      max-width: 100% / $i;
-      width: 100% / $i;
+      max-width: 100%;
+      width: 100% / $i; 
       float: left;
 
       @include clearfix;
+      @include mq(tab-x) {
+        @if $i >= 4 {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
       @include mq(tablet) {
         @if $i >= 4 {
           max-width: 100%;
