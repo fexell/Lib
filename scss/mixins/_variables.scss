@@ -3,3 +3,41 @@ $x-small: 0.625rem;
 $small: 1.25rem;
 $large: 2.5rem;
 $x-large: 3.75rem;
+
+// Variables gotten from https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+// Headings
+$headings: h1, h2, h3, h4, h5, h6;
+
+// Content
+$content: address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, hgroup, nav, section;
+
+// Text Content
+$textContent: blockquote, dd, dir, div, dl, dt, figcaption, figure, hr, li, main, ol, p, pre, ul;
+
+// Inline Text Content
+$inlineTextContent: a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, nobr, q, rp, rt, rtc, ruby, s, samp, small, span, strong, sub, time, tt, u, var, wbr;
+
+// Media tags
+$media: area, audio, img, map, track, video;
+
+// Embeds
+$embeds: applet, embed, noembed, object, param, picture, source;
+
+// Scripting
+$scripting: canvas, noscript, script;
+
+// Erased Text / "Demarcating edits"
+$erasedTest: del, ins;
+
+// Table Contents
+$tables: caption, col, colgroup, table, tbody, td, tfoot, th, thead, tr;
+
+// Forms
+$forms: button, datalist, fieldset, form, input, label, legend, meter, optgroup, option, output, progress, select, textarea;
+
+// Interactive elements
+$interactive: details, dialog, menu, menuitem, summary;
+
+// Web components
+$webComponents: content, element, shadow, slot, template;

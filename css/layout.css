@@ -4,6 +4,7 @@
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
 /* PUSH */
+/* Fill Available */
 main, .wrapper {
   width: 100vw;
   max-width: 100% !important;
@@ -30,6 +31,7 @@ header {
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
 /* PUSH */
+/* Fill Available */
 /* Start nav */
 nav.nav-container {
   width: 100%;
@@ -105,12 +107,14 @@ nav.nav-container {
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
 /* PUSH */
+/* Fill Available */
 /* Footer - <Footer>, .footer, #footer, etc. */
 /* MARGIN MIXINS */
 /* PADDING MIXINS */
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
 /* PUSH */
+/* Fill Available */
 footer, .footer, #footer {
   max-width: 100%;
   width: 100%; }
@@ -125,6 +129,7 @@ footer, .footer, #footer {
 /* CLEARFIX MIXIN */
 /* MIN HEIGHT */
 /* PUSH */
+/* Fill Available */
 section {
   max-width: 1400px;
   margin-left: auto;

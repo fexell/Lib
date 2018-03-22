@@ -19,37 +19,42 @@
       text-align: center;
       vertical-align: middle;
   }
+  .menu, .menu ul {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+  }
+  .menu ul li,
+  .menu ul li a {
+    flex: 1;
+  }
+  .menu ul li a {
+    height: 100%;
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding-top: 200px;
+  }
+  .menu ul li:nth-child(2n) a {
+    background: #87D37C;
+  }
+  .menu ul li a:hover {
+    color: #f3f3f3;
+    background: #333;
+  }
 </style>
 </head>
 <body>
 <main>
-<header style="width: 500px; height: 100px; margin:0 auto; background: #CCC; color: #fff;">
-<table>
-<tr>
-<th>xlg</th>
-<th>lg</th>
-<th>md</th>
-<th>sm</th>
-<th>xs</th>
-<th>xxs</th>
-</tr>
-<tr>
-<td>1920</td>
-<td>1280</td>
-<td>960</td>
-<td>640</td>
-<td>480</td>
-<td>384</td>
-</tr>
-</table>
-</header>
-<style>
-  .menu{position:fixed;right:0;left:0;bottom:0;margin:0 auto;width:300px;height:auto;padding:10px;border: 1px solid #333;background:#F1F1F1}.menu ul{list-style-type:none}
-</style>
-<div class="menu">
+<div class="menu fixed-top">
 <ul>
 <li>
-<a data-tooltip-offset="text" data-tooltip="Normalize" href="test/normalize.html">Normalize</a>
+<a href="test/normalize.html">Normalize</a>
 </li>
 <li>
 <a href="test/headings.html">Headings</a>

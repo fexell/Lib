@@ -47,7 +47,7 @@
 @for $i from 1 through 6 {
   .flex-container {
     &> .column-#{$i} {
-        flex: $i 0 (100% / $i);
+        flex: 12 / $i 0 (100% / $i);
     }
     
     @if $i >= 4 {
@@ -121,11 +121,17 @@
   @for $i from 1 through 6 {
     &> .column-#{$i} {
       
+      min-width: 100% / $i;
       max-width: 100%;
-      width: 100% / $i; 
+      
       float: left;
 
       @include clearfix;
+      @include mq(desktop) {
+        @if $i == 6 {
+          min-width: (100% / 3);
+        }
+      }
       @include mq(tab-x) {
         @if $i >= 4 {
           max-width: 100%;

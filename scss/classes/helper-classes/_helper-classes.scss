@@ -9,6 +9,11 @@ $positions: 'fixed', 'absolute', 'relative';
     @include marginAuto;
 }
 
+ul.block-center {
+  display: table;
+  @include marginAuto;
+}
+
 /* Position helper classes */
 
 @each $position in $positions {
@@ -115,6 +120,7 @@ html[xmlns] .cf {
   &-big-desktop { 
     @include mq() { display: inherit; }
     @include mq(big-desktop) { display: inherit; }
+    @extend .hide-desktop;
   }
   &-desktop { @include mq(desktop) {
     display: inherit; } @include mq() { display: none; } @include mq(big-desktop) { display: none; }
