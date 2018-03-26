@@ -136,6 +136,7 @@ ul.block-center {
   *zoom: 1; }
   .cf::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -317,6 +318,7 @@ html[xmlns] .cf {
   position: sticky; }
   .sticky-box::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -327,6 +329,7 @@ html[xmlns] .cf {
 */
 .container::after {
   display: block;
+  display: contents;
   clear: both;
   line-height: 0;
   height: 0;
@@ -570,6 +573,7 @@ html[xmlns] .cf {
   width: 100%; }
   .p-container::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -580,6 +584,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-1::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -590,6 +595,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-2::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -600,6 +606,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-3::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -614,6 +621,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-4::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -636,6 +644,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-5::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -658,6 +667,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-6::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -687,6 +697,7 @@ html[xmlns] .cf {
   column-count: 1; }
   .text-col-1::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -698,6 +709,7 @@ html[xmlns] .cf {
   column-count: 2; }
   .text-col-2::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -709,6 +721,7 @@ html[xmlns] .cf {
   column-count: 3; }
   .text-col-3::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -724,6 +737,7 @@ html[xmlns] .cf {
   column-count: 4; }
   .text-col-4::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -739,6 +753,7 @@ html[xmlns] .cf {
   column-count: 5; }
   .text-col-5::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -759,6 +774,7 @@ html[xmlns] .cf {
   column-count: 6; }
   .text-col-6::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;

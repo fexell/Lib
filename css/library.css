@@ -970,6 +970,7 @@ ul.block-center {
   *zoom: 1; }
   .cf::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1151,6 +1152,7 @@ html[xmlns] .cf {
   position: sticky; }
   .sticky-box::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1161,6 +1163,7 @@ html[xmlns] .cf {
 */
 .container::after {
   display: block;
+  display: contents;
   clear: both;
   line-height: 0;
   height: 0;
@@ -1404,6 +1407,7 @@ html[xmlns] .cf {
   width: 100%; }
   .p-container::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1414,6 +1418,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-1::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -1424,6 +1429,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-2::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -1434,6 +1440,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-3::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -1448,6 +1455,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-4::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -1470,6 +1478,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-5::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -1492,6 +1501,7 @@ html[xmlns] .cf {
     float: left; }
     .p-container > .column-6::after {
       display: block;
+      display: contents;
       clear: both;
       line-height: 0;
       height: 0;
@@ -1521,6 +1531,7 @@ html[xmlns] .cf {
   column-count: 1; }
   .text-col-1::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1532,6 +1543,7 @@ html[xmlns] .cf {
   column-count: 2; }
   .text-col-2::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1543,6 +1555,7 @@ html[xmlns] .cf {
   column-count: 3; }
   .text-col-3::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1558,6 +1571,7 @@ html[xmlns] .cf {
   column-count: 4; }
   .text-col-4::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1573,6 +1587,7 @@ html[xmlns] .cf {
   column-count: 5; }
   .text-col-5::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1593,6 +1608,7 @@ html[xmlns] .cf {
   column-count: 6; }
   .text-col-6::after {
     display: block;
+    display: contents;
     clear: both;
     line-height: 0;
     height: 0;
@@ -1734,80 +1750,164 @@ header {
   max-width: 100%;
   width: 100%; }
 
-/* MARGIN MIXINS */
-/* PADDING MIXINS */
-/* CLEARFIX MIXIN */
-/* MIN HEIGHT */
-/* PUSH */
-/* Fill Available */
-/* Start nav */
-nav.nav-container {
-  width: 100%;
-  position: relative;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  /* Menu */ }
-  nav.nav-container .menu {
-    position: relative;
+/* Don't use <menu> or <menuitem> as it is Deprecated and WILL be removed */
+header, .header {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  width: 100%; }
+  header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 120px;
-    grid-column-gap: 1%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    /* In case of small screen, center everything */
-    /* Give option of spanning the <menu> 100%, but still keep the responsiveness */ }
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
-      nav.nav-container .menu {
-        width: 100%;
+    position: relative;
+    height: 100px; }
+    @media only screen and (min-width: 1920px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        grid-auto-flow: column;
         -ms-flex-pack: distribute;
         justify-content: space-around; } }
+    @media only screen and (min-width: 1600px) and (max-width: 1919px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        grid-auto-flow: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1599px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        grid-auto-flow: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        grid-auto-flow: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; } }
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        grid-auto-flow: row; } }
     @media only screen and (max-width: 480px) {
-      nav.nav-container .menu {
-        grid-template-columns: 100%; } }
-    nav.nav-container .menu.logo-top {
-      grid-template-columns: 100%;
-      grid-template-rows: 100% 100%; }
-      nav.nav-container .menu.logo-top > input[type=image], nav.nav-container .menu.logo-top .logo, nav.nav-container .menu.logo-top .logo > img {
-        max-width: 100%;
-        max-height: 100%;
-        height: 100%; }
-    nav.nav-container .menu.logo-right > ul {
-      grid-row: 1; }
-      @media only screen and (min-width: 480px) and (max-width: 767px) {
-        nav.nav-container .menu.logo-right > ul {
-          grid-row: 2; } }
-    nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu .logo > img, nav.nav-container .menu > ul, nav.nav-container .menu > input {
-      margin-left: auto;
-      margin-right: auto; }
-    nav.nav-container .menu > input[type=image], nav.nav-container .menu .logo, nav.nav-container .menu .logo > img, nav.nav-container .menu > input {
-      height: 100%;
-      /* F*ck you, -webkit- max height bug... */
-      max-height: 100%; }
-    nav.nav-container .menu > ul {
-      -ms-flex-item-align: center;
-      align-self: center; }
-    nav.nav-container .menu > ul li, nav.nav-container .menu > li {
-      float: left; }
-    nav.nav-container .menu > ul li a, nav.nav-container .menu > li a {
-      display: block;
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; }
-    nav.nav-container .menu.fluid {
-      width: 100vw;
-      grid-column-gap: 0; }
-      nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo, nav.nav-container .menu.fluid > ul, nav.nav-container .menu.fluid > input {
-        margin: 0; }
-      nav.nav-container .menu.fluid > input[type=image], nav.nav-container .menu.fluid .logo {
-        justify-self: start; }
-      nav.nav-container .menu.fluid > ul {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        grid-auto-flow: row; } }
+    @media only screen and (min-width: 1920px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        min-width: 1920px;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto; } }
+    @media only screen and (min-width: 1600px) and (max-width: 1919px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        min-width: 1600px;
+        max-width: 1920px; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1599px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        min-width: 1024px;
+        max-width: 1600px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        min-width: 768px;
+        max-width: 1024px; } }
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        min-width: 100%;
+        max-width: 100%; } }
+    @media only screen and (max-width: 480px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        min-width: 100%;
+        max-width: 100%; } }
+    header > nav.space-between, header .navigation.space-between, header .menu.space-between, .header > nav.space-between, .header .navigation.space-between, .header .menu.space-between {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+    header > nav.start, header .navigation.start, header .menu.start, .header > nav.start, .header .navigation.start, .header .menu.start {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: start; }
+    header > nav.end, header .navigation.end, header .menu.end, .header > nav.end, .header .navigation.end, .header .menu.end {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: end; }
+    header > nav.center, header .navigation.center, header .menu.center, .header > nav.center, .header .navigation.center, .header .menu.center {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        height: auto;
+        grid-template-rows: auto; } }
+    @media only screen and (max-width: 480px) {
+      header > nav, header .navigation, header .menu, .header > nav, .header .navigation, .header .menu {
+        height: auto;
+        grid-template-rows: auto; } }
+    header > nav .logo, header > nav .logotype, header > nav input[type='image'], header .navigation .logo, header .navigation .logotype, header .navigation input[type='image'], header .menu .logo, header .menu .logotype, header .menu input[type='image'], .header > nav .logo, .header > nav .logotype, .header > nav input[type='image'], .header .navigation .logo, .header .navigation .logotype, .header .navigation input[type='image'], .header .menu .logo, .header .menu .logotype, .header .menu input[type='image'] {
+      height: auto;
+      max-height: 100%;
+      width: auto;
+      max-width: 100%; }
+      header > nav .logo.right, header > nav .logotype.right, header > nav input[type='image'].right, header .navigation .logo.right, header .navigation .logotype.right, header .navigation input[type='image'].right, header .menu .logo.right, header .menu .logotype.right, header .menu input[type='image'].right, .header > nav .logo.right, .header > nav .logotype.right, .header > nav input[type='image'].right, .header .navigation .logo.right, .header .navigation .logotype.right, .header .navigation input[type='image'].right, .header .menu .logo.right, .header .menu .logotype.right, .header .menu input[type='image'].right {
         justify-self: end; }
+      header > nav .logo.center, header > nav .logotype.center, header > nav input[type='image'].center, header .navigation .logo.center, header .navigation .logotype.center, header .navigation input[type='image'].center, header .menu .logo.center, header .menu .logotype.center, header .menu input[type='image'].center, .header > nav .logo.center, .header > nav .logotype.center, .header > nav input[type='image'].center, .header .navigation .logo.center, .header .navigation .logotype.center, .header .navigation input[type='image'].center, .header .menu .logo.center, .header .menu .logotype.center, .header .menu input[type='image'].center {
+        justify-self: center; }
+      header > nav .logo > img, header > nav .logotype > img, header > nav input[type='image'] > img, header .navigation .logo > img, header .navigation .logotype > img, header .navigation input[type='image'] > img, header .menu .logo > img, header .menu .logotype > img, header .menu input[type='image'] > img, .header > nav .logo > img, .header > nav .logotype > img, .header > nav input[type='image'] > img, .header .navigation .logo > img, .header .navigation .logotype > img, .header .navigation input[type='image'] > img, .header .menu .logo > img, .header .menu .logotype > img, .header .menu input[type='image'] > img {
+        height: 100%;
+        max-height: 100%;
+        width: auto;
+        max-width: 100%;
+        -o-object-fit: contain;
+        object-fit: contain; }
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+        header > nav .logo, header > nav .logotype, header > nav input[type='image'], header .navigation .logo, header .navigation .logotype, header .navigation input[type='image'], header .menu .logo, header .menu .logotype, header .menu input[type='image'], .header > nav .logo, .header > nav .logotype, .header > nav input[type='image'], .header .navigation .logo, .header .navigation .logotype, .header .navigation input[type='image'], .header .menu .logo, .header .menu .logotype, .header .menu input[type='image'] {
+          margin-left: auto;
+          margin-right: auto;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          justify-self: center; } }
+      @media only screen and (max-width: 480px) {
+        header > nav .logo, header > nav .logotype, header > nav input[type='image'], header .navigation .logo, header .navigation .logotype, header .navigation input[type='image'], header .menu .logo, header .menu .logotype, header .menu input[type='image'], .header > nav .logo, .header > nav .logotype, .header > nav input[type='image'], .header .navigation .logo, .header .navigation .logotype, .header .navigation input[type='image'], .header .menu .logo, .header .menu .logotype, .header .menu input[type='image'] {
+          margin-left: auto;
+          margin-right: auto;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          justify-self: center; } }
+    header > nav ul, header > nav ul.menu, header .navigation ul, header .navigation ul.menu, header .menu ul, header .menu ul.menu, .header > nav ul, .header > nav ul.menu, .header .navigation ul, .header .navigation ul.menu, .header .menu ul, .header .menu ul.menu {
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
+      -ms-flex-item-align: center;
+      align-self: center;
+      white-space: nowrap; }
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+        header > nav ul, header > nav ul.menu, header .navigation ul, header .navigation ul.menu, header .menu ul, header .menu ul.menu, .header > nav ul, .header > nav ul.menu, .header .navigation ul, .header .navigation ul.menu, .header .menu ul, .header .menu ul.menu {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          header > nav ul > li, header > nav ul.menu > li, header .navigation ul > li, header .navigation ul.menu > li, header .menu ul > li, header .menu ul.menu > li, .header > nav ul > li, .header > nav ul.menu > li, .header .navigation ul > li, .header .navigation ul.menu > li, .header .menu ul > li, .header .menu ul.menu > li {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1; } }
+      header > nav ul > li, header > nav ul.menu > li, header .navigation ul > li, header .navigation ul.menu > li, header .menu ul > li, header .menu ul.menu > li, .header > nav ul > li, .header > nav ul.menu > li, .header .navigation ul > li, .header .navigation ul.menu > li, .header .menu ul > li, .header .menu ul.menu > li {
+        display: inline-block;
+        position: relative; }
+        @media only screen and (min-width: 480px) and (max-width: 767px) {
+          header > nav ul > li, header > nav ul.menu > li, header .navigation ul > li, header .navigation ul.menu > li, header .menu ul > li, header .menu ul.menu > li, .header > nav ul > li, .header > nav ul.menu > li, .header .navigation ul > li, .header .navigation ul.menu > li, .header .menu ul > li, .header .menu ul.menu > li {
+            display: block; } }
+        @media only screen and (max-width: 480px) {
+          header > nav ul > li, header > nav ul.menu > li, header .navigation ul > li, header .navigation ul.menu > li, header .menu ul > li, header .menu ul.menu > li, .header > nav ul > li, .header > nav ul.menu > li, .header .navigation ul > li, .header .navigation ul.menu > li, .header .menu ul > li, .header .menu ul.menu > li {
+            display: block; } }
+        header > nav ul > li > a, header > nav ul.menu > li > a, header .navigation ul > li > a, header .navigation ul.menu > li > a, header .menu ul > li > a, header .menu ul.menu > li > a, .header > nav ul > li > a, .header > nav ul.menu > li > a, .header .navigation ul > li > a, .header .navigation ul.menu > li > a, .header .menu ul > li > a, .header .menu ul.menu > li > a {
+          display: block;
+          font-size: 1rem;
+          padding: 10px;
+          text-align: center;
+          white-space: nowrap; }
 
 /* Content - <Section>, <Article>, <Aside>, etc. */
 /* MARGIN MIXINS */
@@ -1816,6 +1916,12 @@ nav.nav-container {
 /* MIN HEIGHT */
 /* PUSH */
 /* Fill Available */
+html, body, main {
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  height: 100%; }
+
 /* Footer - <Footer>, .footer, #footer, etc. */
 /* MARGIN MIXINS */
 /* PADDING MIXINS */
